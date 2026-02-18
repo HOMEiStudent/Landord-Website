@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Building HOMEi HTTPS Server..."
+echo "Building HOMEi Server..."
 
 # Clean
 rm -rf build/
