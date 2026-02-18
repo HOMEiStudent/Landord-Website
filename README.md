@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HOMEi Landlord Marketing Site
 
-## Getting Started
+A Java 21 HTTPS marketing website for HOMEi — zero external dependencies, pure JDK.
 
-First, run the development server:
+## Prerequisites
+
+- Java 21+
+
+## Running
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+./run.sh
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or manually:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+./build.sh
+java -cp build/classes com.homei.HomeApplication
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The site will be available at **https://localhost:8443**
 
-## Learn More
+> Note: The site uses a self-signed SSL certificate. Your browser will show a security warning — click "Advanced" and proceed to accept it for local development.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/main/
+  java/com/homei/
+    HomeApplication.java       - HTTPS server & static file handler
+  resources/
+    keystore.p12               - Self-signed SSL certificate (PKCS12)
+    static/
+      index.html               - Marketing page
+      css/styles.css            - Styles
+      js/main.js               - Mobile menu & form handling
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Security Headers
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The server includes:
+- `Strict-Transport-Security` (HSTS)
+- `X-Content-Type-Options: nosniff`
