@@ -2,26 +2,17 @@ package com.homei;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpsConfigurator;
-import com.sun.net.httpserver.HttpsParameters;
-import com.sun.net.httpserver.HttpsServer;
+import com.sun.net.httpserver.HttpServer;
 
-import javax.net.ssl.KeyManagerFactory;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLEngine;
-import javax.net.ssl.SSLParameters;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.security.KeyStore;
 import java.util.Map;
 
 public class HomeApplication {
 
-    private static final int PORT = 8443;
+    private static final int PORT = 8080;
 
     private static final Map<String, String> MIME_TYPES = Map.of(
         "html", "text/html; charset=UTF-8",
@@ -35,44 +26,15 @@ public class HomeApplication {
     );
 
     public static void main(String[] args) throws Exception {
-        SSLContext sslContext = createSSLContext();
-
-        HttpsServer server = HttpsServer.create(new InetSocketAddress(PORT), 0);
-        server.setHttpsConfigurator(new HttpsConfigurator(sslContext) {
-            @Override
-            public void configure(HttpsParameters params) {
-                SSLContext ctx = getSSLContext();
-                SSLEngine engine = ctx.createSSLEngine();
-                params.setNeedClientAuth(false);
-                params.setCipherSuites(engine.getEnabledCipherSuites());
-                params.setProtocols(engine.getEnabledProtocols());
-                SSLParameters sslParams = ctx.getSupportedSSLParameters();
-                params.setSSLParameters(sslParams);
-            }
-        });
-
+        HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 0);
         server.createContext("/", new StaticFileHandler());
         server.setExecutor(null);
         server.start();
 
         System.out.println("===========================================");
-        System.out.println("  HOMEi HTTPS Server started successfully");
-        System.out.println("  https://localhost:" + PORT);
+        System.out.println("  HOMEi Server started successfully");
+        System.out.println("  http://localhost:" + PORT);
         System.out.println("===========================================");
-    }
-
-    private static SSLContext createSSLContext() throws Exception {
-        KeyStore keyStore = KeyStore.getInstance("PKCS12");
-        try (InputStream is = HomeApplication.class.getResourceAsStream("/keystore.p12")) {
-            keyStore.load(is, "homeihttps".toCharArray());
-        }
-
-        KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
-        kmf.init(keyStore, "homeihttps".toCharArray());
-
-        SSLContext sslContext = SSLContext.getInstance("TLS");
-        sslContext.init(kmf.getKeyManagers(), null, null);
-        return sslContext;
     }
 
     static class StaticFileHandler implements HttpHandler {
@@ -116,7 +78,6 @@ public class HomeApplication {
 
             exchange.getResponseHeaders().set("Content-Type", contentType);
             exchange.getResponseHeaders().set("X-Content-Type-Options", "nosniff");
-            exchange.getResponseHeaders().set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
             exchange.sendResponseHeaders(200, data.length);
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(data);

@@ -5,4 +5,5 @@ set -e
 bash build.sh
 
 # Run
+echo "Starting server... visit http://localhost:8080"
 java -cp build/classes com.homei.HomeApplication
