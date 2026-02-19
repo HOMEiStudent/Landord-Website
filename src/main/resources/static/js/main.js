@@ -1,5 +1,5 @@
-// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
     var menuBtn = document.getElementById('mobileMenuBtn');
     var mobileMenu = document.getElementById('mobileMenu');
     var menuIcon = menuBtn.querySelector('.menu-icon');
@@ -20,17 +20,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form submission
-    var form = document.getElementById('contactForm');
-    var success = document.getElementById('formSuccess');
+    // Web3Forms contact form submission
+    var form = document.getElementById('form');
+    var submitBtn = form.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        form.classList.add('hidden');
-        success.classList.remove('hidden');
+        var formData = new FormData(form);
+        formData.append("access_key", "a1ac79e5-9df0-46b7-8379-d913a8a74b11");
+
+        var originalText = submitBtn.textContent;
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+
+        try {
+            var response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            var data = await response.json();
+
+            if (response.ok) {
+                alert("Success! Your message has been sent.");
+                form.reset();
+            } else {
+                alert("Error: " + data.message);
+            }
+        } catch (error) {
+            alert("Something went wrong. Please try again.");
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
     });
 
     // Copyright year
     document.getElementById('copyright').textContent =
-        '\u00A9 ' + new Date().getFullYear() + ' HOMEi. All rights reserved.';
+        '\u00A9 ' + new Date().getFullYear() + ' HOMEi Property Management. All rights reserved.';
 });
