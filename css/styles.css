@@ -6,26 +6,26 @@
 }
 
 :root {
-    --navy-950: #0B1D33;
-    --navy-900: #0F2B46;
-    --navy-800: #1E3A5F;
-    --navy-700: #2A4A72;
-    --navy-600: #3B5E8A;
-    --navy-100: #D4E0ED;
-    --navy-50: #EBF0F7;
-    --accent-600: #0284C7;
-    --accent-500: #0EA5E9;
-    --accent-400: #38BDF8;
-    --accent-200: #BAE6FD;
-    --accent-100: #E0F2FE;
-    --accent-50: #F0F9FF;
-    --slate-50: #F8FAFC;
-    --slate-100: #F1F5F9;
-    --slate-200: #E2E8F0;
-    --slate-300: #CBD5E1;
-    --slate-400: #94A3B8;
-    --slate-500: #64748B;
-    --slate-600: #475569;
+    --navy-950: #1C1917;
+    --navy-900: #292524;
+    --navy-800: #44403C;
+    --navy-700: #57534E;
+    --navy-600: #78716C;
+    --navy-100: #E7E5E4;
+    --navy-50: #F5F5F4;
+    --accent-600: #EA580C;
+    --accent-500: #F97316;
+    --accent-400: #FB923C;
+    --accent-200: #FED7AA;
+    --accent-100: #FFEDD5;
+    --accent-50: #FFF7ED;
+    --slate-50: #FAFAF9;
+    --slate-100: #F5F5F4;
+    --slate-200: #E7E5E4;
+    --slate-300: #D6D3D1;
+    --slate-400: #A8A29E;
+    --slate-500: #78716C;
+    --slate-600: #57534E;
     --green-100: #D1FAE5;
     --green-600: #059669;
     --white: #FFFFFF;
@@ -94,11 +94,11 @@ img {
 
 .btn-primary {
     color: var(--white);
-    background: var(--navy-800);
-    box-shadow: 0 4px 14px rgba(30, 58, 95, 0.2);
+    background: var(--accent-500);
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.25);
 }
 .btn-primary:hover {
-    background: var(--navy-700);
+    background: var(--accent-600);
 }
 
 .btn-outline {
@@ -174,7 +174,7 @@ img {
 .logo-icon {
     width: 2.25rem;
     height: 2.25rem;
-    background: var(--navy-800);
+    background: var(--accent-500);
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
@@ -292,7 +292,7 @@ img {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(160deg, var(--navy-50) 0%, var(--white) 50%, var(--accent-50) 100%);
+    background: linear-gradient(160deg, var(--accent-50) 0%, var(--white) 50%, var(--navy-50) 100%);
 }
 
 .hero-grid {
@@ -741,7 +741,7 @@ img {
 .early-access-number {
     width: 2rem;
     height: 2rem;
-    background: var(--navy-800);
+    background: var(--accent-500);
     color: var(--white);
     font-weight: 700;
     font-size: 0.875rem;
@@ -857,8 +857,8 @@ img {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 2px var(--accent-500);
+    border-color: var(--accent-400);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
 }
 
 .form-group textarea {
