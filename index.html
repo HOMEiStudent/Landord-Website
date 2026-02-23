@@ -3,18 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOMEi Property Management | Inspection, Maintenance &amp; Communication Software for Landlords</title>
-    <meta name="description" content="HOMEi Property Management helps UK landlords and estate agents manage inspections, maintenance requests and tenant communication from one web-based platform. Free beta coming soon.">
-    <meta name="keywords" content="property management software UK, landlord inspection software, tenant maintenance reporting, estate agent communication, property inspection platform, HOMEi, landlord software free">
+    <title>HOMEi Property Management | UK Landlord &amp; Estate Agent Inspection Software | Free Trial</title>
+    <meta name="description" content="HOMEi Property Management helps UK landlords and estate agents manage property inspections, tenant maintenance requests and communication from one platform. Free 1-year trial for the first 50 landlords.">
+    <meta name="keywords" content="property management software UK, landlord inspection software, tenant maintenance reporting, estate agent communication, property inspection platform, HOMEi, landlord software free trial, UK letting agent tools">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="HOMEi Property Management | Free Beta Coming Soon">
-    <meta property="og:description" content="Manage inspections, maintenance and tenant communication from one platform. Built for UK landlords and estate agents.">
+    <meta property="og:title" content="HOMEi Property Management | Free 1-Year Trial for UK Landlords">
+    <meta property="og:description" content="Manage inspections, maintenance and tenant communication from one platform. Free 1-year trial for the first 50 landlords.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://homeistudent.github.io/Website-Test/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "HOMEi Property Management",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser",
+        "url": "https://homeistudent.github.io/Website-Test/",
+        "description": "Web-based property inspection, maintenance tracking and landlord-tenant communication software for UK landlords and estate agents.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "GBP",
+            "description": "Free 1-year trial for the first 50 landlords who sign up",
+            "availability": "https://schema.org/LimitedAvailability"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "HOMEi",
+            "url": "https://homeistudent.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is HOMEi Property Management really free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We're offering the first 50 landlords who sign up a completely free 1-year trial. No credit card, no hidden fees. After the trial year, early adopters get a discounted rate as a thank you for helping us shape the platform."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is HOMEi, the Shared Household Organiser?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HOMEi is a mobile app that helps tenants organise their shared household. It handles things like bills, cleaning rotas and shopping lists. It's also where tenants complete inspections, report maintenance and communicate with their landlord through HOMEi Property Management."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do tenant property inspections work with HOMEi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You request an inspection from your dashboard. Each tenant receives a guided checklist through the HOMEi app asking them to photograph their rooms and note any issues. Their individual reports are combined to give you a full picture of the property's condition, without you needing to visit."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can tenants report maintenance issues through HOMEi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Tenants submit maintenance requests through the HOMEi app with photos and a description of the problem. You see the request on your dashboard and can track its progress from reported to resolved."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to install any software to use HOMEi Property Management?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. HOMEi Property Management runs entirely in your web browser. You can access it from your laptop, tablet or phone. Your tenants use the HOMEi mobile app, which is a free download."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is HOMEi Property Management only available in the UK?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For now, yes. We're building HOMEi Property Management specifically for UK landlords, estate agents and letting agents. We may expand to other markets in the future."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 
@@ -23,9 +104,8 @@
         <div class="container navbar-inner">
             <a href="#" class="logo">
                 <!--
-                    LOGO: Replace the fallback below with your logo.
-                    Place file at: images/logo.png
-                    <img src="images/logo.png" alt="HOMEi Property Management" class="logo-img">
+                    LOGO: Place file at images/logo.png
+                    <img src="images/logo.png" alt="HOMEi Property Management - UK landlord and estate agent software" class="logo-img">
                 -->
                 <div class="logo-fallback">
                     <div class="logo-icon">H</div>
@@ -43,7 +123,7 @@
 
             <div class="nav-cta">
                 <a href="https://homeistudent.com" target="_blank" rel="noopener" class="btn btn-outline btn-sm">HOMEi App</a>
-                <a href="#contact" class="btn btn-primary">Try It Free</a>
+                <a href="#contact" class="btn btn-primary">Claim Free Trial</a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
@@ -63,9 +143,19 @@
             <a href="#faq" class="mobile-link">FAQ</a>
             <a href="#contact" class="mobile-link">Contact</a>
             <a href="https://homeistudent.com" target="_blank" rel="noopener" class="mobile-link">HOMEi App</a>
-            <a href="#contact" class="btn btn-primary mobile-cta">Try It Free</a>
+            <a href="#contact" class="btn btn-primary mobile-cta">Claim Free Trial</a>
         </div>
     </nav>
+
+    <!-- Social Proof Counter (hidden until 30+ signups - toggle by removing .hidden) -->
+    <div class="social-proof hidden" id="socialProof">
+        <div class="container social-proof-inner">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p><strong id="signupCount">0</strong> landlords have signed up so far</p>
+        </div>
+    </div>
 
     <main>
 
@@ -76,25 +166,25 @@
                 <div class="hero-content">
                     <div class="badge reveal">
                         <span class="badge-dot"></span>
-                        <span class="badge-text">Free Beta Coming Soon</span>
+                        <span class="badge-text">Only 50 Free Trial Spots</span>
                     </div>
 
                     <h1 class="hero-title reveal">
                         Property Management Software
-                        <span class="text-accent">Built for Landlords &amp; Agents</span>
+                        <span class="text-accent">Built for UK Landlords &amp; Agents</span>
                     </h1>
 
                     <p class="hero-description reveal">
-                        Manage inspections, maintenance requests and tenant communication
-                        from one web-based platform. Connected to
-                        <a href="https://homeistudent.com" target="_blank" rel="noopener" class="inline-link">HOMEi, the Shared Household Organiser</a>,
-                        so your tenants can report issues, complete inspections and stay in
-                        touch without the back-and-forth.
+                        We're looking for <strong>50 landlords and estate agents</strong> to trial
+                        HOMEi Property Management <strong>free for 1 year</strong>. Manage inspections,
+                        maintenance requests and tenant communication from one platform, connected to
+                        <a href="https://homeistudent.com" target="_blank" rel="noopener" class="inline-link">HOMEi, the Shared Household Organiser</a>.
+                        All we ask for in return is your honest feedback.
                     </p>
 
                     <div class="hero-actions reveal">
                         <a href="#contact" class="btn btn-primary btn-lg">
-                            Sign Up for Free Beta
+                            Claim Your Free Trial Spot
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
@@ -104,12 +194,12 @@
 
                     <div class="trust-indicators reveal">
                         <div class="trust-item">
-                            <p class="trust-stat">100% Web-Based</p>
-                            <p class="trust-label">Nothing to install</p>
+                            <p class="trust-stat">Free for 1 Year</p>
+                            <p class="trust-label">No credit card needed</p>
                         </div>
                         <div class="trust-item">
-                            <p class="trust-stat">Free During Beta</p>
-                            <p class="trust-label">No credit card needed</p>
+                            <p class="trust-stat">50 Spots Only</p>
+                            <p class="trust-label">Limited trial places</p>
                         </div>
                         <div class="trust-item">
                             <p class="trust-stat">UK Focused</p>
@@ -120,7 +210,7 @@
 
                 <div class="hero-visual reveal">
                     <div class="image-carousel" data-real-image="images/hero-dashboard.png" data-carousel='["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=800&q=80","https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&h=800&q=80"]'>
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=800&q=80" alt="HOMEi Property Management dashboard overview" class="carousel-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=800&q=80" alt="Property management dashboard showing landlord analytics and tenant overview for UK rental properties" class="carousel-img">
                     </div>
                 </div>
             </div>
@@ -162,7 +252,7 @@
                     </div>
                     <div class="feature-screenshot">
                         <div class="image-carousel" data-real-image="images/feature-inspections.png" data-carousel='["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=600&q=80"]'>
-                            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&h=600&q=80" alt="Property inspection interface" class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&h=600&q=80" alt="Property inspection showing a modern UK rental living room photographed for condition reporting" class="carousel-img">
                         </div>
                     </div>
                 </div>
@@ -189,12 +279,12 @@
                     </div>
                     <div class="feature-screenshot">
                         <div class="image-carousel" data-real-image="images/feature-communication.png" data-carousel='["https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&h=600&q=80"]'>
-                            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&h=600&q=80" alt="Landlord-tenant messaging interface" class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&h=600&q=80" alt="Landlord using mobile phone for tenant communication and property management messaging" class="carousel-img">
                         </div>
                     </div>
                 </div>
 
-                <!-- Feature 3: Maintenance Tracking (NEW) -->
+                <!-- Feature 3: Maintenance Tracking -->
                 <div class="feature-row reveal">
                     <div class="feature-text">
                         <div class="feature-icon-wrap">
@@ -217,7 +307,7 @@
                     </div>
                     <div class="feature-screenshot">
                         <div class="image-carousel" data-real-image="images/feature-maintenance.png" data-carousel='["https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&h=600&q=80"]'>
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&h=600&q=80" alt="Maintenance reporting and tracking" class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&h=600&q=80" alt="Plumber fixing maintenance issue in UK rental property reported through tenant app" class="carousel-img">
                         </div>
                     </div>
                 </div>
@@ -244,7 +334,7 @@
                     </div>
                     <div class="feature-screenshot">
                         <div class="image-carousel" data-real-image="images/feature-dashboard.png" data-carousel='["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=600&q=80","https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&h=600&q=80"]'>
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600&q=80" alt="Property management dashboard" class="carousel-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600&q=80" alt="Web-based property management dashboard showing portfolio analytics and inspection data" class="carousel-img">
                         </div>
                     </div>
                 </div>
@@ -256,11 +346,11 @@
             <div class="container">
                 <div class="cta-banner-inner reveal">
                     <div class="cta-banner-content">
-                        <h2>Want to try it before anyone else?</h2>
-                        <p>We're opening free beta access soon. Sign up now and you'll be first in line when we launch.</p>
+                        <h2>50 landlords. 1 year free. Your feedback shapes the product.</h2>
+                        <p>We're giving the first 50 landlords who sign up a full year of free access. After that, you'll get a discounted rate for life.</p>
                     </div>
                     <div class="cta-banner-actions">
-                        <a href="#contact" class="btn btn-white btn-lg">Sign Up for Free Beta</a>
+                        <a href="#contact" class="btn btn-white btn-lg">Claim Your Spot</a>
                     </div>
                 </div>
             </div>
@@ -345,7 +435,7 @@
 
                 <div class="section-cta reveal">
                     <a href="#contact" class="btn btn-primary btn-lg">
-                        Sign Up to Try It
+                        Claim Your Free Trial Spot
                         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
@@ -421,32 +511,103 @@
             </div>
         </section>
 
+        <!-- Quick Poll -->
+        <section id="poll" class="section bg-slate">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-label">Quick Poll</p>
+                    <h2 class="section-title">What's Your Biggest Challenge as a Landlord?</h2>
+                    <p class="section-description">
+                        Help us build the right features. Pick the issues that take up the most of your time.
+                    </p>
+                </div>
+
+                <div class="poll-container reveal">
+                    <div class="poll-grid" id="pollGrid">
+                        <button class="poll-option" data-value="Arranging and scheduling property inspections">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            </svg>
+                            <span>Arranging inspections</span>
+                        </button>
+                        <button class="poll-option" data-value="Communicating with tenants efficiently">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                            <span>Tenant communication</span>
+                        </button>
+                        <button class="poll-option" data-value="Tracking and managing maintenance requests">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                            </svg>
+                            <span>Tracking maintenance</span>
+                        </button>
+                        <button class="poll-option" data-value="Keeping property records organised and accessible">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                            </svg>
+                            <span>Keeping records organised</span>
+                        </button>
+                        <button class="poll-option" data-value="Managing multiple properties at once">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                            <span>Managing multiple properties</span>
+                        </button>
+                        <button class="poll-option" data-value="Reducing admin costs and time">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Reducing costs and admin time</span>
+                        </button>
+                    </div>
+
+                    <div class="poll-followup hidden" id="pollFollowup">
+                        <p class="poll-followup-label">Thanks for sharing. Could you tell us a bit more?</p>
+                        <form id="pollForm" class="poll-form">
+                            <input type="hidden" name="access_key" value="a1ac79e5-9df0-46b7-8379-d913a8a74b11">
+                            <input type="hidden" name="subject" value="Poll feedback from HOMEi PM website">
+                            <input type="hidden" name="selected_challenges" id="pollSelectedValue" value="">
+                            <div class="form-group">
+                                <textarea name="detailed_feedback" rows="3" placeholder="What does this look like day-to-day for you? What would help most?"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your email (optional, if you'd like us to follow up)">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Feedback CTA Banner -->
         <section class="feedback-banner">
             <div class="container">
                 <div class="feedback-inner reveal">
                     <h2>Help us build something useful</h2>
                     <p>
-                        We're still developing HOMEi Property Management and we want to get it right.
-                        What features matter most to you? What would make your day-to-day easier?
-                        Sign up and tell us.
+                        We're offering 50 landlords a <strong>free 1-year trial</strong> in exchange for
+                        honest feedback. After the trial, you'll get a discounted rate for being an
+                        early adopter. Tell us what features you need and we'll build them.
                     </p>
                     <div class="feedback-actions">
-                        <a href="#contact" class="btn btn-primary btn-lg">Share Your Feedback</a>
+                        <a href="#contact" class="btn btn-primary btn-lg">Claim Your Free Trial Spot</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Early Access -->
-        <section id="early-access" class="section bg-slate">
+        <section id="early-access" class="section bg-white">
             <div class="container">
                 <div class="section-header reveal">
-                    <p class="section-label">Early Access</p>
-                    <h2 class="section-title">Be First to Try HOMEi Property Management</h2>
+                    <p class="section-label">The Offer</p>
+                    <h2 class="section-title">Free for 1 Year. Discounted for Life.</h2>
                     <p class="section-description">
-                        We're opening free beta access soon. Sign up, test the platform, and
-                        help shape what we build next. No cost, no commitment.
+                        We're looking for 50 landlords and estate agents to help us shape
+                        HOMEi Property Management. Here's the deal.
                     </p>
                 </div>
 
@@ -454,29 +615,27 @@
                     <div class="early-access-card reveal reveal-delay-1">
                         <div class="early-access-number">1</div>
                         <h3>Sign Up</h3>
-                        <p>Drop your details in the form below. Takes 30 seconds.</p>
+                        <p>Fill in your details below. Takes 30 seconds. You'll be one of the first 50 to get access.</p>
                     </div>
                     <div class="early-access-card reveal reveal-delay-2">
                         <div class="early-access-number">2</div>
-                        <h3>Get Access</h3>
-                        <p>When we launch the beta, you'll be first in line. We'll send you a link to get started.</p>
+                        <h3>Use It Free for 1 Year</h3>
+                        <p>Full access to the platform at no cost. No credit card. No catches. Use it as much as you like.</p>
                     </div>
                     <div class="early-access-card reveal reveal-delay-3">
                         <div class="early-access-number">3</div>
-                        <h3>Give Feedback</h3>
-                        <p>Tell us what works and what doesn't. Your input shapes what we build next.</p>
+                        <h3>Discounted for Life</h3>
+                        <p>After the free year, you'll get a permanent discounted rate as a thank you for helping us build the platform.</p>
                     </div>
                 </div>
 
-                <div class="early-access-preview reveal">
-                    <div class="image-carousel image-carousel-wide" data-real-image="images/platform-preview.png" data-carousel='["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&h=600&q=80","https://images.unsplash.com/photo-1560185127-6ed6e3e1d7b7?auto=format&fit=crop&w=1400&h=600&q=80","https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&h=600&q=80"]'>
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&h=600&q=80" alt="HOMEi Property Management platform preview" class="carousel-img">
-                    </div>
+                <div class="trial-highlight reveal">
+                    <p>All we ask is that you use the platform and give us your honest feedback. What works, what doesn't, what you'd like to see next. Your input directly shapes what we build.</p>
                 </div>
 
                 <div class="section-cta reveal">
                     <a href="#contact" class="btn btn-primary btn-lg">
-                        Sign Up for Free Beta
+                        Claim Your Free Trial Spot
                         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
@@ -486,7 +645,7 @@
         </section>
 
         <!-- FAQ -->
-        <section id="faq" class="section bg-white">
+        <section id="faq" class="section bg-slate">
             <div class="container">
                 <div class="section-header reveal">
                     <p class="section-label">Frequently Asked Questions</p>
@@ -494,7 +653,7 @@
                 </div>
 
                 <div class="faq-list">
-                    <div class="faq-item reveal">
+                    <div class="faq-item reveal" id="faq-free">
                         <button class="faq-question" aria-expanded="false">
                             <span>Is it really free?</span>
                             <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -502,10 +661,10 @@
                             </svg>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes. During the beta period the platform is completely free to use. No credit card, no hidden fees. We want landlords and agents to try it, give us feedback, and help us get it right before we set pricing.</p>
+                            <p>Yes. The first 50 landlords who sign up get a completely free 1-year trial. No credit card, no hidden fees. After the trial year, early adopters get a discounted rate as a thank you for helping us shape the platform.</p>
                         </div>
                     </div>
-                    <div class="faq-item reveal">
+                    <div class="faq-item reveal" id="faq-homei-app">
                         <button class="faq-question" aria-expanded="false">
                             <span>What is HOMEi, the Shared Household Organiser?</span>
                             <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -516,7 +675,7 @@
                             <p>HOMEi is a mobile app that helps tenants organise their shared household. It handles things like bills, cleaning rotas and shopping lists. It's also where tenants complete inspections, report maintenance and communicate with their landlord through HOMEi Property Management. <a href="https://homeistudent.com" target="_blank" rel="noopener" class="inline-link">Learn more about the HOMEi app here</a>.</p>
                         </div>
                     </div>
-                    <div class="faq-item reveal">
+                    <div class="faq-item reveal" id="faq-inspections">
                         <button class="faq-question" aria-expanded="false">
                             <span>How do tenant inspections work?</span>
                             <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -527,7 +686,7 @@
                             <p>You request an inspection from your dashboard. Each tenant receives a guided checklist through the HOMEi app asking them to photograph their rooms and note any issues. Their individual reports are combined to give you a full picture of the property's condition, without you needing to visit.</p>
                         </div>
                     </div>
-                    <div class="faq-item reveal">
+                    <div class="faq-item reveal" id="faq-maintenance">
                         <button class="faq-question" aria-expanded="false">
                             <span>Can tenants report maintenance issues?</span>
                             <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -538,7 +697,7 @@
                             <p>Yes. Tenants submit maintenance requests through the HOMEi app with photos and a description of the problem. You see the request on your dashboard and can track its progress from reported to resolved.</p>
                         </div>
                     </div>
-                    <div class="faq-item reveal">
+                    <div class="faq-item reveal" id="faq-install">
                         <button class="faq-question" aria-expanded="false">
                             <span>Do I need to install any software?</span>
                             <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -549,7 +708,7 @@
                             <p>No. HOMEi Property Management runs entirely in your web browser. You can access it from your laptop, tablet or phone. Your tenants use the HOMEi mobile app, which is a free download.</p>
                         </div>
                     </div>
-                    <div class="faq-item reveal">
+                    <div class="faq-item reveal" id="faq-uk">
                         <button class="faq-question" aria-expanded="false">
                             <span>Is this just for the UK?</span>
                             <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -560,21 +719,31 @@
                             <p>For now, yes. We're building HOMEi Property Management specifically for UK landlords, estate agents and letting agents. We may expand to other markets in the future.</p>
                         </div>
                     </div>
+                    <div class="faq-item reveal" id="faq-after-trial">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What happens after the free year?</span>
+                            <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>After your free trial year, you'll move to a discounted rate that's locked in permanently. As an early adopter who helped shape the platform, you'll always pay less than the standard price. We'll share pricing details before your trial ends so there are no surprises.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact / Sign Up -->
-        <section id="contact" class="section bg-slate">
+        <section id="contact" class="section bg-white">
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-info reveal">
-                        <p class="section-label">Get in Touch</p>
-                        <h2 class="section-title" style="text-align:left;">Sign Up for Free Beta Access</h2>
+                        <p class="section-label">Get Started</p>
+                        <h2 class="section-title" style="text-align:left;">Claim Your Free 1-Year Trial</h2>
                         <p class="contact-description">
                             Whether you manage 2 properties or 200, we'd like to hear from you.
-                            Sign up for free beta access, ask us a question, or tell us what features
-                            you'd find most useful.
+                            Be one of the first 50 landlords to get full access, free for a whole year.
                         </p>
 
                         <div class="contact-highlights">
@@ -582,19 +751,25 @@
                                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
-                                <span>Free during beta, no credit card</span>
+                                <span>Free for 1 year, no credit card</span>
+                            </div>
+                            <div class="contact-highlight">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Discounted rate locked in after trial</span>
+                            </div>
+                            <div class="contact-highlight">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Only 50 spots available</span>
                             </div>
                             <div class="contact-highlight">
                                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
                                 <span>Your feedback shapes the product</span>
-                            </div>
-                            <div class="contact-highlight">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Early access before public launch</span>
                             </div>
                         </div>
 
@@ -616,17 +791,11 @@
                     <div class="contact-form-wrapper reveal">
                         <form id="form" class="contact-form" method="POST">
                             <input type="hidden" name="access_key" value="a1ac79e5-9df0-46b7-8379-d913a8a74b11">
-                            <input type="hidden" name="subject" value="New sign-up from HOMEi Property Management website">
+                            <input type="hidden" name="subject" value="New trial sign-up from HOMEi PM website">
 
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name</label>
-                                    <input type="text" id="firstName" name="firstName" required placeholder="John">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name</label>
-                                    <input type="text" id="lastName" name="lastName" required placeholder="Smith">
-                                </div>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Smith">
                             </div>
 
                             <div class="form-group">
@@ -646,27 +815,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="propertyCount">Number of Properties</label>
-                                <select id="propertyCount" name="propertyCount">
-                                    <option value="">Select a range</option>
-                                    <option value="1-10">1 - 10</option>
-                                    <option value="11-50">11 - 50</option>
-                                    <option value="51-200">51 - 200</option>
-                                    <option value="200+">200+</option>
-                                </select>
+                                <label for="feedback">What features would you find most useful? (optional)</label>
+                                <textarea id="feedback" name="feedback" rows="3" placeholder="Tell us what your biggest challenges are and what you'd like the platform to do..."></textarea>
                             </div>
 
-                            <div class="form-group">
-                                <label for="features">What features matter most to you? (optional)</label>
-                                <textarea id="features" name="features" rows="2" placeholder="e.g. inspections, maintenance tracking, tenant messaging..."></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Anything else? (optional)</label>
-                                <textarea id="message" name="message" rows="2" placeholder="Questions, suggestions, or just say hello..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-full">Sign Up for Free Beta</button>
+                            <button type="submit" class="btn btn-primary btn-full">Claim Your Free Trial Spot</button>
 
                             <p class="form-disclaimer">
                                 We'll only use your details to contact you about HOMEi Property
@@ -685,10 +838,10 @@
         <div class="footer-cta">
             <div class="container footer-cta-inner">
                 <div class="footer-cta-content">
-                    <h3>Ready to simplify your property management?</h3>
-                    <p>Sign up for free beta access and be the first to try HOMEi Property Management.</p>
+                    <h3>Only 50 free trial spots. Don't miss out.</h3>
+                    <p>1 year free. Discounted for life. All we need is your feedback.</p>
                 </div>
-                <a href="#contact" class="btn btn-white">Sign Up Free</a>
+                <a href="#contact" class="btn btn-white">Claim Your Spot</a>
             </div>
         </div>
 
@@ -696,10 +849,6 @@
             <div class="container footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <!--
-                            FOOTER LOGO:
-                            <img src="images/logo-light.png" alt="HOMEi Property Management" class="logo-img">
-                        -->
                         <div class="logo-fallback">
                             <div class="logo-icon logo-icon-accent">H</div>
                             <span class="logo-text text-white">HOMEi <span class="logo-accent-light">PM</span></span>
@@ -709,6 +858,15 @@
                         Web-based inspection, maintenance and communication
                         software for UK landlords and estate agents.
                     </p>
+
+                    <!-- Footer Email Capture -->
+                    <div class="footer-email-capture">
+                        <p class="footer-email-label">Not ready to sign up? Get notified when we launch.</p>
+                        <form class="footer-email-form" id="footerEmailForm">
+                            <input type="email" name="email" placeholder="Your email address" required aria-label="Email address for launch notification">
+                            <button type="submit" class="btn btn-primary btn-sm">Notify Me</button>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="footer-links-group">
@@ -725,7 +883,7 @@
                 <div class="footer-links-group">
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="#contact">Sign Up for Beta</a></li>
+                        <li><a href="#contact">Claim Free Trial</a></li>
                         <li><a href="https://homeistudent.com" target="_blank" rel="noopener">HOMEi App</a></li>
                         <li>support@homeistudent.com</li>
                     </ul>
@@ -739,6 +897,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="mobile-cta-bar" id="mobileCta">
+        <span class="mobile-cta-text">Be one of the first to trial HOMEi PM</span>
+        <a href="#contact" class="btn btn-primary btn-sm">Sign Up Free</a>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal hidden" id="successModal">
+        <div class="success-modal-overlay" id="successModalClose"></div>
+        <div class="success-modal-content">
+            <div class="success-icon">
+                <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </div>
+            <h2>You're in! Welcome aboard.</h2>
+            <p>Thanks for signing up to trial HOMEi Property Management. You're one of the first landlords to get access and we're genuinely excited to have you on board.</p>
+            <p class="success-detail">We'll be in touch soon with your login details and everything you need to get started. Keep an eye on your inbox.</p>
+            <button class="btn btn-primary btn-lg" id="successModalBtn">Got it, thanks!</button>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
