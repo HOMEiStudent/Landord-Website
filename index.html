@@ -10,6 +10,10 @@
     <meta property="og:title" content="HOMEi Property Management | UK Landlord &amp; Estate Agent Software">
     <meta property="og:description" content="Manage inspections, maintenance and tenant communication from one web-based platform. Built for UK landlords and estate agents.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://homeistudent.github.io/Website-Test/images/og-image.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="canonical" href="https://homeistudent.github.io/Website-Test/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,11 +106,8 @@
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container navbar-inner">
-            <a href="#" class="logo">
-                <!--
-                    LOGO: Place file at images/logo.png
-                    <img src="images/logo.png" alt="HOMEi Property Management - UK landlord and estate agent software" class="logo-img">
-                -->
+            <a href="#" class="logo" id="navLogo">
+                <img src="images/logo.png" alt="HOMEi Property Management" class="logo-img" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
                 <div class="logo-fallback">
                     <div class="logo-icon">H</div>
                     <span class="logo-text">HOMEi <span class="logo-accent">Property Management</span></span>
@@ -1036,7 +1037,8 @@
         <div class="footer-main">
             <div class="container footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
+                    <a href="#" class="logo" id="footerLogo">
+                        <img src="images/logo-light.png" alt="HOMEi Property Management" class="logo-img" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
                         <div class="logo-fallback">
                             <div class="logo-icon logo-icon-accent">H</div>
                             <span class="logo-text text-white">HOMEi <span class="logo-accent-light">PM</span></span>
