@@ -48,82 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
         revealObserver.observe(el);
     });
 
-    // ===== Image carousels with auto-swap to real images =====
-    var carousels = document.querySelectorAll('.image-carousel');
-
-    carousels.forEach(function(container) {
-        var img = container.querySelector('.carousel-img');
-        var realImagePath = container.dataset.realImage;
-        var placeholderImages = [];
-
-        try {
-            placeholderImages = JSON.parse(container.dataset.carousel);
-        } catch (e) {
-            return;
-        }
-
-        if (!img || placeholderImages.length === 0) return;
-
-        var currentIndex = 0;
-        var intervalId = null;
-        var usingRealImage = false;
-
-        // Try loading the real image
-        function checkRealImage() {
-            if (!realImagePath) return;
-
-            var testImg = new Image();
-            testImg.onload = function() {
-                // Real image exists, use it and stop carousel
-                usingRealImage = true;
-                if (intervalId) {
-                    clearInterval(intervalId);
-                    intervalId = null;
-                }
-                img.style.opacity = '0';
-                setTimeout(function() {
-                    img.src = realImagePath;
-                    img.style.opacity = '1';
-                }, 300);
-            };
-            testImg.onerror = function() {
-                // Real image not found, start carousel if not already running
-                if (!intervalId && !usingRealImage) {
-                    startCarousel();
-                }
-            };
-            testImg.src = realImagePath + '?t=' + Date.now();
-        }
-
-        // Cycle through placeholder images
-        function startCarousel() {
-            if (placeholderImages.length <= 1) return;
-
-            intervalId = setInterval(function() {
-                if (usingRealImage) {
-                    clearInterval(intervalId);
-                    return;
-                }
-                currentIndex = (currentIndex + 1) % placeholderImages.length;
-                img.style.opacity = '0';
-                setTimeout(function() {
-                    img.src = placeholderImages[currentIndex];
-                    img.style.opacity = '1';
-                }, 400);
-            }, 5000);
-        }
-
-        // Initial check
-        checkRealImage();
-
-        // Re-check for real image every 30 seconds
-        setInterval(function() {
-            if (!usingRealImage) {
-                checkRealImage();
-            }
-        }, 30000);
-    });
-
     // ===== FAQ accordion =====
     var faqItems = document.querySelectorAll('.faq-item');
 
@@ -147,9 +71,85 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // ===== Poll functionality =====
+    var pollGrid = document.getElementById('pollGrid');
+    var pollFollowup = document.getElementById('pollFollowup');
+    var pollSelectedValue = document.getElementById('pollSelectedValue');
+    var selectedChallenges = [];
+
+    if (pollGrid) {
+        var pollOptions = pollGrid.querySelectorAll('.poll-option');
+
+        pollOptions.forEach(function(option) {
+            option.addEventListener('click', function() {
+                var value = option.dataset.value;
+                option.classList.toggle('selected');
+
+                if (option.classList.contains('selected')) {
+                    selectedChallenges.push(value);
+                } else {
+                    selectedChallenges = selectedChallenges.filter(function(v) { return v !== value; });
+                }
+
+                if (selectedChallenges.length > 0) {
+                    pollFollowup.classList.remove('hidden');
+                    pollSelectedValue.value = selectedChallenges.join('; ');
+                } else {
+                    pollFollowup.classList.add('hidden');
+                    pollSelectedValue.value = '';
+                }
+            });
+        });
+
+        // Poll form submission via Web3Forms
+        var pollForm = document.getElementById('pollForm');
+        if (pollForm) {
+            pollForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                var pollBtn = pollForm.querySelector('button[type="submit"]');
+                var originalText = pollBtn.textContent;
+                pollBtn.textContent = 'Sending...';
+                pollBtn.disabled = true;
+
+                var formData = new FormData(pollForm);
+
+                try {
+                    var response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    var data = await response.json();
+
+                    if (response.ok) {
+                        pollBtn.textContent = 'Thanks!';
+                        pollBtn.style.background = '#059669';
+                        pollForm.reset();
+                        setTimeout(function() {
+                            pollFollowup.classList.add('hidden');
+                            selectedChallenges = [];
+                            pollOptions.forEach(function(opt) { opt.classList.remove('selected'); });
+                            pollBtn.textContent = originalText;
+                            pollBtn.style.background = '';
+                            pollBtn.disabled = false;
+                        }, 3000);
+                    } else {
+                        pollBtn.textContent = originalText;
+                        pollBtn.disabled = false;
+                    }
+                } catch (error) {
+                    pollBtn.textContent = originalText;
+                    pollBtn.disabled = false;
+                }
+            });
+        }
+    }
+
     // ===== Web3Forms contact form submission =====
     var form = document.getElementById('form');
     var submitBtn = form.querySelector('button[type="submit"]');
+    var successModal = document.getElementById('successModal');
+    var successModalClose = document.getElementById('successModalClose');
+    var successModalBtn = document.getElementById('successModalBtn');
 
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -168,25 +168,68 @@ document.addEventListener('DOMContentLoaded', function() {
             var data = await response.json();
 
             if (response.ok) {
-                submitBtn.textContent = "Sent!";
-                submitBtn.style.background = "#059669";
                 form.reset();
-                setTimeout(function() {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.background = "";
-                    submitBtn.disabled = false;
-                }, 3000);
+                // Show success modal
+                if (successModal) {
+                    successModal.classList.remove('hidden');
+                }
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             } else {
-                alert("Error: " + data.message);
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             }
         } catch (error) {
-            alert("Something went wrong. Please try again.");
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }
     });
+
+    // Close success modal
+    function closeModal() {
+        if (successModal) {
+            successModal.classList.add('hidden');
+        }
+    }
+
+    if (successModalClose) {
+        successModalClose.addEventListener('click', closeModal);
+    }
+
+    if (successModalBtn) {
+        successModalBtn.addEventListener('click', closeModal);
+    }
+
+    // ===== Sticky mobile CTA =====
+    var mobileCta = document.getElementById('mobileCta');
+    var contactSection = document.getElementById('contact');
+
+    if (mobileCta && contactSection) {
+        var mobileCtaObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    // Hide when contact form is visible
+                    mobileCta.classList.add('hidden');
+                } else {
+                    // Show when scrolled past hero but contact not visible
+                    if (window.scrollY > 400) {
+                        mobileCta.classList.remove('hidden');
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        mobileCtaObserver.observe(contactSection);
+
+        // Also show/hide based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.scrollY < 400) {
+                mobileCta.classList.add('hidden');
+            }
+        });
+    }
 
     // ===== Copyright year =====
     document.getElementById('copyright').textContent =
