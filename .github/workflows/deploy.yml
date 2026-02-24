@@ -3,7 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - claude/landlord-marketing-site-8cnXE
       - main
 
 permissions:
