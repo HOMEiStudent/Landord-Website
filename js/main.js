@@ -146,44 +146,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== Web3Forms contact form submission =====
     var form = document.getElementById('form');
-    var submitBtn = form.querySelector('button[type="submit"]');
     var successModal = document.getElementById('successModal');
     var successModalClose = document.getElementById('successModalClose');
     var successModalBtn = document.getElementById('successModalBtn');
 
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        var formData = new FormData(form);
-        formData.append("access_key", "a1ac79e5-9df0-46b7-8379-d913a8a74b11");
+    if (form) {
+        var submitBtn = form.querySelector('button[type="submit"]');
+        var formError = document.getElementById('formError');
 
-        var originalText = submitBtn.textContent;
-        submitBtn.textContent = "Sending...";
-        submitBtn.disabled = true;
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
 
-        try {
-            var response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
-            var data = await response.json();
+            // Hide any previous error
+            if (formError) formError.classList.add('hidden');
 
-            if (response.ok) {
-                form.reset();
-                // Show success modal
-                if (successModal) {
-                    successModal.classList.remove('hidden');
+            var formData = new FormData(form);
+
+            var originalText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+
+            try {
+                var response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+                var data = await response.json();
+
+                if (data.success) {
+                    form.reset();
+                    // Show success modal
+                    if (successModal) {
+                        successModal.classList.remove('hidden');
+                    }
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                } else {
+                    // Show error message
+                    if (formError) formError.classList.remove('hidden');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
                 }
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            } else {
+            } catch (error) {
+                // Show error message on network failure
+                if (formError) formError.classList.remove('hidden');
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             }
-        } catch (error) {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }
-    });
+        });
+    }
 
     // Close success modal
     function closeModal() {

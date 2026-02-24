@@ -1236,6 +1236,17 @@ img {
     resize: none;
 }
 
+.form-error {
+    font-size: 0.8125rem;
+    color: #dc2626;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0.75rem;
+    background: #fef2f2;
+    border-radius: 0.5rem;
+    border: 1px solid #fecaca;
+}
+
 .form-disclaimer {
     font-size: 0.75rem;
     color: var(--slate-400);

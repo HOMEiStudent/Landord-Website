@@ -762,9 +762,10 @@
 
                     <div class="poll-followup hidden" id="pollFollowup">
                         <p class="poll-followup-label">Thanks for sharing. Could you tell us a bit more?</p>
-                        <form id="pollForm" class="poll-form">
+                        <form id="pollForm" class="poll-form" method="POST" action="https://api.web3forms.com/submit">
                             <input type="hidden" name="access_key" value="a1ac79e5-9df0-46b7-8379-d913a8a74b11">
                             <input type="hidden" name="subject" value="Poll feedback from HOMEi PM website">
+                            <input type="hidden" name="redirect" value="https://homeistudent.github.io/Website-Test/?poll-submitted=true">
                             <input type="hidden" name="selected_challenges" id="pollSelectedValue" value="">
                             <div class="form-group">
                                 <textarea name="detailed_feedback" rows="3" placeholder="What does this look like day-to-day for you? What would help most?"></textarea>
@@ -978,9 +979,10 @@
                     </div>
 
                     <div class="contact-form-wrapper reveal">
-                        <form id="form" class="contact-form" method="POST">
+                        <form id="form" class="contact-form" method="POST" action="https://api.web3forms.com/submit">
                             <input type="hidden" name="access_key" value="a1ac79e5-9df0-46b7-8379-d913a8a74b11">
                             <input type="hidden" name="subject" value="New trial sign-up from HOMEi PM website">
+                            <input type="hidden" name="redirect" value="https://homeistudent.github.io/Website-Test/?submitted=true">
 
                             <div class="form-group">
                                 <label for="name">Your Name</label>
@@ -1009,6 +1011,8 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-full">Register Your Interest</button>
+
+                            <p class="form-error hidden" id="formError">Something went wrong. Please try again or email us directly at support@homeistudent.com</p>
 
                             <p class="form-disclaimer">
                                 We'll only use your details to contact you about HOMEi Property
