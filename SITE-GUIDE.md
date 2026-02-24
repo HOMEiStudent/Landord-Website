@@ -241,53 +241,53 @@ Line 925 — Answer
 
 **To add a new FAQ:** Copy an existing `<div class="faq-item">` block and paste it before the closing `</div>` of the `faq-list`. Change the question and answer text.
 
-### Contact / Sign Up Form (Lines 933-1021)
+### Contact / Sign Up Form (Lines 934-1025)
 
 ```
-Line 937 — Section label ("Get Started")
-Line 938 — Section title ("Register Your Interest")
-Lines 939-942 — Description
+Line 938 — Section label ("Get Started")
+Line 939 — Section title ("Register Your Interest")
+Lines 940-942 — Description
 Line 949 — Highlight 1 ("Free for 1 year as an early adopter")
 Line 955 — Highlight 2 ("Preferential pricing after the trial")
 Line 961 — Highlight 3 ("Your feedback shapes the product")
 Line 973 — Email label ("Email Us")
 Line 974 — Email address
-Line 1011 — Submit button text
-Lines 1013-1016 — Privacy disclaimer text
+Line 1013 — Submit button text
+Lines 1017-1020 — Privacy disclaimer text
 ```
 
-**Form fields** (lines 984-1009): Change the `<label>` text and `placeholder` attributes to update what the user sees.
+**Form fields** (lines 987-1011): Change the `<label>` text and `placeholder` attributes to update what the user sees.
 
-### Footer (Lines 1024-1090)
+### Footer (Lines 1030-1090)
 
 ```
-Line 1030 — Footer CTA heading
-Line 1031 — Footer CTA description
-Line 1033 — Footer CTA button text
-Lines 1046-1048 — Brand description
-Line 1052 — Footer contact label
-Line 1053 — Footer contact email
-Lines 1060-1066 — Platform links
-Lines 1071-1075 — Connect links
+Line 1034 — Footer CTA heading
+Line 1035 — Footer CTA description
+Line 1037 — Footer CTA button text
+Lines 1050-1052 — Brand description
+Line 1056 — Footer contact label
+Line 1057 — Footer contact email
+Lines 1064-1070 — Platform links
+Lines 1075-1079 — Connect links
 ```
 
-### Mobile CTA (Line 1091)
+### Mobile CTA (Line 1095)
 
 The sticky button bar that appears on mobile devices when scrolling.
 
 ```
-Line 1091 — Button text ("Get Started with HOMEi PM")
+Line 1095 — Button text ("Get Started with HOMEi PM")
 ```
 
-### Success Modal (Lines 1098-1112)
+### Success Modal (Lines 1102-1116)
 
 Shown after someone submits the contact form.
 
 ```
-Line 1107 — Heading ("You're in! Welcome aboard.")
-Line 1108 — Main message
-Line 1109 — Secondary message
-Line 1110 — Button text ("Got it, thanks!")
+Line 1111 — Heading ("You're in! Welcome aboard.")
+Line 1112 — Main message
+Line 1113 — Secondary message
+Line 1114 — Button text ("Got it, thanks!")
 ```
 
 ---
