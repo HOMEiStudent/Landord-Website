@@ -31,6 +31,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // ===== Active section highlighting in nav =====
+    var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    var navSectionMap = {};
+    navAnchors.forEach(function(a) {
+        var id = a.getAttribute('href').slice(1);
+        if (id) navSectionMap[id] = a;
+    });
+    var navSections = Object.keys(navSectionMap)
+        .map(function(id) { return document.getElementById(id); })
+        .filter(Boolean);
+
+    if (navSections.length) {
+        var sectionObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var link = navSectionMap[entry.target.id];
+                if (!link) return;
+                if (entry.isIntersecting) {
+                    navAnchors.forEach(function(a) { a.classList.remove('active'); });
+                    link.classList.add('active');
+                }
+            });
+        }, {
+            rootMargin: '-40% 0px -55% 0px',
+            threshold: 0
+        });
+
+        navSections.forEach(function(s) { sectionObserver.observe(s); });
+    }
+
     // ===== Scroll reveal animations =====
     var reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
     var revealObserver = new IntersectionObserver(function(entries) {
