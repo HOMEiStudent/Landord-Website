@@ -81,6 +81,35 @@ img {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
 /* ===== Container ===== */
 .container {
     max-width: 1200px;
@@ -137,7 +166,17 @@ img {
 }
 
 .btn:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px) scale(0.97);
+    transition-duration: 0.1s;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--accent-400);
+    outline-offset: 2px;
 }
 
 .btn-primary {
@@ -147,7 +186,10 @@ img {
 }
 .btn-primary:hover {
     background: var(--accent-600);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 8px 24px rgba(249, 115, 22, 0.35);
+}
+.btn-primary:active {
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.2);
 }
 
 .btn-outline {
@@ -159,6 +201,10 @@ img {
     border-color: var(--accent-400);
     background: var(--accent-50);
     color: var(--accent-600);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.1);
+}
+.btn-outline:active {
+    box-shadow: none;
 }
 
 .btn-outline-light {
@@ -208,12 +254,13 @@ img {
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s, background 0.3s;
+    transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s, border-color 0.4s;
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.97);
-    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-bottom-color: transparent;
 }
 
 .navbar-inner {
@@ -799,12 +846,13 @@ img {
     border: 1px solid var(--slate-200);
     border-radius: 1rem;
     padding: 2rem;
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s;
 }
 
 .benefit-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--accent-200);
 }
 
 .benefit-icon {
@@ -854,11 +902,14 @@ img {
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
-    transition: background 0.3s;
+    transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s, box-shadow 0.35s;
 }
 
 .ecosystem-card:hover {
     background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+    border-color: rgba(249, 115, 22, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .ecosystem-icon {
@@ -994,12 +1045,13 @@ img {
     border-radius: 1rem;
     padding: 2rem;
     border: 1px solid var(--slate-200);
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s;
 }
 
 .early-access-card:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--accent-200);
 }
 
 .early-access-card h3 {
@@ -1220,16 +1272,31 @@ img {
     border-radius: 0.625rem;
     font-size: 0.875rem;
     font-family: inherit;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    transition: box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s, background 0.25s;
     outline: none;
     background: var(--white);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: var(--slate-300);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: var(--accent-400);
-    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+    background: #FFFCF8;
+}
+
+.form-group label {
+    transition: color 0.2s;
+}
+
+.form-group:focus-within label {
+    color: var(--accent-600);
 }
 
 .form-group textarea {

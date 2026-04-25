@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ===== Scroll reveal animations =====
-    var reveals = document.querySelectorAll('.reveal');
+    var reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
     var revealObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
