@@ -2199,6 +2199,55 @@ img {
     .desktop-cta-bar { display: none !important; }
 }
 
+/* ===== Testimonials (hidden until populated) ===== */
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.testimonial-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.testimonial-quote p {
+    font-size: 0.9375rem;
+    color: var(--navy-800);
+    font-style: italic;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.testimonial-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--navy-900);
+}
+
+.testimonial-role {
+    font-size: 0.8125rem;
+    color: var(--slate-500);
+}
+
 /* ===== Mobile Responsive Additions ===== */
 @media (max-width: 767px) {
     .trust-badge-card { padding: 1.5rem; }
