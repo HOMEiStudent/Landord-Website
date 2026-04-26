@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOMEi Property Management | Inspection, Maintenance &amp; Communication Software for UK Landlords</title>
-    <meta name="description" content="HOMEi Property Management helps UK landlords and estate agents manage property inspections, tenant maintenance requests and communication from one web-based platform.">
-    <meta name="keywords" content="property management software UK, landlord inspection software, tenant maintenance reporting, estate agent communication, property inspection platform, HOMEi, UK letting agent tools">
+    <title>HOMEi PM — Renters' Rights Act Software for UK Landlords | Free Trial</title>
+    <meta name="description" content="HOMEi PM is building Renters' Rights Act-ready property management software for UK landlords. Automated inspections, Section 13 tracking, maintenance reporting and tenant communication. Join the free early-adopter pilot.">
+    <meta name="keywords" content="property management software UK, Renters Rights Act compliance, landlord inspection software, Section 13 rent increase tracker, Section 8 evidence, tenant maintenance reporting, property inspection platform, HOMEi, UK letting agent tools, Section 4A periodic tenancy">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="HOMEi Property Management | UK Landlord &amp; Estate Agent Software">
-    <meta property="og:description" content="Manage inspections, maintenance and tenant communication from one web-based platform. Built for UK landlords and estate agents.">
+    <meta property="og:title" content="HOMEi PM | Renters' Rights Act-Ready Software for UK Landlords">
+    <meta property="og:description" content="Property management software being built for the Renters' Rights Act era. Inspections, Section 13 tracking, maintenance and communication — free pilot for early adopters.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://homeistudent.uk/images/og-image.png">
     <meta property="og:url" content="https://homeistudent.uk">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HOMEi Property Management | UK Landlord & Estate Agent Software">
-    <meta name="twitter:description" content="Manage inspections, maintenance and tenant communication from one web-based platform. Built for UK landlords and estate agents.">
+    <meta name="twitter:title" content="HOMEi PM | Renters' Rights Act-Ready Software for UK Landlords">
+    <meta name="twitter:description" content="Property management software being built for the Renters' Rights Act era. Inspections, Section 13 tracking, maintenance and communication — free pilot for early adopters.">
     <meta name="twitter:image" content="https://homeistudent.uk/images/og-image.png">
     <meta name="theme-color" content="#F97316">
     <link rel="alternate" hreflang="en-GB" href="https://homeistudent.uk">
@@ -103,12 +103,65 @@
                     "@type": "Answer",
                     "text": "For now, yes. We're building HOMEi Property Management specifically for UK landlords, estate agents and letting agents. We may expand to other markets in the future."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "How will HOMEi help me comply with the Renters' Rights Act?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We're building Renters' Rights Act compliance tools directly into the platform. This includes tracking Section 13 rent increases, building Section 8 evidence packs, managing Section 4A student notices, storing termination notices, and delivering prescribed information sheets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does early adopter status include?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Early adopter status includes a free year of access to HOMEi PM, free 1:1 onboarding with the founder, full setup support, and direct input into what gets built. After the free year, you get permanently discounted pricing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "I'm a student landlord — does HOMEi handle Section 4A notices?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Student landlords must serve possession notices between 1 May and 30 July with a minimum 4 months' notice. HOMEi will alert you when the notice window opens, track your deadlines, and help you avoid missing the window."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When will the platform be fully launched?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HOMEi PM is in active development. Rather than waiting for a single launch date, early adopters get progressive access as features are built and tested. Your feedback directly shapes what gets prioritised."
+                }
             }
         ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HOMEi",
+        "url": "https://homeistudent.uk",
+        "logo": "https://homeistudent.uk/images/logo.png",
+        "description": "HOMEi builds property management and shared household technology for the UK rental market.",
+        "founder": {
+            "@type": "Person",
+            "name": "James"
+        },
+        "foundingDate": "2024"
+    }
+    </script>
 </head>
 <body>
+
+    <!-- Skip to content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
@@ -124,6 +177,7 @@
             <div class="nav-links" id="navLinks">
                 <a href="#features">Features</a>
                 <a href="#inspections">Inspections</a>
+                <a href="#rra">RRA Compliance</a>
                 <a href="#why-homei">Why HOMEi</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
@@ -131,7 +185,7 @@
 
             <div class="nav-cta">
                 <a href="https://homeistudent.com" target="_blank" rel="noopener" class="btn btn-outline btn-sm">HOMEi App</a>
-                <a href="#contact" class="btn btn-primary">Get Started</a>
+                <a href="#contact" class="btn btn-primary">Claim Free Year</a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
@@ -147,25 +201,26 @@
         <div class="mobile-menu hidden" id="mobileMenu">
             <a href="#features" class="mobile-link">Features</a>
             <a href="#inspections" class="mobile-link">Inspections</a>
+            <a href="#rra" class="mobile-link">RRA Compliance</a>
             <a href="#why-homei" class="mobile-link">Why HOMEi</a>
             <a href="#faq" class="mobile-link">FAQ</a>
             <a href="#contact" class="mobile-link">Contact</a>
             <a href="https://homeistudent.com" target="_blank" rel="noopener" class="mobile-link">HOMEi App</a>
-            <a href="#contact" class="btn btn-primary mobile-cta">Get Started</a>
+            <a href="#contact" class="btn btn-primary mobile-cta">Claim Your Free Year of Early Access</a>
         </div>
     </nav>
 
-    <!-- Social Proof Counter (hidden until 30+ signups - toggle by removing .hidden) -->
-    <div class="social-proof hidden" id="socialProof">
+    <!-- Scarcity Bar -->
+    <div class="social-proof" id="socialProof">
         <div class="container social-proof-inner">
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            <p><strong id="signupCount">0</strong> landlords have signed up so far</p>
+            <p><strong>Limited pilot places</strong> — Only accepting 50 landlords for our free early-adopter programme</p>
         </div>
     </div>
 
-    <main>
+    <main id="main-content">
 
         <!-- Hero -->
         <section class="hero">
@@ -174,7 +229,7 @@
                 <div class="hero-content">
                     <div class="badge reveal">
                         <span class="badge-dot"></span>
-                        <span class="badge-text">Now Accepting Early Adopters</span>
+                        <span class="badge-text">In Development — Pilot Opening Soon</span>
                     </div>
 
                     <h1 class="hero-title reveal">
@@ -183,17 +238,17 @@
                     </h1>
 
                     <p class="hero-description reveal">
-                        Thank you for your interest in HOMEi Property Management. We're inviting
-                        a small group of landlords and estate agents to trial the platform
-                        <strong>for free for 1 year</strong>. Manage inspections, maintenance requests
-                        and tenant communication from one place, connected to
+                        We're building property management software designed for the
+                        <strong>Renters' Rights Act era</strong>. Manage inspections, track Section 13
+                        rent increases, handle maintenance requests and communicate with tenants —
+                        all from one platform, connected to
                         <a href="https://homeistudent.com" target="_blank" rel="noopener" class="inline-link">HOMEi, the Shared Household Organiser</a>.
-                        All we ask in return is your honest feedback.
+                        We're inviting <strong>50 landlords to pilot it free for 1 year</strong>.
                     </p>
 
                     <div class="hero-actions reveal">
                         <a href="#contact" class="btn btn-primary btn-lg">
-                            Get Started with HOMEi PM
+                            Claim Your Free Year of Early Access
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
@@ -204,15 +259,15 @@
                     <div class="trust-indicators reveal">
                         <div class="trust-item">
                             <p class="trust-stat">Free for 1 Year</p>
-                            <p class="trust-label">For early adopters</p>
+                            <p class="trust-label">50 pilot places</p>
                         </div>
                         <div class="trust-item">
-                            <p class="trust-stat">100% Web-Based</p>
-                            <p class="trust-label">Nothing to install</p>
+                            <p class="trust-stat">RRA-Ready</p>
+                            <p class="trust-label">Built for new legislation</p>
                         </div>
                         <div class="trust-item">
-                            <p class="trust-stat">UK Focused</p>
-                            <p class="trust-label">Built for UK lettings</p>
+                            <p class="trust-stat">1,200+ Students</p>
+                            <p class="trust-label">Already on the HOMEi app</p>
                         </div>
                     </div>
                 </div>
@@ -284,6 +339,57 @@
             </div>
         </section>
 
+        <!-- About / Trust Section -->
+        <section id="about" class="section bg-white">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-label">Who We Are</p>
+                    <h2 class="section-title">Built by People Who Understand Property</h2>
+                    <p class="section-description">
+                        Sheffield-based, backed by Emerge — the University of Sheffield's startup incubator.
+                        We're a small, focused team building tools that make the UK rental experience better
+                        for landlords and tenants alike. We're currently working with university accommodation
+                        providers and letting agents in early co-design partnerships.
+                    </p>
+                </div>
+
+                <div class="trust-badges-row reveal">
+                    <div class="trust-badge-card">
+                        <div class="trust-badge-icon">
+                            <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h4>Sheffield-Based, Backed by Emerge</h4>
+                        <p>HOMEi is supported by Emerge — the University of Sheffield's startup incubator — backing early-stage proptech ventures.</p>
+                    </div>
+                    <div class="trust-badge-card">
+                        <div class="trust-badge-icon">
+                            <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <h4>Founded by James</h4>
+                        <p>MSc in Real Estate and former HMO manager who has lived the problems HOMEi solves. Now building the tools he always wished he had.</p>
+                    </div>
+                    <div class="trust-badge-card">
+                        <div class="trust-badge-icon">
+                            <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <h4>1,200+ Student Users</h4>
+                        <p>Since launching in Sheffield in September 2025, the HOMEi household organiser app has built up over 1,200 active student users — a ready-made tenant network.</p>
+                    </div>
+                </div>
+
+                <blockquote class="founder-quote reveal">
+                    <p>"I've worked in HMO management for years and felt the same frustrations every landlord deals with. HOMEi is the system I always wished I had. We're building it with landlords, not for them — and I'd love for you to be part of it."</p>
+                    <cite>— James, Founder</cite>
+                </blockquote>
+            </div>
+        </section>
+
         <!-- Features -->
         <section id="features" class="section bg-white">
             <div class="container">
@@ -291,8 +397,9 @@
                     <p class="section-label">Platform Features</p>
                     <h2 class="section-title">Everything You Need in One Place</h2>
                     <p class="section-description">
-                        Inspections, maintenance tracking and tenant communication, all
-                        managed from your browser. Here's what the platform does.
+                        Inspections, maintenance tracking, Renters' Rights Act compliance tools
+                        and tenant communication — all managed from your browser. Here's what
+                        we're building.
                     </p>
                 </div>
 
@@ -550,11 +657,11 @@
             <div class="container">
                 <div class="cta-banner-inner reveal">
                     <div class="cta-banner-content">
-                        <h2>Your feedback shapes the product we build.</h2>
-                        <p>We're inviting a small group of landlords to trial HOMEi PM for free and help us get it right.</p>
+                        <h2>We're building this with landlords, not just for them.</h2>
+                        <p>Your feedback shapes every feature. Join the free pilot and help us get it right.</p>
                     </div>
                     <div class="cta-banner-actions">
-                        <a href="#contact" class="btn btn-white btn-lg">Get Started</a>
+                        <a href="#contact" class="btn btn-white btn-lg">Reserve Your Free Trial Spot</a>
                     </div>
                 </div>
             </div>
@@ -639,7 +746,83 @@
 
                 <div class="section-cta reveal">
                     <a href="#contact" class="btn btn-primary btn-lg">
-                        Get Started with HOMEi PM
+                        Reserve Your Free Trial Spot
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Renters' Rights Act Compliance -->
+        <section id="rra" class="section bg-slate">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-label">Renters' Rights Act 2025</p>
+                    <h2 class="section-title">Built for the Renters' Rights Act</h2>
+                    <p class="section-description">
+                        The biggest change to UK lettings law in decades. Here's how we're building
+                        HOMEi to keep landlords on the right side of it.
+                    </p>
+                </div>
+
+                <div class="rra-grid reveal">
+                    <div class="rra-card">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <div class="rra-card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h4>Section 13 Rent Increase Tracker</h4>
+                        <p>Rent can now only increase once per year with 2 months' written notice — errors invalidate the increase entirely. HOMEi will generate, store and track Section 13 notices with automated reminders.</p>
+                    </div>
+                    <div class="rra-card">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <div class="rra-card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <h4>Section 8 Evidence Pack Builder</h4>
+                        <p>With Section 21 abolished, possessions must use Section 8 with documented legal grounds. HOMEi stores every inspection, maintenance request and message with timestamps for court-ready audit trails.</p>
+                    </div>
+                    <div class="rra-card">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <div class="rra-card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h4>Section 4A Compliance Tracker</h4>
+                        <p>Student landlords must serve notice between 1 May and 30 July with 4 months' notice — miss the window and you wait a full year. HOMEi will alert you when the window opens and track deadlines.</p>
+                    </div>
+                    <div class="rra-card">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <div class="rra-card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                            </svg>
+                        </div>
+                        <h4>Termination Notice Storage</h4>
+                        <p>Termination notices must now be issued in writing or email and stored as legal records. HOMEi will automatically create a permanent, timestamped record of every notice.</p>
+                    </div>
+                    <div class="rra-card">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <div class="rra-card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h4>Prescribed Information Delivery</h4>
+                        <p>Landlords must provide tenants with the Government Information Sheet — failure risks fines of up to £7,000. HOMEi will send, track and store delivery confirmation automatically.</p>
+                    </div>
+                </div>
+
+                <div class="section-cta reveal">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        Get RRA-Ready — Join the Pilot
                         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
@@ -797,7 +980,130 @@
                         Tell us what features matter most to you and we'll prioritise them.
                     </p>
                     <div class="feedback-actions">
-                        <a href="#contact" class="btn btn-primary btn-lg">Register Your Interest</a>
+                        <a href="#contact" class="btn btn-primary btn-lg">Reserve Your Free Trial Spot</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Placeholder -->
+        <section class="section bg-white partner-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-label">Working With</p>
+                    <h2 class="section-title">Trusted By Partners</h2>
+                    <p class="section-description">
+                        Currently co-designing with leading UK university housing providers and
+                        letting agents — partner announcements coming soon.
+                        <a href="#contact" class="inline-link">Interested in partnering with us? Get in touch.</a>
+                    </p>
+                </div>
+                <!-- Hidden partner logo slots — ready to show when partnerships confirmed.
+                     Remove .hidden from partner-logos div and insert logo/name in each slot. -->
+                <div class="partner-logos hidden">
+                    <!-- PARTNER SLOT 1 - INSERT LOGO/NAME HERE -->
+                    <div class="partner-logo-slot"></div>
+                    <!-- PARTNER SLOT 2 - INSERT LOGO/NAME HERE -->
+                    <div class="partner-logo-slot"></div>
+                    <!-- PARTNER SLOT 3 - INSERT LOGO/NAME HERE -->
+                    <div class="partner-logo-slot"></div>
+                    <!-- PARTNER SLOT 4 - INSERT LOGO/NAME HERE -->
+                    <div class="partner-logo-slot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Onboarding -->
+        <section class="section bg-slate" id="onboarding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="section-label">White-Glove Setup</p>
+                    <h2 class="section-title">Free Onboarding &amp; Setup Support</h2>
+                    <p class="section-description">
+                        When HOMEi PM launches, every early adopter gets free onboarding support.
+                        We'll help you add your properties, invite your tenants, and run your first inspection.
+                        No technical knowledge required — just an honest feedback loop with the build team.
+                    </p>
+                </div>
+
+                <div class="onboarding-grid reveal">
+                    <div class="onboarding-item">
+                        <div class="onboarding-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <h4>1:1 Walkthrough with the Founder</h4>
+                        <p>A personal call with James to walk you through the platform, answer your questions, and understand your needs.</p>
+                    </div>
+                    <div class="onboarding-item">
+                        <div class="onboarding-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h4>Full Setup Support</h4>
+                        <p>We'll help you add your properties and tenant details, and provide training for both you and your tenants so everyone's ready from day one.</p>
+                    </div>
+                    <div class="onboarding-item">
+                        <div class="onboarding-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            </svg>
+                        </div>
+                        <h4>First Inspection Walkthrough</h4>
+                        <p>We'll guide you through requesting and reviewing your first tenant inspection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials (hidden until real testimonials exist — structure ready for activation) -->
+        <section class="section bg-white hidden" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">What Landlords Say</p>
+                    <h2 class="section-title">Trusted by Landlords Like You</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <!-- TESTIMONIAL SLOT 1 — Replace with real quote -->
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-quote">
+                            <p>"Placeholder testimonial text — replace with real landlord quote."</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <!-- <img src="" alt="" class="testimonial-avatar"> -->
+                            <div>
+                                <p class="testimonial-name">Name Here</p>
+                                <p class="testimonial-role">Role, Organisation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TESTIMONIAL SLOT 2 — Replace with real quote -->
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-quote">
+                            <p>"Placeholder testimonial text — replace with real landlord quote."</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <!-- <img src="" alt="" class="testimonial-avatar"> -->
+                            <div>
+                                <p class="testimonial-name">Name Here</p>
+                                <p class="testimonial-role">Role, Organisation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TESTIMONIAL SLOT 3 — Replace with real quote or mini case study with partner logo -->
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-quote">
+                            <p>"Placeholder testimonial text — replace with real landlord quote."</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <!-- <img src="" alt="" class="testimonial-avatar"> -->
+                            <div>
+                                <p class="testimonial-name">Name Here</p>
+                                <p class="testimonial-role">Role, Organisation</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -838,7 +1144,7 @@
 
                 <div class="section-cta reveal">
                     <a href="#contact" class="btn btn-primary btn-lg">
-                        Register Your Interest
+                        Join as a Founding Landlord
                         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
@@ -933,6 +1239,50 @@
                             <p>After your free trial year, you'll move to a preferential rate that's locked in permanently. As an early adopter who helped shape the platform, you'll always pay less than the standard price. We'll share full pricing details well before your trial ends.</p>
                         </div>
                     </div>
+                    <div class="faq-item reveal" id="faq-rra">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How will HOMEi help me comply with the Renters' Rights Act?</span>
+                            <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We're building Renters' Rights Act compliance tools directly into the platform. This includes tracking Section 13 rent increases, building Section 8 evidence packs, managing Section 4A periodic tenancy requirements, storing termination notices, and delivering prescribed information sheets — all from your dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" id="faq-early-adopter">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What does early adopter status include?</span>
+                            <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Early adopter status includes a free year of access to HOMEi PM, free 1:1 onboarding with the founder, full setup support, and direct input into what gets built. After the free year, you get permanently discounted pricing as a thank you for helping shape the platform.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" id="faq-section-4a">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>I'm a student landlord — does HOMEi handle Section 4A notices?</span>
+                            <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes — Section 4A is a key part of what we're building. Student landlords must serve possession notices between 1 May and 30 July with a minimum 4 months' notice. HOMEi will alert you when the notice window opens, track your deadlines, and help you avoid missing the window (which would mean waiting a full year).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" id="faq-launch">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>When will the platform be fully launched?</span>
+                            <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>HOMEi PM is in active development. Rather than waiting for a single launch date, early adopters get progressive access as features are built and tested. You'll see the platform grow and your feedback will directly shape what gets prioritised. Sign up now to be first in line.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -942,11 +1292,11 @@
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-info reveal-left">
-                        <p class="section-label">Get Started</p>
+                        <p class="section-label">Join the Pilot</p>
                         <h2 class="section-title" style="text-align:left;">Register Your Interest</h2>
                         <p class="contact-description">
-                            Whether you manage 2 properties or 200, we'd like to hear from you.
-                            Register below and we'll be in touch with everything you need to get started.
+                            Whether you manage 2 properties or 200, we'd love to hear from you.
+                            Register below to join the free pilot — places are limited to 50 landlords.
                         </p>
 
                         <div class="contact-highlights">
@@ -1017,7 +1367,7 @@
                                 <textarea id="feedback" name="feedback" rows="3" placeholder="Tell us what your biggest challenges are and what you'd like the platform to do..."></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-full">Register Your Interest</button>
+                            <button type="submit" class="btn btn-primary btn-full">Join as a Founding Landlord</button>
 
                             <p class="form-error hidden" id="formError">Something went wrong. Please try again or email us directly at support@homeistudent.com</p>
 
@@ -1038,10 +1388,10 @@
         <div class="footer-cta">
             <div class="container footer-cta-inner">
                 <div class="footer-cta-content">
-                    <h3>Ready to optimise your property management?</h3>
-                    <p>Join as an early adopter and help us shape the platform.</p>
+                    <h3>Ready to get ahead of the Renters' Rights Act?</h3>
+                    <p>Join the free pilot and help us build the platform landlords actually need.</p>
                 </div>
-                <a href="#contact" class="btn btn-white">Get Started</a>
+                <a href="#contact" class="btn btn-white">Join as a Founding Landlord</a>
             </div>
         </div>
 
@@ -1081,7 +1431,7 @@
                 <div class="footer-links-group">
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="#contact">Get Started</a></li>
+                        <li><a href="#contact">Claim Free Year</a></li>
                         <li><a href="https://homeistudent.com" target="_blank" rel="noopener">HOMEi App</a></li>
                         <li>support@homeistudent.com</li>
                     </ul>
@@ -1096,10 +1446,23 @@
         </div>
     </footer>
 
+    <!-- Desktop Sticky CTA Bar -->
+    <div class="desktop-cta-bar hidden" id="desktopCta">
+        <div class="container desktop-cta-inner">
+            <p class="desktop-cta-text"><strong>Limited pilot places available</strong> — Free for 1 year for the first 50 landlords</p>
+            <a href="#contact" class="btn btn-primary btn-sm">
+                Get Free Onboarding
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
     <!-- Sticky Mobile CTA -->
     <div class="mobile-cta-bar hidden" id="mobileCta">
         <a href="#contact" class="mobile-cta-link">
-            <span class="mobile-cta-text">Get Started with HOMEi PM</span>
+            <span class="mobile-cta-text">Get Free Onboarding</span>
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
