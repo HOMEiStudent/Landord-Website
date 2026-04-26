@@ -11,6 +11,13 @@
     <meta property="og:description" content="Manage inspections, maintenance and tenant communication from one web-based platform. Built for UK landlords and estate agents.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://homeistudent.uk/images/og-image.png">
+    <meta property="og:url" content="https://homeistudent.uk">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HOMEi Property Management | UK Landlord & Estate Agent Software">
+    <meta name="twitter:description" content="Manage inspections, maintenance and tenant communication from one web-based platform. Built for UK landlords and estate agents.">
+    <meta name="twitter:image" content="https://homeistudent.uk/images/og-image.png">
+    <meta name="theme-color" content="#F97316">
+    <link rel="alternate" hreflang="en-GB" href="https://homeistudent.uk">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -40,7 +47,7 @@
         "publisher": {
             "@type": "Organization",
             "name": "HOMEi",
-            "url": "https://homeistudent.com"
+            "url": "https://homeistudent.uk"
         }
     }
     </script>
@@ -566,7 +573,7 @@
                 </div>
 
                 <div class="comparison-grid">
-                    <div class="comparison-card comparison-old reveal">
+                    <div class="comparison-card comparison-old reveal-left">
                         <div class="comparison-header">
                             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -582,7 +589,7 @@
                             <li>Intrusive for tenants who need to be home</li>
                         </ul>
                     </div>
-                    <div class="comparison-card comparison-new reveal">
+                    <div class="comparison-card comparison-new reveal-right">
                         <div class="comparison-header">
                             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -934,7 +941,7 @@
         <section id="contact" class="section bg-white">
             <div class="container">
                 <div class="contact-grid">
-                    <div class="contact-info reveal">
+                    <div class="contact-info reveal-left">
                         <p class="section-label">Get Started</p>
                         <h2 class="section-title" style="text-align:left;">Register Your Interest</h2>
                         <p class="contact-description">
@@ -978,7 +985,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-form-wrapper reveal">
+                    <div class="contact-form-wrapper reveal-right">
                         <form id="form" class="contact-form" method="POST" action="https://api.web3forms.com/submit">
                             <input type="hidden" name="access_key" value="a1ac79e5-9df0-46b7-8379-d913a8a74b11">
                             <input type="hidden" name="subject" value="New trial sign-up from HOMEi PM website">
@@ -1115,6 +1122,6 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
