@@ -1926,3 +1926,283 @@ img {
 
     .success-modal-content h2 { font-size: 1.125rem; }
 }
+
+/* ===== Skip to Content ===== */
+.skip-to-content {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    background: var(--accent-500);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* ===== Scroll Progress Bar ===== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-500), var(--accent-400));
+    z-index: 100;
+    transition: width 0.05s linear;
+}
+
+/* ===== Trust Badges Row (About Section) ===== */
+.trust-badges-row {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .trust-badges-row { grid-template-columns: repeat(3, 1fr); }
+}
+
+.trust-badge-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s;
+}
+
+.trust-badge-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--accent-200);
+}
+
+.trust-badge-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--accent-50);
+    color: var(--accent-500);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.trust-badge-card h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--navy-900);
+    margin-bottom: 0.5rem;
+}
+
+.trust-badge-card p {
+    font-size: 0.875rem;
+    color: var(--slate-500);
+    line-height: 1.7;
+}
+
+/* ===== Founder Quote ===== */
+.founder-quote {
+    background: var(--accent-50);
+    border-left: 4px solid var(--accent-500);
+    border-radius: 0 1rem 1rem 0;
+    padding: 2rem 2.5rem;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.founder-quote p {
+    font-size: 1.0625rem;
+    color: var(--navy-900);
+    font-style: italic;
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+}
+
+.founder-quote cite {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-600);
+    font-style: normal;
+}
+
+/* ===== RRA Section ===== */
+.rra-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+    .rra-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .rra-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.rra-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s;
+}
+
+.rra-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--accent-200);
+}
+
+.rra-card-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--accent-50);
+    color: var(--accent-500);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.rra-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy-900);
+    margin-bottom: 0.5rem;
+}
+
+.rra-card p {
+    font-size: 0.875rem;
+    color: var(--slate-500);
+    line-height: 1.7;
+}
+
+/* ===== Coming Soon Badge ===== */
+.coming-soon-badge {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-600);
+    background: var(--accent-50);
+    border: 1px solid var(--accent-200);
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Partner Section ===== */
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.partner-logo-slot {
+    height: 4rem;
+    background: var(--slate-100);
+    border: 1px dashed var(--slate-300);
+    border-radius: 0.75rem;
+}
+
+/* ===== Onboarding Section ===== */
+.onboarding-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .onboarding-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.onboarding-item {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s;
+}
+
+.onboarding-item:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--accent-200);
+}
+
+.onboarding-icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--accent-50);
+    color: var(--accent-500);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.onboarding-item h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--navy-900);
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-item p {
+    font-size: 0.875rem;
+    color: var(--slate-500);
+    line-height: 1.7;
+}
+
+/* ===== Desktop Sticky CTA Bar ===== */
+.desktop-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background: var(--white);
+    border-top: 1px solid var(--slate-200);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+    padding: 0.75rem 0;
+    transition: transform 0.3s ease;
+}
+
+.desktop-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.desktop-cta-text {
+    font-size: 0.9375rem;
+    color: var(--navy-800);
+}
+
+@media (max-width: 767px) {
+    .desktop-cta-bar { display: none !important; }
+}
+
+/* ===== Mobile Responsive Additions ===== */
+@media (max-width: 767px) {
+    .trust-badge-card { padding: 1.5rem; }
+    .rra-card { padding: 1.5rem; }
+    .onboarding-item { padding: 1.5rem; }
+    .founder-quote { padding: 1.5rem 1.75rem; }
+}

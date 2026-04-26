@@ -23,11 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== Navbar scroll effect =====
     var navbar = document.getElementById('navbar');
+    var scrollProgress = document.getElementById('scrollProgress');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 20) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+        }
+
+        // Scroll progress bar
+        if (scrollProgress) {
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var scrolled = (window.scrollY / docHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
         }
     });
 
@@ -240,9 +248,34 @@ document.addEventListener('DOMContentLoaded', function() {
         successModalBtn.addEventListener('click', closeModal);
     }
 
+    // ===== Sticky desktop CTA =====
+    var desktopCta = document.getElementById('desktopCta');
+    var contactSection = document.getElementById('contact');
+
+    if (desktopCta && contactSection) {
+        var desktopCtaObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    desktopCta.classList.add('hidden');
+                } else {
+                    if (window.scrollY > 600) {
+                        desktopCta.classList.remove('hidden');
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        desktopCtaObserver.observe(contactSection);
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY < 600) {
+                desktopCta.classList.add('hidden');
+            }
+        });
+    }
+
     // ===== Sticky mobile CTA =====
     var mobileCta = document.getElementById('mobileCta');
-    var contactSection = document.getElementById('contact');
 
     if (mobileCta && contactSection) {
         var mobileCtaObserver = new IntersectionObserver(function(entries) {
