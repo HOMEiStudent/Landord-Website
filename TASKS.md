@@ -34,7 +34,7 @@ JS: /js/main.js
 
 ## Group C — CTA Improvements
 
-- [ ] **T09** — Audit all CTAs on index.html. Document current text, colour, position, and click-through behaviour. Output to `audits/current-cta-state.md`.
+- [x] **T09** — Audit all CTAs on index.html. Document current text, colour, position, and click-through behaviour. Output to `audits/current-cta-state.md`.
 
 - [ ] **T10** — Add a secondary CTA "Book a 15-minute chat" to the homepage hero, next to the existing primary CTA. Use #ff6a00 with white text for secondary, keep primary in #ffa000. Both must have minimum 44x44px tap target on mobile. STOP and ask user: mailto link or Calendly?
 

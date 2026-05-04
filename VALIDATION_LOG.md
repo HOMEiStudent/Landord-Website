@@ -72,6 +72,20 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T09 — Audit current CTAs
+
+**Validation gate:** Audit file exists with all CTAs documented.
+
+**Output:** `audits/current-cta-state.md` — 16 button CTAs + 3 non-button CTAs documented with text, class, target, colour, and behaviour.
+
+**Key findings:**
+- 5 different primary CTA text variants across the page
+- All primary CTAs target #contact (sign-up form)
+- No "book a chat" or direct contact CTA exists in hero
+- btn-primary uses #F97316 orange with glow pulse animation
+
+**Result:** PASS — no code changes required.
+
 ## T08 — Heading hierarchy audit
 
 **Validation gate:** Exactly one H1, no skipped heading levels in `<main>`, no empty headings.
