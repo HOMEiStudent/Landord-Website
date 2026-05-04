@@ -72,6 +72,36 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T08 — Heading hierarchy audit
+
+**Validation gate:** Exactly one H1, no skipped heading levels in `<main>`, no empty headings.
+
+**Issues found and fixed (14 H4→H3 changes):**
+| Section | Headings changed | Lines |
+|---------|-----------------|-------|
+| Trust badges | 3 H4→H3 | 370, 379, 388 |
+| Benefit cards | 3 H4→H3 | 731, 740, 749 |
+| RRA cards | 5 H4→H3 | 785, 795, 805, 815, 825 |
+| Onboarding items | 3 H4→H3 | 1043, 1052, 1061 |
+
+**CSS selectors updated (4 rules):**
+- `.trust-badge-card h4` → `.trust-badge-card h3`
+- `.benefit-card h4` → `.benefit-card h3`
+- `.rra-card h4` → `.rra-card h3`
+- `.onboarding-item h4` → `.onboarding-item h3`
+
+**Intentionally left unchanged:**
+- Footer H4s ("Platform", "Connect") — standard footer column label pattern, H3→H4 hierarchy is valid.
+
+**Post-fix validation:**
+```
+grep -c '<h1' index.html  → 1
+grep '<h[1-6]>' index.html  → H1→H2→H3 throughout <main>, no skips
+grep '<h[1-6]>\s*</h[1-6]>' index.html  → 0 empty headings
+```
+
+**Result:** PASS
+
 ## T07 — Audit remaining pages
 
 **SKIPPED** — Single-page site (index.html only). No other pages to audit.

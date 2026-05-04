@@ -30,7 +30,7 @@ JS: /js/main.js
 
 - [x] **T07** — ~~Audit remaining pages~~ **SKIPPED** — only index.html exists. N/A.
 
-- [ ] **T08** — Audit index.html for: exactly one H1, no skipped heading levels (no H1→H3 jumps), no empty headings. Fix violations. Log all fixes.
+- [x] **T08** — Audit index.html for: exactly one H1, no skipped heading levels (no H1→H3 jumps), no empty headings. Fix violations. Log all fixes. **Fixed 14 H4→H3 skips across 4 sections + 4 CSS selectors. Footer H4s left unchanged.**
 
 ## Group C — CTA Improvements
 
