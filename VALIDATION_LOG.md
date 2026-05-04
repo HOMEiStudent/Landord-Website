@@ -72,6 +72,25 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T06 — Update H2s to match patterns
+
+**Validation gate:** Matching H2s updated, non-matching logged and skipped.
+
+**Pattern matching:**
+| Prescribed Source | Found? | Action |
+|---|---|---|
+| "Built for the Renters' Rights Act" | YES (line 770) | Changed to "Stay compliant with the Renters' Rights Act 2026" |
+| "Everything you need in one place" | YES (line 405, title case) | Changed to "Manage inspections, maintenance and rent in one place" |
+| "Free Onboarding & Setup Support" | YES (line 1028) | Changed to "Dedicated onboarding, no hassle" |
+| "What Landlords Say" | NO | "What Landlords Say" exists only as a `<p class="section-label">` (line 1072), not an H2. The H2 is "Trusted by Landlords Like You" which doesn't match the prescribed source. **SKIPPED.** |
+
+**Commands run:**
+```
+grep -n 'Stay compliant\|Manage inspections\|Dedicated onboarding\|What Landlords Say' index.html
+```
+
+**Result:** PASS — 3 of 4 applied, 1 skipped (not found as H2).
+
 ## T04 — Update homepage meta description
 
 **Validation gate:** Meta description updated, 150–160 characters total.

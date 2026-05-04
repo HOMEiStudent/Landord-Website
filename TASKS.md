@@ -21,11 +21,11 @@ JS: /js/main.js
 
 - [x] **T05** — Update H1 to: `Run your student lets without the headaches`. Confirm exactly one H1 exists after the change.
 
-- [ ] **T06** — Update H2s where they match these patterns (only rename existing ones):
-  - "Built for the Renters' Rights Act" → "Stay compliant with the Renters' Rights Act 2026"
-  - "Everything You Need in One Place" → "Manage inspections, maintenance and rent in one place"
-  - "Free Onboarding & Setup Support" → "Dedicated onboarding, no hassle"
-  - "Trusted by Landlords Like You" → "Trusted by UK landlords and agents"
+- [x] **T06** — Update H2s where they match these patterns (only rename existing ones):
+  - "Built for the Renters' Rights Act" → "Stay compliant with the Renters' Rights Act 2026" **DONE**
+  - "Everything You Need in One Place" → "Manage inspections, maintenance and rent in one place" **DONE**
+  - "Free Onboarding & Setup Support" → "Dedicated onboarding, no hassle" **DONE**
+  - "Trusted by Landlords Like You" → "Trusted by UK landlords and agents" **SKIPPED** — "What Landlords Say" is a section label `<p>`, not an H2. The actual H2 "Trusted by Landlords Like You" doesn't match the prescribed source.
   If any H2 is not present, log and skip.
 
 - [ ] **T07** — ~~Audit remaining pages~~ **SKIPPED** — only index.html exists. N/A.
