@@ -38,3 +38,21 @@ ls -la data/    → does not exist (not needed for single-page site)
 
 **Result:** PASS — `/audits/` already created during T01. `/data/` not applicable to this codebase (no JSON data files). No action needed.
 
+## T03 — Update homepage title
+
+**Validation gate:** Title tag updated, visible portion 55–65 chars, exactly one `<title>` tag.
+
+**Prescribed title:** `Student Landlord Property Management Software (UK) – Renters' Rights Act Ready | HOMEi PM`
+**Prescribed visible portion:** 78 chars — OVER the 55–65 limit.
+**Adjustment:** Removed "Software (UK)" to preserve the two key SEO phrases ("Student Landlord Property Management" + "Renters' Rights Act").
+**Final title:** `Student Landlord Property Management – Renters' Rights Act Ready | HOMEi PM`
+**Final visible portion:** 64 chars — within range.
+
+**Commands run:**
+```
+grep -c '<title>' index.html  → 1
+grep '<title>' index.html     → Student Landlord Property Management – Renters' Rights Act Ready | HOMEi PM
+```
+
+**Result:** PASS
+
