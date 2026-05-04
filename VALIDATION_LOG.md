@@ -56,6 +56,22 @@ grep '<title>' index.html     → Student Landlord Property Management – Rente
 
 **Result:** PASS
 
+## T05 — Update homepage H1
+
+**Validation gate:** H1 updated to prescribed text, exactly one H1 on page.
+
+**Previous H1:** `Property Management Software Built for UK Landlords & Agents`
+**New H1:** `Run your student lets without the headaches`
+**Accent span:** "without the headaches" wrapped in `<span class="text-accent">` to preserve existing styling.
+
+**Commands run:**
+```
+grep -c '<h1' index.html  → 1
+grep -A3 '<h1' index.html → correct content confirmed
+```
+
+**Result:** PASS
+
 ## T04 — Update homepage meta description
 
 **Validation gate:** Meta description updated, 150–160 characters total.
