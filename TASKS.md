@@ -28,7 +28,7 @@ JS: /js/main.js
   - "Trusted by Landlords Like You" → "Trusted by UK landlords and agents" **SKIPPED** — "What Landlords Say" is a section label `<p>`, not an H2. The actual H2 "Trusted by Landlords Like You" doesn't match the prescribed source.
   If any H2 is not present, log and skip.
 
-- [ ] **T07** — ~~Audit remaining pages~~ **SKIPPED** — only index.html exists. N/A.
+- [x] **T07** — ~~Audit remaining pages~~ **SKIPPED** — only index.html exists. N/A.
 
 - [ ] **T08** — Audit index.html for: exactly one H1, no skipped heading levels (no H1→H3 jumps), no empty headings. Fix violations. Log all fixes.
 

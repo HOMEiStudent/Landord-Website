@@ -72,6 +72,12 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T07 — Audit remaining pages
+
+**SKIPPED** — Single-page site (index.html only). No other pages to audit.
+
+**Result:** N/A
+
 ## T06 — Update H2s to match patterns
 
 **Validation gate:** Matching H2s updated, non-matching logged and skipped.
