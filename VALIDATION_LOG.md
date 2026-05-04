@@ -56,3 +56,20 @@ grep '<title>' index.html     → Student Landlord Property Management – Rente
 
 **Result:** PASS
 
+## T04 — Update homepage meta description
+
+**Validation gate:** Meta description updated, 150–160 characters total.
+
+**Prescribed text (211 chars):** `HOMEi PM is the UK property management platform built for student landlords. Stay Renters' Rights Act compliant, run digital inspections, track maintenance and message tenants — all in one place. Join the pilot.`
+**Issues:** 211 chars (over limit); contains em dash (previously removed per user request).
+**Final text (157 chars):** `HOMEi PM is property management software for UK student landlords. Stay Renters' Rights Act compliant, run inspections and track maintenance. Join the pilot.`
+**Key terms preserved:** property management software, UK student landlords, Renters' Rights Act, inspections, maintenance, pilot.
+
+**Commands run:**
+```
+grep '<meta name="description"' index.html  → confirmed updated, single occurrence
+python3 -c "print(len('...'))"  → 157 chars
+```
+
+**Result:** PASS
+

@@ -17,7 +17,7 @@ JS: /js/main.js
 
 - [x] **T03** — Update `<title>` to: `Student Landlord Property Management Software (UK) – Renters' Rights Act Ready | HOMEi PM`. Verify visible portion before the pipe is 55–65 characters. **Adjusted:** removed "Software (UK)" to fit 64 chars.
 
-- [ ] **T04** — Update meta description to: `HOMEi PM is the UK property management platform built for student landlords. Stay Renters' Rights Act compliant, run digital inspections, track maintenance and message tenants — all in one place. Join the pilot.` Trim to 150–160 characters total.
+- [x] **T04** — Update meta description to: `HOMEi PM is the UK property management platform built for student landlords. Stay Renters' Rights Act compliant, run digital inspections, track maintenance and message tenants — all in one place. Join the pilot.` Trim to 150–160 characters total. **Adjusted:** trimmed to 157 chars, removed em dash.
 
 - [ ] **T05** — Update H1 to: `Run your student lets without the headaches`. Confirm exactly one H1 exists after the change.
 
