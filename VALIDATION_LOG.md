@@ -26,3 +26,15 @@ grep -n 'class="btn\|<a.*href="#contact"\|<button' index.html  → 16 CTAs ident
 
 **Result:** PASS — no code changes required for this task.
 
+## T02 — Create folder structure
+
+**Validation gate:** `/audits/` exists.
+
+**Commands run:**
+```
+ls -la audits/  → exists, contains current-seo-state.md from T01
+ls -la data/    → does not exist (not needed for single-page site)
+```
+
+**Result:** PASS — `/audits/` already created during T01. `/data/` not applicable to this codebase (no JSON data files). No action needed.
+

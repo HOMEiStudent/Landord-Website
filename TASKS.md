@@ -11,7 +11,7 @@ JS: /js/main.js
 
 - [x] **T01** — Audit current state: extract current `<title>`, meta description, H1, all H2s, heading hierarchy, existing schema, existing CTAs. Output to `audits/current-seo-state.md`. No code changes.
 
-- [ ] **T02** — Create `/audits/` folder. No deletions.
+- [x] **T02** — Create `/audits/` folder. No deletions.
 
 ## Group B — On-Page SEO Foundations
 
