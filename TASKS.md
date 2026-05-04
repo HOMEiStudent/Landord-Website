@@ -36,7 +36,7 @@ JS: /js/main.js
 
 - [x] **T09** — Audit all CTAs on index.html. Document current text, colour, position, and click-through behaviour. Output to `audits/current-cta-state.md`.
 
-- [ ] **T10** — Add a secondary CTA "Book a 15-minute chat" to the homepage hero, next to the existing primary CTA. Use #ff6a00 with white text for secondary, keep primary in #ffa000. Both must have minimum 44x44px tap target on mobile. STOP and ask user: mailto link or Calendly?
+- [x] **T10** — Add a secondary CTA "Book a 15-minute chat" to the homepage hero, next to the existing primary CTA. Use #ff6a00 with white text for secondary, keep primary in #ffa000. Both must have minimum 44x44px tap target on mobile. **User confirmed: mailto to support@homeistudent.com. Also added min-height: 44px to all .btn.**
 
 - [ ] **T11** — Add `data-cta-id` attributes to every CTA button/link on index.html (e.g. `data-cta-id="hero-primary"`, `data-cta-id="hero-secondary"`, `data-cta-id="footer-pilot"`). Inert markers only — no tracking scripts.
 

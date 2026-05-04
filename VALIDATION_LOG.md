@@ -72,6 +72,24 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T10 — Add secondary hero CTA
+
+**Validation gate:** Secondary CTA exists in hero, correct href, both buttons have min 44px tap target, btn-secondary CSS uses #ff6a00.
+
+**Changes made:**
+- Added `<a href="mailto:support@homeistudent.com?subject=..." class="btn btn-secondary btn-lg">Book a 15-minute chat</a>` to hero-actions div
+- Replaced "See How It Works" outline button (which scrolled to #features) with the new secondary CTA
+- Created `.btn-secondary` CSS class: background #ff6a00, white text, hover darkens to #e55f00
+- Added `min-height: 44px` to base `.btn` class to ensure all CTAs meet WCAG tap target requirement
+
+**Commands run:**
+```
+grep 'btn-secondary\|15-minute' index.html  → 1 match, correct mailto href
+grep -c 'btn-secondary' css/styles.css  → 3 rules (base, hover, active)
+```
+
+**Result:** PASS
+
 ## T09 — Audit current CTAs
 
 **Validation gate:** Audit file exists with all CTAs documented.

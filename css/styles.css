@@ -217,6 +217,7 @@ img {
     font-size: 0.875rem;
     border-radius: 999px;
     padding: 0.625rem 1.5rem;
+    min-height: 44px;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     border: none;
     cursor: pointer;
@@ -274,6 +275,19 @@ img {
     .btn-primary {
         animation: none;
     }
+}
+
+.btn-secondary {
+    color: var(--white);
+    background: #ff6a00;
+    box-shadow: 0 4px 14px rgba(255, 106, 0, 0.3);
+}
+.btn-secondary:hover {
+    background: #e55f00;
+    box-shadow: 0 8px 28px rgba(255, 106, 0, 0.4);
+}
+.btn-secondary:active {
+    box-shadow: 0 2px 8px rgba(255, 106, 0, 0.25);
 }
 
 .btn-outline {
