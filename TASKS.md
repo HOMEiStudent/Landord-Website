@@ -9,7 +9,7 @@ JS: /js/main.js
 
 ## Group A — Discovery & Setup
 
-- [ ] **T01** — Audit current state: extract current `<title>`, meta description, H1, all H2s, heading hierarchy, existing schema, existing CTAs. Output to `audits/current-seo-state.md`. No code changes.
+- [x] **T01** — Audit current state: extract current `<title>`, meta description, H1, all H2s, heading hierarchy, existing schema, existing CTAs. Output to `audits/current-seo-state.md`. No code changes.
 
 - [ ] **T02** — Create `/audits/` folder. No deletions.
 
