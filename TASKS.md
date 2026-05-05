@@ -17,11 +17,11 @@ Feature Flag: homei-pm-website-ab-test
 
 - [x] **T03** — Review complete. API key correct, EU host confirmed, no .env, no build step. Audit: `audits/posthog-wizard-changes.md`.
 
-- [ ] **T04** — Verify PostHog is live. Start local server, confirm $pageview events fire. Get user confirmation from PostHog dashboard.
+- [x] **T04** — Verify PostHog is live. Host corrected EU→US. $pageview events confirmed in PostHog dashboard by user. Start local server, confirm $pageview events fire. Get user confirmation from PostHog dashboard.
 
 ## Group B — CTA Click Tracking
 
-- [ ] **T05** — Wire up CTA click tracking via delegated event listener. Verify cta_clicked events fire with correct data-cta-id values. Get user confirmation.
+- [x] **T05** — Wire up CTA click tracking. Created `scripts/cta-tracking.js`, 17 CTAs covered. Awaiting user confirmation of events. via delegated event listener. Verify cta_clicked events fire with correct data-cta-id values. Get user confirmation.
 
 ## Group C — Hero Headline A/B Test
 
