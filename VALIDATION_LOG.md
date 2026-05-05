@@ -276,3 +276,48 @@ grep -c 'metrics-strip\|metric-item' css/styles.css  → 8 rules
 
 **Result:** PASS
 
+## T16 — Verify canonical link
+
+**Validation gate:** `<link rel="canonical">` exists and points to `https://homeistudent.uk/`.
+
+**Before:** `<link rel="canonical" href="https://homeistudent.uk">` (missing trailing slash)
+**After:** `<link rel="canonical" href="https://homeistudent.uk/">` (matches sitemap `<loc>`)
+
+**Commands run:**
+```
+grep 'rel="canonical"' index.html  → href="https://homeistudent.uk/"
+grep -c 'rel="canonical"' index.html  → 1
+```
+
+**Result:** PASS
+
+## T17 — Verify sitemap.xml
+
+**Validation gate:** Lists index.html with `<lastmod>` today, `<changefreq>` weekly.
+
+**Before:** `<lastmod>2026-04-26</lastmod>` (stale)
+**After:** `<lastmod>2026-05-05</lastmod>` (today)
+**Structure:** Single `<url>` entry, `<loc>https://homeistudent.uk/</loc>`, `<changefreq>weekly</changefreq>`, `<priority>1.0</priority>`.
+
+**Commands run:**
+```
+grep 'lastmod' sitemap.xml  → 2026-05-05
+grep 'changefreq' sitemap.xml  → weekly
+```
+
+**Result:** PASS
+
+## T18 — Verify robots.txt
+
+**Validation gate:** Contains `User-agent: *`, `Allow: /`, `Sitemap: https://homeistudent.uk/sitemap.xml`.
+
+**Content (verbatim):**
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://homeistudent.uk/sitemap.xml
+```
+
+**Result:** PASS — no changes needed.
+

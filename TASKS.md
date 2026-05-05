@@ -52,11 +52,11 @@ JS: /js/main.js
 
 ## Group E — Technical SEO Infrastructure
 
-- [ ] **T16** — Verify `<link rel="canonical">` exists and points to `https://homeistudent.uk/`. Fix if incorrect.
+- [x] **T16** — Verify canonical link. **Fixed:** added trailing slash to match sitemap `<loc>`. Points to `https://homeistudent.uk/`.
 
-- [ ] **T17** — Verify `/sitemap.xml` is correct: lists index.html with `<lastmod>` set to today's date, `<changefreq>` weekly. Fix if needed.
+- [x] **T17** — Verify sitemap.xml. **Fixed:** updated `<lastmod>` from 2026-04-26 to 2026-05-05. Structure correct.
 
-- [ ] **T18** — Verify `/robots.txt` contains: `User-agent: *`, `Allow: /`, `Sitemap: https://homeistudent.uk/sitemap.xml`. Fix if needed.
+- [x] **T18** — Verify robots.txt. **Already correct** — no changes needed.
 
 - [ ] **T19** — Verify existing Organization schema (JSON-LD) in `<head>`. Ensure it includes: name, url, logo URL, description, address (Sheffield, UK). Add `sameAs` with LinkedIn URL — STOP and ask user for the exact LinkedIn URL.
 
