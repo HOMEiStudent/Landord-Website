@@ -71,5 +71,38 @@ ls package.json 2>/dev/null  → not found (correct)
 **CTA IDs covered (17):**
 contact-form-submit, cta-banner-primary, early-access-primary, feedback-banner-primary, footer-primary, hero-primary, hero-secondary, inspections-primary, modal-dismiss, nav-app-link, nav-mobile-primary, nav-primary, poll-submit, rra-primary, sticky-desktop-primary, sticky-mobile-primary, why-homei-app-link
 
-**User confirmation:** PENDING
+**User confirmation:** YES — `cta_clicked` events visible in PostHog Live Events, including "Join as a Founding Landlord" button.
+
+**Result:** PASS
+
+## T06 — Verify feature flag configuration
+
+**Validation gate:** Feature flag is multivariate with 3 variants, enabled.
+
+**Before:** 2 variants (control 50%, test 50%)
+**After:** User reconfigured to 3 variants (control 33%, variant-a 33%, variant-b 34%)
+**Rollout:** 100% of all users
+**Status:** Enabled
+**User confirmed:** YES
+
+**Result:** PASS
+
+## T07 — Implement feature flag client-side
+
+**Validation gate:** Script exists, loads after PostHog init, swaps H1 based on variant.
+
+**Implementation:**
+- Created `scripts/posthog-experiments.js` with `posthog.onFeatureFlags()` callback
+- 3 variants mapped: control, variant-a, variant-b
+- Captures `hero_variant_shown` event with variant and headline
+- Added `<script src="/scripts/posthog-experiments.js" defer>` before `</body>`
+- Script order: posthog-init.js (head) → cta-tracking.js (defer) → main.js (defer) → posthog-experiments.js (defer)
+
+**Commands run:**
+```
+grep -n 'posthog-init\|cta-tracking\|posthog-experiments\|main.js' index.html
+  → 181: posthog-init.js, 182: cta-tracking.js, 1553: main.js, 1554: posthog-experiments.js
+```
+
+**Result:** PASS
 

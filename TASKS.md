@@ -25,9 +25,9 @@ Feature Flag: homei-pm-website-ab-test
 
 ## Group C — Hero Headline A/B Test
 
-- [ ] **T06** — Verify the existing feature flag (homei-pm-website-ab-test) is multivariate with 3 variants. Get user confirmation of flag configuration. No code changes.
+- [x] **T06** — Feature flag verified. User reconfigured from 2 variants (control/test 50/50) to 3 variants (control 33%, variant-a 33%, variant-b 34%). Enabled, 100% rollout.
 
-- [ ] **T07** — Implement the feature flag client-side. Create /scripts/posthog-experiments.js with H1 swap logic. Add script to index.html only.
+- [x] **T07** — Implemented feature flag client-side. Created `scripts/posthog-experiments.js` with 3-variant H1 swap. Added deferred script before `</body>` in index.html.
 
 - [ ] **T08** — Validate the A/B test is working. Hard-refresh to see different variants. Get user confirmation of hero_variant_shown events.
 
