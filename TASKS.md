@@ -44,7 +44,7 @@ JS: /js/main.js
 
 ## Group D — Trust Signals
 
-- [ ] **T13** — Locate the testimonial section (currently hidden). Replace placeholder text with: "Real landlord case studies coming Q2 2026 as our pilot partners go live." Wrap each slot with `<!-- PLACEHOLDER: real testimonial required -->` comments.
+- [x] **T13** — Testimonial section updated. Fake quotes removed, Q2 2026 note added, 3 slots wrapped with PLACEHOLDER comments. Section remains hidden.
 
 - [ ] **T14** — STOP and ask user: which partner/backer logos do you have permission to display? Do not add logos without confirmation. If Emerge logo or University of Sheffield logo is available, add a "Founded at" trust strip below the hero.
 

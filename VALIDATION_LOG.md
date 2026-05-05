@@ -72,6 +72,26 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T13 — Testimonial section placeholders
+
+**Validation gate:** Placeholder text replaced, slots wrapped with PLACEHOLDER comments, no fake quotes.
+
+**Changes:**
+- Removed all 3 fake placeholder quote strings
+- Added visible note: "Real landlord case studies coming Q2 2026 as our pilot partners go live."
+- Wrapped each of the 3 testimonial card slots with `<!-- PLACEHOLDER: real testimonial required -->` / `<!-- /PLACEHOLDER -->`
+- Updated H2 to "Trusted by UK landlords and agents" (matches T06 prescribed text for this heading)
+- Section remains hidden (`class="hidden"`)
+
+**Commands run:**
+```
+grep -c 'PLACEHOLDER: real testimonial required' index.html  → 3
+grep 'Q2 2026' index.html  → note present in section-description
+grep 'Placeholder testimonial' index.html  → 0 matches (old text removed)
+```
+
+**Result:** PASS
+
 ## T12 — Audit/fix sticky mobile CTA bar
 
 **Validation gate:** Sticky bar is dismissible, doesn't overlap form/footer, only visible below 768px.
