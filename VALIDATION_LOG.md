@@ -515,3 +515,45 @@ grep 'viewport' index.html  → <meta name="viewport" content="width=device-widt
 
 **Result:** PASS
 
+## T33 — Final audit (broken links/references)
+
+**Validation gate:** No broken links, no missing file references, no regressions.
+
+**Checks:**
+- All 8 local file references verified to exist on disk
+- All internal anchor `href="#..."` targets have matching `id="..."` in HTML
+- 0 broken links found
+
+**Result:** PASS
+
+## T34 — Schema re-validation
+
+**Validation gate:** All schema blocks valid, 0 errors.
+
+**Output (python3 json.loads):**
+```
+Block 1 (SoftwareApplication): VALID
+Block 2 (FAQPage): VALID
+Block 3 (Organization): VALID
+Total errors: 0
+```
+
+**Result:** PASS
+
+## T35 — HTML validation
+
+**Validation gate:** No duplicate IDs, all tags balanced.
+
+**Output:**
+```
+IDs: 66 unique, 0 duplicates
+Tag balance check (div, section, main, nav, form, button, p, span, a): all matched
+```
+
+**Result:** PASS
+
+## T36 — Completion report
+
+**Output:** `PHASE_1_COMPLETION_REPORT.md`
+
+**Result:** PASS

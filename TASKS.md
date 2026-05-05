@@ -92,10 +92,10 @@ JS: /js/main.js
 
 ## Group H — Final Validation
 
-- [ ] **T33** — ~~Lighthouse on 3 pages~~ **ADAPTED** — Final manual audit of index.html covering all changes made. Verify no broken links, no missing references, no regressions.
+- [x] **T33** — Final audit. 0 broken links, 0 missing file references, all anchor targets exist.
 
-- [ ] **T34** — Review all JSON-LD schema blocks for structural validity. Confirm zero errors in VALIDATION_LOG.md.
+- [x] **T34** — Schema re-validation. All 3 JSON-LD blocks valid, 0 errors. Confirmed in VALIDATION_LOG.md.
 
-- [ ] **T35** — Run HTML validation check: verify all tags are properly closed, no duplicate IDs, no broken attributes across all modified sections. Log results.
+- [x] **T35** — HTML validation. 66 unique IDs, 0 duplicates, all tags properly balanced.
 
-- [ ] **T36** — Generate `PHASE_1_COMPLETION_REPORT.md` containing: every task with status, changes made, schema validation results, list of all commits, files changed, user consultations, and items deferred to Phase 1.5/2/3.
+- [x] **T36** — Completion report generated: `PHASE_1_COMPLETION_REPORT.md`.
