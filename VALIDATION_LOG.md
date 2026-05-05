@@ -72,6 +72,22 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T11 — Add data-cta-id attributes
+
+**Validation gate:** Every CTA has a unique `data-cta-id`, no duplicates, no tracking scripts added.
+
+**Attributes added (17 total):**
+nav-app-link, nav-primary, nav-mobile-primary, hero-primary, hero-secondary, cta-banner-primary, inspections-primary, rra-primary, why-homei-app-link, poll-submit, feedback-banner-primary, early-access-primary, contact-form-submit, footer-primary, sticky-desktop-primary, sticky-mobile-primary, modal-dismiss
+
+**Commands run:**
+```
+grep -o 'data-cta-id="[^"]*"' index.html | sort        → 17 entries
+grep -o 'data-cta-id="[^"]*"' index.html | sort | uniq -d  → 0 duplicates
+grep 'posthog\|gtag\|analytics' index.html               → 0 matches (no tracking)
+```
+
+**Result:** PASS
+
 ## T10 — Add secondary hero CTA
 
 **Validation gate:** Secondary CTA exists in hero, correct href, both buttons have min 44px tap target, btn-secondary CSS uses #ff6a00.

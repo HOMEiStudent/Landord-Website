@@ -38,7 +38,7 @@ JS: /js/main.js
 
 - [x] **T10** — Add a secondary CTA "Book a 15-minute chat" to the homepage hero, next to the existing primary CTA. Use #ff6a00 with white text for secondary, keep primary in #ffa000. Both must have minimum 44x44px tap target on mobile. **User confirmed: mailto to support@homeistudent.com. Also added min-height: 44px to all .btn.**
 
-- [ ] **T11** — Add `data-cta-id` attributes to every CTA button/link on index.html (e.g. `data-cta-id="hero-primary"`, `data-cta-id="hero-secondary"`, `data-cta-id="footer-pilot"`). Inert markers only — no tracking scripts.
+- [x] **T11** — Add `data-cta-id` attributes to every CTA button/link on index.html. **17 unique IDs added, zero duplicates, zero tracking scripts.**
 
 - [ ] **T12** — Audit existing sticky mobile CTA bar. Verify it is dismissible, doesn't overlap form fields or footer. If not dismissible, add dismiss functionality. If no sticky bar exists, create one using vanilla JS in `js/main.js`.
 
