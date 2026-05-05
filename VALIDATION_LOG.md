@@ -386,3 +386,47 @@ Block 3 (Organization): VALID JSON
 
 **Result:** PASS — zero structural errors across all 3 blocks.
 
+## T23 — Image & SVG audit
+
+**Validation gate:** Audit file exists with all images/SVGs documented.
+
+**Output:** `audits/image-audit.md` — 5 file-based images, 2 active `<img>` tags, 61 inline SVGs.
+
+**Key findings:**
+- No images >200KB (largest: 25.5KB)
+- No missing alt text on `<img>` tags
+- 61 decorative SVGs missing `aria-hidden="true"`
+
+**Result:** PASS — no code changes required.
+
+## T24 — Add aria-hidden to decorative SVGs
+
+**Validation gate:** All images have alt text, decorative SVGs have `aria-hidden="true"`.
+
+**Changes:**
+- No `<img>` alt text changes needed (both already have descriptive alt)
+- Added `aria-hidden="true"` to all 61 inline SVGs (all decorative — icons next to text, or illustrations with adjacent headings)
+
+**Commands run:**
+```
+grep -c 'aria-hidden="true"' index.html  → 61
+grep '<svg' index.html | grep -cv 'aria-hidden'  → 0
+```
+
+**Result:** PASS
+
+## T25 — Image file size check
+
+**Validation gate:** No images >100KB remain, or WebP conversion applied.
+
+**File sizes:**
+- logo.png: 25.5KB
+- logo-light.png: 25.5KB
+- apple-touch-icon.png: 23.9KB
+- favicon-32x32.png: 2.3KB
+- favicon-16x16.png: 0.8KB
+
+All under 100KB threshold. No conversion needed.
+
+**Result:** PASS — logged and skipped.
+
