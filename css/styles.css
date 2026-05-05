@@ -217,6 +217,7 @@ img {
     font-size: 0.875rem;
     border-radius: 999px;
     padding: 0.625rem 1.5rem;
+    min-height: 44px;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     border: none;
     cursor: pointer;
@@ -274,6 +275,19 @@ img {
     .btn-primary {
         animation: none;
     }
+}
+
+.btn-secondary {
+    color: var(--white);
+    background: #ff6a00;
+    box-shadow: 0 4px 14px rgba(255, 106, 0, 0.3);
+}
+.btn-secondary:hover {
+    background: #e55f00;
+    box-shadow: 0 8px 28px rgba(255, 106, 0, 0.4);
+}
+.btn-secondary:active {
+    box-shadow: 0 2px 8px rgba(255, 106, 0, 0.25);
 }
 
 .btn-outline {
@@ -993,7 +1007,7 @@ img {
     margin-bottom: 1.25rem;
 }
 
-.benefit-card h4 {
+.benefit-card h3 {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--navy-900);
@@ -1765,6 +1779,27 @@ img {
     background: var(--accent-600);
 }
 
+.mobile-cta-dismiss {
+    position: absolute;
+    top: 0.375rem;
+    right: 0.5rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--slate-400);
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+}
+.mobile-cta-dismiss:hover {
+    color: var(--navy-800);
+    background: var(--slate-100);
+}
+
 .mobile-cta-link svg {
     flex-shrink: 0;
 }
@@ -1928,6 +1963,96 @@ img {
 }
 
 /* ===== Skip to Content ===== */
+/* ===== Partner Trust Strip ===== */
+.trust-strip {
+    background: var(--slate-50);
+    border-bottom: 1px solid var(--slate-200);
+    padding: 1.25rem 0;
+}
+
+.trust-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.trust-strip-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--slate-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.trust-strip-logos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trust-strip-logo {
+    height: 32px;
+    width: auto;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: opacity 0.2s, filter 0.2s;
+}
+
+.trust-strip-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Metrics Strip */
+.metrics-strip {
+    background: var(--gray-900);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--gray-800);
+}
+
+.metrics-strip-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+}
+
+.metric-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-500);
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+    .metrics-strip-inner {
+        gap: 1.5rem;
+    }
+    .metric-number {
+        font-size: 1.25rem;
+    }
+    .metric-label {
+        font-size: 0.75rem;
+    }
+}
+
 .skip-to-content {
     position: fixed;
     top: -100%;
@@ -1996,7 +2121,7 @@ img {
     margin-bottom: 1.25rem;
 }
 
-.trust-badge-card h4 {
+.trust-badge-card h3 {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--navy-900);
@@ -2083,7 +2208,7 @@ img {
     margin-bottom: 1rem;
 }
 
-.rra-card h4 {
+.rra-card h3 {
     font-size: 1rem;
     font-weight: 700;
     color: var(--navy-900);
@@ -2163,7 +2288,7 @@ img {
     margin-bottom: 1rem;
 }
 
-.onboarding-item h4 {
+.onboarding-item h3 {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--navy-900);

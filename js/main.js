@@ -276,15 +276,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== Sticky mobile CTA =====
     var mobileCta = document.getElementById('mobileCta');
+    var mobileCtaDismissed = false;
+    var mobileCtaDismissBtn = document.getElementById('mobileCtaDismiss');
+
+    if (mobileCtaDismissBtn) {
+        mobileCtaDismissBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            mobileCtaDismissed = true;
+            mobileCta.classList.add('hidden');
+        });
+    }
 
     if (mobileCta && contactSection) {
         var mobileCtaObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
+                if (mobileCtaDismissed) return;
                 if (entry.isIntersecting) {
-                    // Hide when contact form is visible
                     mobileCta.classList.add('hidden');
                 } else {
-                    // Show when scrolled past hero but contact not visible
                     if (window.scrollY > 400) {
                         mobileCta.classList.remove('hidden');
                     }
@@ -296,8 +305,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mobileCtaObserver.observe(contactSection);
 
-        // Also show/hide based on scroll position
         window.addEventListener('scroll', function() {
+            if (mobileCtaDismissed) return;
             if (window.scrollY < 400) {
                 mobileCta.classList.add('hidden');
             }
