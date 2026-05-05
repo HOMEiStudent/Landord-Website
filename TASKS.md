@@ -48,7 +48,7 @@ JS: /js/main.js
 
 - [ ] **T14** — STOP and ask user: which partner/backer logos do you have permission to display? Do not add logos without confirmation. If Emerge logo or University of Sheffield logo is available, add a "Founded at" trust strip below the hero.
 
-- [ ] **T15** — Add a metrics strip with verifiable numbers: "1,200+ student app downloads in Sheffield · 3.5 daily app opens per active user · Currently co-designing HOMEi PM with University of Sheffield SmartMove". STOP and ask user to confirm these numbers are accurate before implementing.
+- [x] **T15** — Add a metrics strip with verifiable numbers. **User confirmed:** 1,200+ downloads, 3.5 daily active opens per user, co-designed with universities. Visible strip added below hero.
 
 ## Group E — Technical SEO Infrastructure
 

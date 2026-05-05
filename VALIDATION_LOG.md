@@ -253,3 +253,26 @@ python3 -c "print(len('...'))"  → 157 chars
 
 **Result:** PASS
 
+## T15 — Metrics strip with verifiable numbers
+
+**Validation gate:** Strip visible below hero with 3 metrics, no unverified claims.
+
+**User-confirmed metrics:**
+- "1,200+" — student app downloads (in Sheffield since Sept 2025)
+- "3.5" — daily active opens per user
+- "Co-designed" — with universities
+
+**Implementation:**
+- HTML: `.metrics-strip` div between trust strip and About section (lines 362-377)
+- CSS: Dark background (gray-900), flexbox layout, accent-500 numbers, responsive breakpoint at 640px
+- Not hidden — visible by default (user confirmed numbers are accurate)
+
+**Commands run:**
+```
+grep -c 'metric-item' index.html  → 3
+grep '1,200\|3.5\|Co-designed' index.html  → all 3 values present in metrics strip
+grep -c 'metrics-strip\|metric-item' css/styles.css  → 8 rules
+```
+
+**Result:** PASS
+
