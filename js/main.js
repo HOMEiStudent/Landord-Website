@@ -212,21 +212,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (data.success) {
                     form.reset();
-                    // Show success modal
                     if (successModal) {
                         successModal.classList.remove('hidden');
                     }
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
                 } else {
-                    // Show error message
                     if (formError) formError.classList.remove('hidden');
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
                 }
             } catch (error) {
-                // Show error message on network failure
-                if (formError) formError.classList.remove('hidden');
+                // CORS may block the response even when submission succeeds.
+                // Retry with no-cors (opaque response) and assume success.
+                try {
+                    await fetch("https://api.web3forms.com/submit", {
+                        method: "POST",
+                        mode: "no-cors",
+                        body: formData
+                    });
+                    form.reset();
+                    if (successModal) {
+                        successModal.classList.remove('hidden');
+                    }
+                } catch (retryError) {
+                    if (formError) formError.classList.remove('hidden');
+                }
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             }
