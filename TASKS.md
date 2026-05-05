@@ -11,11 +11,11 @@ Feature Flag: homei-pm-website-ab-test
 
 ## Group A — PostHog Installation
 
-- [ ] **T01** — Pre-wizard snapshot. Capture current state (git status, ls, HTML files). Confirm working tree is clean. No code changes — audit only.
+- [x] **T01** — Pre-wizard snapshot. Capture current state (git status, ls, HTML files). Confirm working tree is clean. No code changes — audit only.
 
-- [ ] **T02** — Install PostHog using the official wizard (`npx -y @posthog/wizard@latest`). Follow Path A/B/C depending on wizard behaviour. Do NOT commit yet.
+- [x] **T02** — Install PostHog. Wizard failed (non-interactive TTY) — Path C manual install. Created `scripts/posthog-init.js` with EU host. Added script tag to index.html.
 
-- [ ] **T03** — Review and complete the PostHog installation. Document wizard changes in `audits/posthog-wizard-changes.md`. Verify site-wide loading, inline API key, remove .env if needed. Commit.
+- [x] **T03** — Review complete. API key correct, EU host confirmed, no .env, no build step. Audit: `audits/posthog-wizard-changes.md`.
 
 - [ ] **T04** — Verify PostHog is live. Start local server, confirm $pageview events fire. Get user confirmation from PostHog dashboard.
 
