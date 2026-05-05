@@ -72,6 +72,30 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T12 — Audit/fix sticky mobile CTA bar
+
+**Validation gate:** Sticky bar is dismissible, doesn't overlap form/footer, only visible below 768px.
+
+**Audit findings:**
+- Bar exists with correct show/hide logic (IntersectionObserver on #contact, scroll threshold 400px)
+- Hidden above 768px via `display: none !important`
+- Hides when contact form visible (no overlap)
+- **NOT dismissible** — no close button existed
+
+**Fixes applied:**
+1. Added dismiss button (`<button class="mobile-cta-dismiss">`) with X icon and `aria-label="Dismiss"`
+2. Added CSS for dismiss button (positioned top-right, 28x28px, hover state)
+3. Added JS: click handler sets `mobileCtaDismissed = true` and hides bar
+4. Added `if (mobileCtaDismissed) return;` guards in both the IntersectionObserver and scroll handlers to prevent bar reappearing after dismissal
+
+**Commands run:**
+```
+grep 'mobileCtaDismiss' index.html js/main.js  → button in HTML, 7 refs in JS
+grep 'mobile-cta-dismiss' css/styles.css       → 2 rules (base + hover)
+```
+
+**Result:** PASS
+
 ## T11 — Add data-cta-id attributes
 
 **Validation gate:** Every CTA has a unique `data-cta-id`, no duplicates, no tracking scripts added.

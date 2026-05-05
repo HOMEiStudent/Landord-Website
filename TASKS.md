@@ -40,7 +40,7 @@ JS: /js/main.js
 
 - [x] **T11** — Add `data-cta-id` attributes to every CTA button/link on index.html. **17 unique IDs added, zero duplicates, zero tracking scripts.**
 
-- [ ] **T12** — Audit existing sticky mobile CTA bar. Verify it is dismissible, doesn't overlap form fields or footer. If not dismissible, add dismiss functionality. If no sticky bar exists, create one using vanilla JS in `js/main.js`.
+- [x] **T12** — Audit existing sticky mobile CTA bar. **Bar existed but was not dismissible. Added dismiss button with X icon, CSS, and JS handler. Bar stays hidden after dismissal.**
 
 ## Group D — Trust Signals
 

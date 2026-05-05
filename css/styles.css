@@ -1779,6 +1779,27 @@ img {
     background: var(--accent-600);
 }
 
+.mobile-cta-dismiss {
+    position: absolute;
+    top: 0.375rem;
+    right: 0.5rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--slate-400);
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+}
+.mobile-cta-dismiss:hover {
+    color: var(--navy-800);
+    background: var(--slate-100);
+}
+
 .mobile-cta-link svg {
     flex-shrink: 0;
 }
