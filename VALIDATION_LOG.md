@@ -72,6 +72,23 @@ grep -A3 '<h1' index.html → correct content confirmed
 
 **Result:** PASS
 
+## T14 — Partner trust strip (deferred, structure built)
+
+**Validation gate:** Trust strip HTML structure exists below hero, hidden, ready for logo activation.
+
+**Status:** User deferred logo permissions. Built the code so logos can be added quickly:
+- HTML: `.trust-strip.hidden` div below hero with placeholder comments and example `<img>` tags
+- CSS: Full styling for strip, label, logo grid with greyscale/hover effects
+- To activate: remove `.hidden` from `#trustStrip`, add `<img>` tags with logo files
+
+**Commands run:**
+```
+grep 'trust-strip' index.html    → structure present, class="hidden"
+grep -c 'trust-strip' styles.css → 6 CSS rules
+```
+
+**Result:** PASS (deferred per user instruction, structure ready)
+
 ## T13 — Testimonial section placeholders
 
 **Validation gate:** Placeholder text replaced, slots wrapped with PLACEHOLDER comments, no fake quotes.

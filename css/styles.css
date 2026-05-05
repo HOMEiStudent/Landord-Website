@@ -1963,6 +1963,48 @@ img {
 }
 
 /* ===== Skip to Content ===== */
+/* ===== Partner Trust Strip ===== */
+.trust-strip {
+    background: var(--slate-50);
+    border-bottom: 1px solid var(--slate-200);
+    padding: 1.25rem 0;
+}
+
+.trust-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.trust-strip-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--slate-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.trust-strip-logos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trust-strip-logo {
+    height: 32px;
+    width: auto;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: opacity 0.2s, filter 0.2s;
+}
+
+.trust-strip-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
 .skip-to-content {
     position: fixed;
     top: -100%;
