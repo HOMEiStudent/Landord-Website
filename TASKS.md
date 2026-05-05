@@ -58,13 +58,13 @@ JS: /js/main.js
 
 - [x] **T18** — Verify robots.txt. **Already correct** — no changes needed.
 
-- [ ] **T19** — Verify existing Organization schema (JSON-LD) in `<head>`. Ensure it includes: name, url, logo URL, description, address (Sheffield, UK). Add `sameAs` with LinkedIn URL — STOP and ask user for the exact LinkedIn URL.
+- [x] **T19** — Verify Organization schema. **Fixed:** added `address` (Sheffield, GB). LinkedIn `sameAs` skipped per user instruction. All required fields present.
 
-- [ ] **T20** — ~~BreadcrumbList schema on non-homepage pages~~ **SKIPPED** — only homepage exists. N/A.
+- [x] **T20** — ~~BreadcrumbList schema on non-homepage pages~~ **SKIPPED** — only homepage exists. N/A.
 
-- [ ] **T21** — Verify existing FAQPage schema (JSON-LD) matches the actual FAQ HTML content. Fix any mismatches between schema entries and visible FAQ questions.
+- [x] **T21** — Fix FAQ schema/HTML mismatch. **Fixed:** added missing Q7 "What happens after the free year?", updated all question names to match visible HTML text exactly. Now 11 schema entries = 11 HTML FAQ items.
 
-- [ ] **T22** — Validate all schema by reviewing JSON-LD blocks for structural correctness. Paste validation evidence into VALIDATION_LOG.md.
+- [x] **T22** — Validate all JSON-LD schema. **All 3 blocks (SoftwareApplication, FAQPage, Organization) pass structural validation.** Evidence in VALIDATION_LOG.md.
 
 ## Group F — Image & Accessibility Pass
 

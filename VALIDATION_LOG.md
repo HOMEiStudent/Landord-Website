@@ -321,3 +321,68 @@ Sitemap: https://homeistudent.uk/sitemap.xml
 
 **Result:** PASS — no changes needed.
 
+## T19 — Verify Organization schema
+
+**Validation gate:** Organization schema includes name, url, logo, description, address (Sheffield, UK).
+
+**Before:** Missing `address` field. No `sameAs`.
+**After:** Added `address` with `addressLocality: "Sheffield"`, `addressCountry: "GB"`.
+**LinkedIn `sameAs`:** Skipped per user instruction.
+
+**Fields verified:**
+- name: "HOMEi" — OK
+- url: "https://homeistudent.uk" — OK
+- logo: "https://homeistudent.uk/images/logo.png" — OK
+- description: present — OK
+- founder: [James, Gurprit] — OK
+- foundingDate: "2024" — OK
+- address: Sheffield, GB — OK
+
+**Result:** PASS
+
+## T20 — BreadcrumbList schema
+
+**SKIPPED** — single-page site, no breadcrumbs applicable.
+
+**Result:** N/A
+
+## T21 — Fix FAQ schema/HTML mismatch
+
+**Validation gate:** Schema question count = HTML question count, names match visible text.
+
+**Before:** 10 schema entries vs 11 HTML FAQ items. Schema question names were longer/more formal than visible text.
+**Fixes:**
+1. Added missing Q7: "What happens after the free year?"
+2. Updated all `"name"` values to match exact visible `<span>` text in HTML
+3. Updated `"text"` values to match current HTML answer content
+
+**Commands run:**
+```
+grep -c '"@type": "Question"' index.html  → 11
+grep -c 'class="faq-question"' index.html  → 11
+```
+
+**Result:** PASS — 11 = 11, all names match.
+
+## T22 — Validate all JSON-LD schema
+
+**Validation gate:** All schema blocks parse as valid JSON with required fields.
+
+**Validation output (python3 json.loads):**
+```
+Block 1 (SoftwareApplication): VALID JSON
+  name: OK, applicationCategory: OK, operatingSystem: OK
+  url: OK, description: OK, offers: OK, publisher: OK
+  offers.@type: OK, offers.price: OK, offers.priceCurrency: OK
+
+Block 2 (FAQPage): VALID JSON
+  Questions: 11
+  All questions have name + acceptedAnswer.text: YES
+
+Block 3 (Organization): VALID JSON
+  name: OK, url: OK, logo: OK, description: OK, address: OK
+  address.locality: Sheffield, address.country: GB
+```
+
+**Result:** PASS — zero structural errors across all 3 blocks.
+
