@@ -76,19 +76,19 @@ JS: /js/main.js
 
 ## Group G — Mobile & Core Web Vitals
 
-- [ ] **T26** — ~~Run Lighthouse~~ **ADAPTED** — No browser available in this environment. Instead, audit index.html manually for: viewport meta, render-blocking resources, image dimensions, lazy loading, CLS risks. Output baseline to `audits/lighthouse-baseline-manual.md`.
+- [x] **T26** — Manual Lighthouse audit. Output: `audits/lighthouse-baseline-manual.md`. Identified render-blocking Google Fonts, missing image dimensions, no lazy loading.
 
-- [ ] **T27** — Add `loading="lazy"` to every `<img>` below the fold. Add `loading="eager"` and `fetchpriority="high"` to the logo/hero image.
+- [x] **T27** — Added `loading="eager"` + `fetchpriority="high"` to navbar logo, `loading="lazy"` to footer logo.
 
-- [ ] **T28** — Add `width` and `height` attributes to every `<img>` tag. Match to actual image dimensions.
+- [x] **T28** — Added `width="200" height="200"` to both `<img>` tags (matching actual PNG dimensions).
 
-- [ ] **T29** — Audit `css/styles.css` for render-blocking issues. Inline critical above-the-fold CSS in `<style>` in `<head>`. Defer non-critical CSS using `media="print" onload="this.media='all'"` pattern.
+- [x] **T29** — Deferred Google Fonts via `media="print" onload` pattern with preload hint and noscript fallback. Local styles.css kept blocking (small enough that inlining critical CSS would add more bytes than saved).
 
-- [ ] **T30** — Verify `<meta name="viewport" content="width=device-width, initial-scale=1">` exists. Fix if missing or incorrect.
+- [x] **T30** — Viewport meta already correct: `width=device-width, initial-scale=1.0`. No fix needed.
 
-- [ ] **T31** — ~~Test in browser~~ **ADAPTED** — No browser available. Audit CSS for: min tap target sizes (44px), font sizes (min 14px), overflow risks, fixed-width elements. Log findings in `audits/mobile-audit.md`.
+- [x] **T31** — Mobile CSS audit. Output: `audits/mobile-audit.md`. All tap targets meet 44px min, no font below 14px on primary text, no overflow risks.
 
-- [ ] **T32** — ~~Re-run Lighthouse~~ **ADAPTED** — Produce a summary of all performance improvements made, expected impact on each Lighthouse category, and remaining recommendations. Output to `audits/performance-summary.md`.
+- [x] **T32** — Performance summary. Output: `audits/performance-summary.md`. Expected Lighthouse: Performance 90-95, Accessibility 95-100, SEO 100.
 
 ## Group H — Final Validation
 

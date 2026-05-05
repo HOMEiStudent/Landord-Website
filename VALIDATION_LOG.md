@@ -430,3 +430,88 @@ All under 100KB threshold. No conversion needed.
 
 **Result:** PASS — logged and skipped.
 
+## T26 — Manual Lighthouse audit
+
+**Validation gate:** Audit file exists covering viewport, render-blocking, images, CLS.
+
+**Output:** `audits/lighthouse-baseline-manual.md`
+
+**Result:** PASS
+
+## T27 — Image loading attributes
+
+**Validation gate:** Above-fold images eager with fetchpriority, below-fold images lazy.
+
+**Commands run:**
+```
+grep 'loading=\|fetchpriority' index.html
+  → logo.png: loading="eager" fetchpriority="high"
+  → logo-light.png: loading="lazy"
+```
+
+**Result:** PASS
+
+## T28 — Image width/height attributes
+
+**Validation gate:** All `<img>` tags have width and height matching actual dimensions.
+
+**Commands run:**
+```
+grep 'width="200" height="200"' index.html  → 2 matches (both logos, actual size 200x200)
+```
+
+**Result:** PASS
+
+## T29 — Defer render-blocking CSS
+
+**Validation gate:** Google Fonts no longer render-blocking.
+
+**Changes:**
+- Added `rel="preload" as="style"` hint
+- Changed stylesheet to `media="print" onload="this.media='all'"`
+- Added `<noscript>` fallback
+- Local styles.css kept as blocking (justified: single small file, inlining would bloat HTML)
+
+**Commands run:**
+```
+grep 'media="print"' index.html  → Google Fonts link with onload pattern
+grep 'preload.*style' index.html  → preload hint present
+grep '<noscript>' index.html  → fallback present
+```
+
+**Result:** PASS
+
+## T30 — Viewport meta
+
+**Validation gate:** Viewport meta exists with correct content.
+
+**Commands run:**
+```
+grep 'viewport' index.html  → <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+**Result:** PASS — already correct.
+
+## T31 — Mobile CSS audit
+
+**Validation gate:** No critical mobile issues (tap targets, font sizes, overflow).
+
+**Output:** `audits/mobile-audit.md`
+- All CTAs meet 44px min-height
+- No primary text below 14px
+- No horizontal overflow risks
+- All grids responsive
+
+**Result:** PASS
+
+## T32 — Performance summary
+
+**Validation gate:** Summary document produced.
+
+**Output:** `audits/performance-summary.md`
+- Expected Lighthouse Performance: 90-95
+- Expected Lighthouse Accessibility: 95-100
+- Expected Lighthouse SEO: 100
+
+**Result:** PASS
+

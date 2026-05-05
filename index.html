@@ -25,7 +25,9 @@
     <link rel="canonical" href="https://homeistudent.uk/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Schema.org Structured Data -->
@@ -187,7 +189,7 @@
     <nav class="navbar" id="navbar">
         <div class="container navbar-inner">
             <a href="#" class="logo" id="navLogo">
-                <img src="images/logo.png" alt="HOMEi Property Management" class="logo-img" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                <img src="images/logo.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="eager" fetchpriority="high" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
                 <div class="logo-fallback">
                     <div class="logo-icon">H</div>
                     <span class="logo-text">HOMEi <span class="logo-accent">Property Management</span></span>
@@ -1453,7 +1455,7 @@
             <div class="container footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo" id="footerLogo">
-                        <img src="images/logo-light.png" alt="HOMEi Property Management" class="logo-img" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <img src="images/logo-light.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="lazy" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
                         <div class="logo-fallback">
                             <div class="logo-icon logo-icon-accent">H</div>
                             <span class="logo-text text-white">HOMEi <span class="logo-accent-light">PM</span></span>
