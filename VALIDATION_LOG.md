@@ -106,3 +106,34 @@ grep -n 'posthog-init\|cta-tracking\|posthog-experiments\|main.js' index.html
 
 **Result:** PASS
 
+## T08 — Validate A/B test working
+
+**Validation gate:** Different variants show on different loads, hero_variant_shown events fire.
+
+**Evidence:**
+- User opened two tabs: one showed "Run your student lets without the headaches" (control), other showed "Built by a former HMO landlord, for landlords" (variant-b)
+- PostHog Live Events: multiple `hero_variant_shown` events confirmed
+- User confirmed: YES
+
+**Result:** PASS
+
+## T09 — Manual Lighthouse audit for regression
+
+**Validation gate:** Phase 1 scores not degraded, PostHog scripts non-blocking.
+
+**Phase 1 work verification:**
+- aria-hidden="true": 61 SVGs (intact)
+- H1 count: 1 (intact)
+- data-cta-id: 17 (intact)
+- JSON-LD schemas: 3 valid blocks (intact)
+- SEO elements (canonical, meta description, viewport, schemas): all present
+
+**PostHog script impact:**
+- posthog-init.js: 1,885 bytes (in head, but loads PostHog library async)
+- cta-tracking.js: 348 bytes (deferred)
+- posthog-experiments.js: 740 bytes (deferred)
+- Total added: 2,973 bytes (~2.9KB)
+- No render-blocking scripts added
+
+**Result:** PASS
+

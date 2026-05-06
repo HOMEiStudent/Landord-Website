@@ -29,10 +29,10 @@ Feature Flag: homei-pm-website-ab-test
 
 - [x] **T07** — Implemented feature flag client-side. Created `scripts/posthog-experiments.js` with 3-variant H1 swap. Added deferred script before `</body>` in index.html.
 
-- [ ] **T08** — Validate the A/B test is working. Hard-refresh to see different variants. Get user confirmation of hero_variant_shown events.
+- [x] **T08** — A/B test validated. Two tabs showed different variants (control + variant-b). `hero_variant_shown` events confirmed in PostHog Live Events. Hard-refresh to see different variants. Get user confirmation of hero_variant_shown events.
 
 ## Group D — Final Validation
 
-- [ ] **T09** — Manual Lighthouse-style audit on homepage. Confirm Phase 1 scores have not degraded.
+- [x] **T09** — Manual audit complete. Phase 1 intact (61 aria-hidden, 1 H1, 17 CTAs, 3 valid schemas, all SEO elements). PostHog scripts total 2.9KB, non-blocking. No degradation. Confirm Phase 1 scores have not degraded.
 
-- [ ] **T10** — Generate PHASE_1.5_COMPLETION_REPORT.md with full summary.
+- [x] **T10** — Completion report generated: `PHASE_1.5_COMPLETION_REPORT.md`.
