@@ -177,9 +177,8 @@
     }
     </script>
 
-    <!-- PostHog Analytics -->
-    <script src="/scripts/posthog-init.js"></script>
-    <script src="/scripts/cta-tracking.js" defer></script>
+    <!-- Cookie Consent (gates PostHog analytics on user acceptance) -->
+    <script src="/scripts/cookie-consent.js"></script>
 </head>
 <body>
 
@@ -1433,7 +1432,7 @@
 
                             <p class="form-disclaimer">
                                 We'll only use your details to contact you about HOMEi Property
-                                Management. We won't share them with anyone else.
+                                Management. See our <a href="/privacy.html">Privacy Policy</a> for how we handle your data.
                             </p>
                         </form>
                     </div>
@@ -1496,6 +1495,14 @@
                         <li>support@homeistudent.com</li>
                     </ul>
                 </div>
+
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="#" id="cookieSettingsLink">Cookie Settings</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -1550,7 +1557,17 @@
         </div>
     </div>
 
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent hidden" id="cookieConsent" role="dialog" aria-label="Cookie consent" aria-describedby="cookieConsentText">
+        <div class="cookie-consent-inner">
+            <p id="cookieConsentText">We use cookies to analyse how our website is used and to run A/B tests. No analytics cookies are set until you accept. <a href="/privacy.html">Privacy Policy</a></p>
+            <div class="cookie-consent-actions">
+                <button class="btn btn-primary btn-sm cookie-accept">Accept</button>
+                <button class="btn btn-outline btn-sm cookie-reject">Reject</button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js" defer></script>
-    <script src="/scripts/posthog-experiments.js" defer></script>
 </body>
 </html>
