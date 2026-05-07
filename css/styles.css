@@ -1894,11 +1894,15 @@ img {
 @media (max-width: 767px) {
     .hero { padding-top: 5rem; padding-bottom: 3rem; }
 
+    .hero-content { max-width: none; text-align: center; }
+
     .hero-title { font-size: 1.875rem; }
 
     .hero-description { font-size: 0.9375rem; }
 
-    .trust-indicators { gap: 1.25rem; }
+    .hero-actions { align-items: center; }
+
+    .trust-indicators { gap: 1.25rem; justify-content: center; text-align: center; }
 
     .trust-stat { font-size: 0.875rem; }
 
@@ -2043,13 +2047,18 @@ img {
 
 @media (max-width: 640px) {
     .metrics-strip-inner {
-        gap: 1.5rem;
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+    .metric-item {
+        min-width: 0;
+        flex: 1;
     }
     .metric-number {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
     .metric-label {
-        font-size: 0.75rem;
+        font-size: 0.625rem;
     }
 }
 
