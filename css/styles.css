@@ -1894,11 +1894,15 @@ img {
 @media (max-width: 767px) {
     .hero { padding-top: 5rem; padding-bottom: 3rem; }
 
+    .hero-content { max-width: none; text-align: center; }
+
     .hero-title { font-size: 1.875rem; }
 
     .hero-description { font-size: 0.9375rem; }
 
-    .trust-indicators { gap: 1.25rem; }
+    .hero-actions { align-items: center; }
+
+    .trust-indicators { gap: 1.25rem; justify-content: center; text-align: center; }
 
     .trust-stat { font-size: 0.875rem; }
 
@@ -2043,13 +2047,18 @@ img {
 
 @media (max-width: 640px) {
     .metrics-strip-inner {
-        gap: 1.5rem;
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+    .metric-item {
+        min-width: 0;
+        flex: 1;
     }
     .metric-number {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
     .metric-label {
-        font-size: 0.75rem;
+        font-size: 0.625rem;
     }
 }
 
@@ -2386,4 +2395,76 @@ img {
     .rra-card { padding: 1.5rem; }
     .onboarding-item { padding: 1.5rem; }
     .founder-quote { padding: 1.5rem 1.75rem; }
+}
+
+/* ===== Cookie Consent Banner ===== */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--white);
+    border-top: 1px solid var(--slate-200);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+    padding: 1rem 1.5rem;
+}
+
+.cookie-consent.hidden { display: none; }
+
+.cookie-consent-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.cookie-consent-inner p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--navy-700);
+    margin: 0;
+    flex: 1;
+}
+
+.cookie-consent-inner a {
+    color: var(--accent-600);
+    text-decoration: underline;
+}
+
+.cookie-consent-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--slate-300);
+    color: var(--navy-700);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-outline:hover {
+    background: var(--slate-50);
+    border-color: var(--slate-400);
+}
+
+@media (max-width: 640px) {
+    .cookie-consent-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cookie-consent-actions {
+        width: 100%;
+        justify-content: center;
+    }
 }
