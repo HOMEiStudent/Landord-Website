@@ -19,28 +19,17 @@
         if (banner) banner.classList.remove('hidden');
     }
 
-    function initPostHog() {
-        if (window.__posthogLoaded) return;
-        window.__posthogLoaded = true;
-
-        var s = document.createElement('script');
-        s.src = '/scripts/posthog-init.js';
-        s.onload = function() {
-            var deps = ['/scripts/cta-tracking.js', '/scripts/posthog-experiments.js'];
-            deps.forEach(function(src) {
-                var d = document.createElement('script');
-                d.src = src;
-                d.defer = true;
-                document.body.appendChild(d);
-            });
-        };
-        document.head.appendChild(s);
+    function enableTracking() {
+        if (window.posthog) {
+            posthog.set_config({ persistence: 'localStorage+cookie' });
+            posthog.opt_in_capturing();
+        }
     }
 
     function handleAccept() {
         setConsent('accepted');
         hideBanner();
-        initPostHog();
+        enableTracking();
     }
 
     function handleReject() {
@@ -51,6 +40,7 @@
     function clearPostHogCookies() {
         if (window.posthog) {
             posthog.opt_out_capturing();
+            posthog.set_config({ persistence: 'memory' });
             posthog.reset();
         }
         document.cookie.split(';').forEach(function(c) {
@@ -67,10 +57,6 @@
         } else {
             fn();
         }
-    }
-
-    if (getConsent() === 'accepted') {
-        initPostHog();
     }
 
     onReady(function() {
