@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="380" viewBox="0 0 720 380">
+  <rect width="720" height="380" fill="#F5F5F4"/>
+  <text x="360" y="180" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="600" fill="#78716C">Deadline calendar image</text>
+  <text x="360" y="206" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="13" fill="#A8A29E">Calendar showing the 31 May 2026 deadline</text>
+  <text x="360" y="230" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#A8A29E">720 × 380 · WebP</text>
+</svg>
