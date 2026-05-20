@@ -2,5 +2,13 @@
 posthog.init('phc_mv6JqZDqX8urYDijU46DVVLKCdKZphpYnBjCtHWsk357', {
     api_host: 'https://us.i.posthog.com',
     person_profiles: 'identified_only',
-    loaded: function(posthog) { posthog.set_config({ disable_toolbar: true }); }
+    persistence: 'memory',
+    opt_out_capturing_by_default: true,
+    loaded: function(posthog) {
+        posthog.set_config({ disable_toolbar: true });
+        if (localStorage.getItem('cookie_consent') === 'accepted') {
+            posthog.set_config({ persistence: 'localStorage+cookie' });
+            posthog.opt_in_capturing();
+        }
+    }
 });
