@@ -60,7 +60,8 @@ Manual checks (run actual Lighthouse in Chrome for scores):
 | Accessibility | Heading hierarchy (H1>H2>H3, no skips) | PASS |
 | Accessibility | aria-label on nav element | PASS |
 | Accessibility | aria-label on mobile menu button | PASS |
-| Accessibility | Link color contrast (accent-600 #EA580C on white) | PASS (5.0:1) |
+| Accessibility | Link color contrast (#B45309 on white) | PASS (5.0:1, fixed from #EA580C at 3.56:1) |
+| Accessibility | Alert/CTA banner contrast (#C2410C bg, white text) | PASS (5.2:1, fixed from #F97316 at 2.80:1) |
 | Best Practices | HTTPS in canonical/og URLs | PASS |
 | Best Practices | Charset declared in first 1024 bytes | PASS |
 | SEO | Title tag present | PASS |
