@@ -199,6 +199,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var formData = new FormData(form);
 
+            function captureConversion() {
+                if (window.posthog) {
+                    posthog.capture('form_submitted', {
+                        form_id: 'contact-form',
+                        role: formData.get('role') || 'not_specified',
+                        has_feedback: !!((formData.get('feedback') || '').trim()),
+                        page: window.location.pathname
+                    });
+                }
+            }
+
             var originalText = submitBtn.textContent;
             submitBtn.textContent = "Sending...";
             submitBtn.disabled = true;
@@ -211,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var data = await response.json();
 
                 if (data.success) {
+                    captureConversion();
                     form.reset();
                     if (successModal) {
                         successModal.classList.remove('hidden');
@@ -231,6 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         mode: "no-cors",
                         body: formData
                     });
+                    captureConversion();
                     form.reset();
                     if (successModal) {
                         successModal.classList.remove('hidden');
