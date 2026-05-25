@@ -1,6 +1,6 @@
 /**
  * HOMEi PM - A/B/C Test Copy Variants
- * Feature flag: homei-pm-website-ab-test (PostHog multivariate)
+ * Feature flag: landlord-test-v2 (PostHog multivariate)
  * Variants: control (33%), variant-a (33%), variant-b (34%)
  *
  * Control  = Current baseline wording (unchanged from original site copy)
@@ -14,7 +14,7 @@
  * (ad blockers, Firefox ETP, etc.) so the A/B test still runs.
  */
 (function () {
-  var FLAG_NAME = 'homei-pm-website-ab-test';
+  var FLAG_NAME = 'landlord-test-v2';
   var STORAGE_KEY = 'homei_ab_variant';
   var VARIANTS = ['control', 'variant-a', 'variant-b'];
   var WEIGHTS = [33, 33, 34];
