@@ -81,9 +81,10 @@
         el.innerHTML = variantCopy[key];
       }
     }
-    if (window.posthog && source === 'posthog') {
+    if (window.posthog) {
       posthog.capture('ab_variant_shown', {
         variant: variant,
+        assignment_source: source,
         page: window.location.pathname,
         elements_swapped: keys.length
       });
