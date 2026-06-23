@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f5f5f4"/>
+  <rect x="540" y="285" width="120" height="60" rx="6" fill="#e7e5e4"/>
+  <text x="600" y="268" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#a8a29e">Hero image</text>
+  <text x="600" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#a8a29e">Student terraced houses — UK street</text>
+  <text x="600" y="330" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#c4c0bc">1200 × 630 px · Replace with hero.webp</text>
+</svg>
