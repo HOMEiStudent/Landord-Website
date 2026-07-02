@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Savings Calculator | See What HOMEi PM Saves You | HOMEi PM</title>
+    <meta name="description" content="Free landlord savings calculator. See the money HOMEi PM puts back in your pocket each year and the compliance and possession risk it takes off the table. Built for UK landlords and student HMOs.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Landlord Savings Calculator | HOMEi PM">
+    <meta property="og:description" content="See what a UK landlord saves each year with HOMEi PM, plus the compliance and possession risk it protects against.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://homeistudent.uk/savings-calculator">
+    <meta property="og:image" content="https://homeistudent.uk/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Landlord Savings Calculator | HOMEi PM">
+    <meta name="twitter:description" content="See what a UK landlord saves each year with HOMEi PM, plus the risk it takes off the table.">
+    <meta name="twitter:image" content="https://homeistudent.uk/images/og-image.png">
+    <meta name="theme-color" content="#F97316">
+    <link rel="canonical" href="https://homeistudent.uk/savings-calculator">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HOMEi PM Landlord Savings Calculator",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web browser",
+        "url": "https://homeistudent.uk/savings-calculator",
+        "description": "A free calculator that estimates the annual savings and the compliance and possession risk mitigation a UK landlord gets from HOMEi PM.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "GBP"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "HOMEi",
+            "url": "https://homeistudent.uk"
+        }
+    }
+    </script>
+
+    <style>
+        /* ===== Savings calculator, page-specific styles (uses site design tokens) ===== */
+        .calc-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 6rem 1.25rem 4rem;
+        }
+
+        @media (min-width: 640px) {
+            .calc-page { padding: 7rem 2rem 4rem; }
+        }
+
+        .calc-intro { max-width: 720px; margin-bottom: 2.5rem; }
+
+        .calc-intro h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--navy-900);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+
+        @media (min-width: 640px) {
+            .calc-intro h1 { font-size: 2.5rem; }
+        }
+
+        .calc-intro p {
+            font-size: 1.0625rem;
+            color: var(--slate-500);
+            line-height: 1.7;
+        }
+
+        /* Layout: inputs and results side by side on wide screens */
+        .calc-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        @media (min-width: 900px) {
+            .calc-layout { grid-template-columns: 340px 1fr; gap: 2rem; }
+        }
+
+        /* Cards */
+        .calc-card {
+            background: var(--white);
+            border: 1px solid var(--slate-200);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (min-width: 900px) {
+            .calc-controls { position: sticky; top: 90px; }
+        }
+
+        .calc-card h2 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 1.25rem;
+        }
+
+        /* Controls */
+        .calc-field { margin-bottom: 1.125rem; }
+        .calc-field:last-child { margin-bottom: 0; }
+
+        .calc-field label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--navy-800);
+            margin-bottom: 0.5rem;
+        }
+
+        .calc-field select,
+        .calc-field input[type="text"] {
+            width: 100%;
+            font-family: inherit;
+            font-size: 0.9375rem;
+            color: var(--navy-900);
+            background: var(--white);
+            border: 1.5px solid var(--slate-200);
+            border-radius: 0.625rem;
+            padding: 0.6875rem 0.875rem;
+            min-height: 44px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .calc-field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2378716C' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.875rem center;
+            padding-right: 2.5rem;
+        }
+
+        .calc-field select:focus,
+        .calc-field input[type="text"]:focus {
+            outline: none;
+            border-color: var(--accent-500);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+        }
+
+        /* Segmented button groups for the small choices */
+        .calc-segmented {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .calc-segmented button {
+            flex: 1 1 auto;
+            font-family: inherit;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--navy-700);
+            background: var(--white);
+            border: 1.5px solid var(--slate-200);
+            border-radius: 0.625rem;
+            padding: 0.5625rem 0.5rem;
+            min-height: 44px;
+            cursor: pointer;
+            transition: all 0.18s;
+        }
+
+        .calc-segmented button:hover {
+            border-color: var(--accent-400);
+        }
+
+        .calc-segmented button[aria-pressed="true"] {
+            color: var(--white);
+            background: var(--accent-500);
+            border-color: var(--accent-500);
+        }
+
+        .calc-segmented button:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.25);
+        }
+
+        /* Location combobox */
+        .calc-combo { position: relative; }
+
+        .calc-combo-list {
+            position: absolute;
+            z-index: 20;
+            top: calc(100% + 4px);
+            left: 0;
+            right: 0;
+            max-height: 260px;
+            overflow-y: auto;
+            background: var(--white);
+            border: 1.5px solid var(--slate-200);
+            border-radius: 0.625rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            padding: 0.25rem;
+        }
+
+        .calc-combo-list.hidden { display: none; }
+
+        .calc-combo-option {
+            padding: 0.5625rem 0.75rem;
+            border-radius: 0.4375rem;
+            font-size: 0.9375rem;
+            color: var(--navy-800);
+            cursor: pointer;
+        }
+
+        .calc-combo-option:hover,
+        .calc-combo-option.active {
+            background: var(--accent-50);
+            color: var(--accent-600);
+        }
+
+        .calc-combo-empty {
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            color: var(--slate-500);
+        }
+
+        /* Results */
+        .calc-headline {
+            background: linear-gradient(135deg, var(--accent-50) 0%, var(--white) 100%);
+            border: 1px solid var(--accent-200);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .calc-headline-label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--accent-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .calc-headline-figure {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--navy-900);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        @media (min-width: 640px) {
+            .calc-headline-figure { font-size: 3.5rem; }
+        }
+
+        .calc-headline-range {
+            font-size: 0.9375rem;
+            color: var(--slate-500);
+            margin-top: 0.625rem;
+        }
+
+        .calc-headline-context {
+            font-size: 0.9375rem;
+            color: var(--navy-700);
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        .calc-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin-top: 1.25rem;
+        }
+
+        /* Breakdown lines */
+        .calc-breakdown { margin-top: 0.5rem; }
+
+        .calc-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .calc-line:last-child { border-bottom: none; }
+
+        .calc-line-label {
+            font-size: 0.9375rem;
+            color: var(--navy-700);
+        }
+
+        .calc-line-label small {
+            display: block;
+            font-size: 0.8125rem;
+            color: var(--slate-500);
+            margin-top: 0.125rem;
+        }
+
+        .calc-line-values { text-align: right; white-space: nowrap; }
+
+        .calc-line-base {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--navy-900);
+        }
+
+        .calc-line-range {
+            font-size: 0.8125rem;
+            color: var(--slate-500);
+            margin-top: 0.125rem;
+        }
+
+        /* Section blocks for risk */
+        .calc-block { margin-top: 1.5rem; }
+
+        .calc-block-head {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 0.25rem;
+        }
+
+        .calc-block-note {
+            font-size: 0.875rem;
+            color: var(--slate-500);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .calc-risk-figure {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--navy-900);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .calc-risk-range {
+            font-size: 0.875rem;
+            color: var(--slate-500);
+            margin-top: 0.375rem;
+        }
+
+        .calc-risk-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 560px) {
+            .calc-risk-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .calc-risk-tile {
+            border: 1px solid var(--slate-200);
+            border-radius: 0.75rem;
+            padding: 1.125rem;
+        }
+
+        .calc-risk-tile .tag {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.1875rem 0.5rem;
+            border-radius: 999px;
+            margin-bottom: 0.625rem;
+        }
+
+        .tag-rare { color: var(--red-500); background: var(--red-100); }
+        .tag-annual { color: var(--green-600); background: var(--green-100); }
+
+        .calc-separate-note {
+            font-size: 0.875rem;
+            color: var(--navy-700);
+            background: var(--slate-50);
+            border-left: 3px solid var(--accent-400);
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.75rem 1rem;
+            line-height: 1.6;
+            margin-top: 1.5rem;
+        }
+
+        .calc-method-link {
+            font-size: 0.9375rem;
+            margin-top: 1.25rem;
+        }
+
+        .calc-method-link a {
+            color: var(--accent-600);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-200);
+            text-underline-offset: 2px;
+        }
+
+        .calc-rent-line {
+            font-size: 0.875rem;
+            color: var(--slate-500);
+            margin-top: 1rem;
+        }
+
+        /* Graceful empty / error message */
+        .calc-message {
+            font-size: 0.9375rem;
+            color: var(--navy-700);
+            background: var(--accent-50);
+            border: 1px solid var(--accent-200);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            line-height: 1.6;
+        }
+
+        .calc-disclaimer {
+            border-top: 1px solid var(--slate-200);
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+        }
+
+        .calc-disclaimer p {
+            font-size: 0.8125rem;
+            color: var(--slate-500);
+            line-height: 1.65;
+        }
+
+        /* Foot CTA banner reuses site .footer-cta look via inline block */
+        .calc-foot-cta {
+            background: var(--accent-500);
+            border-radius: 1rem;
+            padding: 2.25rem 1.75rem;
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .calc-foot-cta h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .calc-foot-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media print {
+            .navbar, .footer, .calc-controls, .calc-cta-row,
+            .calc-foot-cta, .skip-to-content { display: none !important; }
+            body { color: #000; background: #fff; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="container navbar-inner">
+            <a href="/" class="logo" id="navLogo">
+                <img src="images/logo.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="eager" fetchpriority="high" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                <div class="logo-fallback">
+                    <div class="logo-icon">H</div>
+                    <span class="logo-text">HOMEi <span class="logo-accent">Property Management</span></span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#inspections">Inspections</a>
+                <a href="/#rra">RRA Compliance</a>
+                <a href="/savings-calculator" aria-current="page">Calculator</a>
+                <a href="/#why-homei">Why HOMEi</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/blog/">Resources</a>
+                <a href="/#contact">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">HOMEi App</a>
+                <a href="/#contact" class="btn btn-primary">Claim Free Year</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg aria-hidden="true" class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg aria-hidden="true" class="close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-menu hidden" id="mobileMenu">
+            <a href="/#features" class="mobile-link">Features</a>
+            <a href="/#inspections" class="mobile-link">Inspections</a>
+            <a href="/#rra" class="mobile-link">RRA Compliance</a>
+            <a href="/savings-calculator" class="mobile-link">Calculator</a>
+            <a href="/#why-homei" class="mobile-link">Why HOMEi</a>
+            <a href="/#faq" class="mobile-link">FAQ</a>
+            <a href="/blog/" class="mobile-link">Resources</a>
+            <a href="/#contact" class="mobile-link">Contact</a>
+            <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="mobile-link">HOMEi App</a>
+            <a href="/#contact" class="btn btn-primary mobile-cta">Claim Your Free Year of Early Access</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div class="calc-page">
+
+            <div class="calc-intro">
+                <h1>Landlord savings calculator</h1>
+                <p>See the money HOMEi PM puts back in your pocket each year, and the compliance and possession risk it takes off the table. Pick your area and property below. The figures update as you go.</p>
+            </div>
+
+            <div class="calc-layout">
+
+                <!-- Controls -->
+                <form class="calc-card calc-controls" id="calcControls" autocomplete="off" novalidate>
+                    <h2>Your property</h2>
+
+                    <div class="calc-field">
+                        <label for="locationInput">Location</label>
+                        <div class="calc-combo">
+                            <input type="text" id="locationInput" role="combobox" aria-expanded="false" aria-controls="locationList" aria-autocomplete="list" placeholder="Search your local authority">
+                            <div class="calc-combo-list hidden" id="locationList" role="listbox" aria-label="Areas"></div>
+                        </div>
+                    </div>
+
+                    <div class="calc-field">
+                        <label id="bedroomsLabel">Bedrooms</label>
+                        <div class="calc-segmented" role="group" aria-labelledby="bedroomsLabel" id="bedroomsGroup">
+                            <button type="button" data-value="1" aria-pressed="false">1</button>
+                            <button type="button" data-value="2" aria-pressed="false">2</button>
+                            <button type="button" data-value="3" aria-pressed="false">3</button>
+                            <button type="button" data-value="4" aria-pressed="false">4</button>
+                        </div>
+                    </div>
+
+                    <div class="calc-field">
+                        <label id="managementLabel">Management</label>
+                        <div class="calc-segmented" role="group" aria-labelledby="managementLabel" id="managementGroup">
+                            <button type="button" data-value="Self-managed" aria-pressed="false">Self-managed</button>
+                            <button type="button" data-value="Agent-managed" aria-pressed="false">Agent-managed</button>
+                        </div>
+                    </div>
+
+                    <div class="calc-field">
+                        <label id="typeLabel">Property type</label>
+                        <div class="calc-segmented" role="group" aria-labelledby="typeLabel" id="typeGroup">
+                            <button type="button" data-value="Single let" aria-pressed="false">Single let</button>
+                            <button type="button" data-value="Student HMO" aria-pressed="false">Student HMO</button>
+                        </div>
+                    </div>
+
+                    <p class="calc-rent-line" id="rentLine"></p>
+                </form>
+
+                <!-- Results -->
+                <div id="calcResults" aria-live="polite">
+                    <!-- Populated by JS -->
+                </div>
+
+            </div>
+
+            <div class="calc-foot-cta">
+                <h2>Be one of the first to save</h2>
+                <p>HOMEi PM is what turns these numbers into reality. It runs your inspections, chases the reminders, and keeps the compliance trail for you.</p>
+                <a href="/#contact" class="btn btn-white btn-lg">Join the waitlist today</a>
+            </div>
+
+            <div class="calc-disclaimer">
+                <p>These figures are estimates to help you make a decision. They are not financial or legal advice. Direct savings and risk are shown separately and are never added together. Compliance risk uses a realistic expected cost, not the maximum fine. Every number comes from a fixed, sourced model. <a href="/how-the-calculator-works" style="color:var(--accent-600);font-weight:600;">See exactly how the figures are worked out</a>.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-content">
+                    <h3>Ready to get ahead of the Renters&rsquo; Rights Act?</h3>
+                    <p>Join the free pilot and help us build the platform landlords actually need.</p>
+                </div>
+                <a href="/#contact" class="btn btn-white">Join as a Founding Landlord</a>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo" id="footerLogo">
+                        <img src="images/logo-light.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="lazy" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <div class="logo-fallback">
+                            <div class="logo-icon logo-icon-accent">H</div>
+                            <span class="logo-text text-white">HOMEi <span class="logo-accent-light">PM</span></span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-description">
+                        Web-based inspection, maintenance and communication
+                        software for UK landlords and estate agents.
+                    </p>
+                    <div class="footer-email-capture">
+                        <p class="footer-email-label">Have a question? Drop us a line.</p>
+                        <p class="footer-email-value">support@homeistudent.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#inspections">Inspections</a></li>
+                        <li><a href="/savings-calculator">Savings Calculator</a></li>
+                        <li><a href="/how-the-calculator-works">How the Calculator Works</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/#contact">Claim Free Year</a></li>
+                        <li><a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer">HOMEi App</a></li>
+                        <li>support@homeistudent.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p id="copyright"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/calculator-data.js"></script>
+    <script src="js/savings-calculator.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

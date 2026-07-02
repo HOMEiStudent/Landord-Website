@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Savings Calculator Works | HOMEi PM</title>
+    <meta name="description" content="A plain-English breakdown of how the HOMEi PM landlord savings calculator reaches each figure: the rent lookup, maintenance saving, inspection saving, rent uplift, compliance risk, and possession protection, with sources.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="How the Savings Calculator Works | HOMEi PM">
+    <meta property="og:description" content="Exactly how the landlord savings calculator reaches each figure, in plain language, with the sources behind every number.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://homeistudent.uk/how-the-calculator-works">
+    <meta property="og:image" content="https://homeistudent.uk/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How the Savings Calculator Works | HOMEi PM">
+    <meta name="twitter:description" content="Exactly how the landlord savings calculator reaches each figure, with the sources behind every number.">
+    <meta name="twitter:image" content="https://homeistudent.uk/images/og-image.png">
+    <meta name="theme-color" content="#F97316">
+    <link rel="canonical" href="https://homeistudent.uk/how-the-calculator-works">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How the HOMEi PM Savings Calculator Works",
+        "description": "A plain-English breakdown of how the landlord savings calculator reaches each figure, with the sources behind every number.",
+        "author": {
+            "@type": "Organization",
+            "name": "HOMEi",
+            "url": "https://homeistudent.uk"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "HOMEi",
+            "url": "https://homeistudent.uk",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://homeistudent.uk/images/logo.png"
+            }
+        },
+        "datePublished": "2026-07-02",
+        "dateModified": "2026-07-02",
+        "mainEntityOfPage": "https://homeistudent.uk/how-the-calculator-works"
+    }
+    </script>
+
+    <style>
+        /* Reuses the article layout tokens used across the site's content pages. */
+        .rra-article {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 6rem 1.25rem 4rem;
+        }
+
+        @media (min-width: 640px) {
+            .rra-article { padding: 7rem 2rem 4rem; }
+        }
+
+        .rra-back-link {
+            display: inline-block;
+            font-size: 0.875rem;
+            color: var(--accent-600);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .rra-back-link:hover { color: var(--accent-500); text-decoration: underline; }
+
+        .rra-article h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--navy-900);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+
+        @media (min-width: 640px) {
+            .rra-article h1 { font-size: 2.5rem; }
+        }
+
+        .rra-lede {
+            font-size: 1.0625rem;
+            color: var(--slate-500);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .rra-article h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .rra-article p {
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            color: var(--navy-700);
+            margin-bottom: 1em;
+        }
+
+        .rra-article a {
+            color: #B45309;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-200);
+            text-underline-offset: 2px;
+        }
+
+        .rra-article a:hover { text-decoration-color: var(--accent-500); }
+
+        .method-source {
+            font-size: 0.9375rem;
+            color: var(--slate-500);
+            background: var(--slate-50);
+            border-left: 3px solid var(--accent-200);
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.625rem 1rem;
+            margin-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        .method-source strong { color: var(--navy-800); font-weight: 600; }
+
+        /* Flowchart figure block */
+        .method-figure {
+            margin: 1.5rem 0 2.5rem;
+            border: 1px solid var(--slate-200);
+            border-radius: 1rem;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .method-figure img { width: 100%; height: auto; display: block; }
+
+        /*
+         * Fallback shown until the branded flowchart export is dropped in.
+         * Replace the block below with:
+         *   <img src="assets/images/calculator/how-it-works-flowchart.png"
+         *        alt="Flowchart of how the savings calculator reaches each figure"
+         *        width="1200" height="700" loading="eager">
+         * Keep the <figcaption>. Recommended export: 1200px wide PNG or SVG, HOMEi brand style.
+         */
+        .method-figure-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 240px;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(135deg, var(--accent-50) 0%, var(--white) 100%);
+            color: var(--slate-500);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        .method-figure figcaption {
+            font-size: 0.8125rem;
+            color: var(--slate-500);
+            padding: 0.875rem 1.25rem;
+            border-top: 1px solid var(--slate-100);
+            background: var(--slate-50);
+        }
+
+        .method-toc {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .method-toc p {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--navy-900);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .method-toc ol { list-style: decimal; padding-left: 1.25rem; margin: 0; }
+        .method-toc li { font-size: 0.9375rem; margin-bottom: 0.25rem; color: var(--navy-700); }
+        .method-toc a { font-weight: 400; }
+
+        .method-callout {
+            background: var(--accent-50);
+            border: 1px solid var(--accent-200);
+            border-radius: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .method-callout p { margin-bottom: 0.5em; }
+        .method-callout p:last-child { margin-bottom: 0; }
+
+        .rra-cta-banner {
+            background: var(--accent-500);
+            border-radius: 0.75rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin: 2.5rem 0 0;
+        }
+
+        .rra-cta-banner h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .rra-cta-banner p { color: rgba(255, 255, 255, 0.9); font-size: 0.9375rem; margin-bottom: 1.25rem; }
+
+        .rra-disclaimer {
+            border-top: 1px solid var(--slate-200);
+            padding-top: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .rra-disclaimer p { font-size: 0.8125rem; color: var(--slate-500); line-height: 1.65; }
+        .rra-disclaimer h2 { font-size: 1rem; margin-top: 1rem; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="container navbar-inner">
+            <a href="/" class="logo" id="navLogo">
+                <img src="images/logo.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="eager" fetchpriority="high" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                <div class="logo-fallback">
+                    <div class="logo-icon">H</div>
+                    <span class="logo-text">HOMEi <span class="logo-accent">Property Management</span></span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#inspections">Inspections</a>
+                <a href="/#rra">RRA Compliance</a>
+                <a href="/savings-calculator">Calculator</a>
+                <a href="/#why-homei">Why HOMEi</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/blog/">Resources</a>
+                <a href="/#contact">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">HOMEi App</a>
+                <a href="/#contact" class="btn btn-primary">Claim Free Year</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg aria-hidden="true" class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg aria-hidden="true" class="close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-menu hidden" id="mobileMenu">
+            <a href="/#features" class="mobile-link">Features</a>
+            <a href="/#inspections" class="mobile-link">Inspections</a>
+            <a href="/#rra" class="mobile-link">RRA Compliance</a>
+            <a href="/savings-calculator" class="mobile-link">Calculator</a>
+            <a href="/#why-homei" class="mobile-link">Why HOMEi</a>
+            <a href="/#faq" class="mobile-link">FAQ</a>
+            <a href="/blog/" class="mobile-link">Resources</a>
+            <a href="/#contact" class="mobile-link">Contact</a>
+            <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="mobile-link">HOMEi App</a>
+            <a href="/#contact" class="btn btn-primary mobile-cta">Claim Your Free Year of Early Access</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <article class="rra-article">
+
+            <a href="/savings-calculator" class="rra-back-link">&larr; Back to the calculator</a>
+
+            <h1>How the savings calculator works</h1>
+
+            <p class="rra-lede">The calculator does not guess. Every figure comes from a fixed model built from tested, cited sources and checked to the penny. This page walks through how each number is reached, in plain language, so you can see the working and judge it for yourself.</p>
+
+            <!-- ================= FLOWCHART FIGURE ================= -->
+            <!--
+                The one-page flowchart is produced separately in HOMEi brand style and
+                exported as an image. Drop the export in here, replacing the placeholder
+                div below with an <img> (keep the <figcaption>):
+
+                <img src="assets/images/calculator/how-it-works-flowchart.png"
+                     alt="Flowchart showing how the calculator turns four inputs into direct savings, expected annual risk, and worst-case exposure"
+                     width="1200" height="700" loading="eager">
+
+                Recommended: 1200px wide PNG or SVG, HOMEi orange brand palette.
+            -->
+            <figure class="method-figure">
+                <div class="method-figure-placeholder">
+                    <span>The one-page flowchart goes here. It shows the four inputs on the left, the rent lookup in the middle, and the three result blocks on the right: direct savings, expected annual risk, and worst-case exposure.</span>
+                </div>
+                <figcaption>At a glance: four inputs feed a rent lookup, which feeds three separate result blocks. Direct savings and risk are never added together.</figcaption>
+            </figure>
+
+            <nav class="method-toc" aria-label="On this page">
+                <p>On this page</p>
+                <ol>
+                    <li><a href="#inputs">The four inputs</a></li>
+                    <li><a href="#rent">The rent lookup</a></li>
+                    <li><a href="#maintenance">The maintenance saving</a></li>
+                    <li><a href="#inspection">The inspection saving</a></li>
+                    <li><a href="#rent-uplift">The rent uplift</a></li>
+                    <li><a href="#compliance">Expected annual compliance risk</a></li>
+                    <li><a href="#exposure">Worst-case exposure</a></li>
+                    <li><a href="#possession">Possession protection</a></li>
+                </ol>
+            </nav>
+
+            <div class="method-callout">
+                <p><strong>Three things to hold in mind before the detail.</strong></p>
+                <p>Direct savings and risk are kept separate. One is cash you keep each year. The other is what is at stake if something goes wrong. We never add them together.</p>
+                <p>Compliance risk uses a realistic expected cost, not the maximum fine. And every figure is worked out three times, for a cautious low case, a middle base case, and a high case, so you see a range rather than a single false-precise number.</p>
+            </div>
+
+            <h2 id="inputs">The four inputs</h2>
+            <p>You give the calculator four things: your location, the number of bedrooms, whether you manage the property yourself or through an agent, and whether it is a single let or a student HMO. All four are fixed choices, so the model always knows exactly which numbers to use. Nothing is typed in free text, which means the lookup can never miss.</p>
+            <p>Each input changes the sum in a specific way. Location and bedrooms set your rent. Management decides how the inspection saving is worked out. Property type decides whether the student HMO adjustments apply.</p>
+
+            <h2 id="rent">The rent lookup</h2>
+            <p>The calculator finds the median monthly rent for your chosen local authority and bedroom count. That rent then drives the rent uplift and the possession figures further down. If we do not hold a rent for a particular combination, the calculator says so plainly rather than showing a misleading zero.</p>
+            <p class="method-source"><strong>Source:</strong> Office for National Statistics private rental market statistics, by local authority and bedroom category. These are official median rents, not estimates.</p>
+
+            <h2 id="maintenance">The maintenance saving</h2>
+            <p>Catching a problem early is cheaper than fixing the damage later. The clearest example is water. A slow leak or a failing seal, spotted at an inspection, is a small repair. Left unseen, it becomes a claim, an excess payment, and years of higher insurance premiums.</p>
+            <p>The model works out how likely a preventable water-damage event is in a year, then how much of that is genuinely avoidable through regular inspection. It applies that likelihood to two things: the insurance excess you would pay, and the extra premium you would carry for several years after a claim. It then adds the smaller, more frequent repairs that sit below the excess and never reach an insurer at all. For a student HMO, where there are more people and more wear, the model scales this up.</p>
+            <p class="method-source"><strong>Sources:</strong> Association of British Insurers data on escape-of-water claims and their frequency, typical buildings insurance excess levels, and published guidance on how claims affect future premiums.</p>
+
+            <h2 id="inspection">The inspection saving</h2>
+            <p>This is the most direct saving, and it depends on how you manage the property.</p>
+            <p>If an agent handles your inspections, you pay a fee each time. HOMEi PM runs the inspection through the tenant's app instead, so the saving is simply the agent fee you no longer pay, across the inspections you do each year.</p>
+            <p>If you inspect the property yourself, the cost is your time and your travel. The model values the hours you spend driving, walking the property, and writing it up, then subtracts the much smaller amount of time it takes to review a guided digital inspection your tenants have already completed. The difference, across the year, is the saving.</p>
+            <p class="method-source"><strong>Sources:</strong> Typical letting-agent inspection fees, HMRC approved mileage rates for travel, and a conservative hourly value for a landlord's own time.</p>
+
+            <h2 id="rent-uplift">The rent uplift</h2>
+            <p>Under the Renters' Rights Act, rent rises happen through a Section 13 notice on the correct form. Landlords who track the market and serve a proper notice keep their rent in step. Landlords who forget, or who get the process wrong, quietly fall behind.</p>
+            <p>The model estimates the rent you would otherwise leave on the table over a couple of months of the year, using your actual local rent and a modest growth rate. It is deliberately cautious. This is about keeping pace with the market, not pushing rents beyond it.</p>
+            <p class="method-source"><strong>Sources:</strong> ONS rental growth figures and the Section 13 procedure set out on GOV.UK.</p>
+
+            <h2 id="compliance">Expected annual compliance risk</h2>
+            <p>There are three certificates that matter most: the gas safety record (CP12), the electrical report (EICR), and the energy performance certificate (EPC). Miss one and you can face a fine.</p>
+            <p>Rather than quoting the maximum fine, which would be alarmist, the model works out a realistic yearly figure. For each certificate it takes how often it tends to lapse, multiplies by how often a lapse is actually caught and fined, multiplies by the size of the fine, and spreads that across the certificate's renewal cycle. Add the three together and you get the expected annual compliance risk. It is the honest, everyday number, not the worst case.</p>
+            <p class="method-source"><strong>Sources:</strong> GOV.UK penalty levels for gas, electrical and EPC breaches, certificate renewal cycles set in regulation, and published local-authority enforcement rates.</p>
+
+            <h2 id="exposure">Worst-case exposure</h2>
+            <p>Separately, the calculator shows the rare worst case, so you can see the full size of what is at stake. If all three certificates lapse and are caught, the combined maximum fines reach a fixed ceiling. This is not a cost you expect in a normal year. It is the downside HOMEi PM is there to keep off the table.</p>
+            <p class="method-source"><strong>Source:</strong> The statutory maximum penalties for each certificate, added together.</p>
+
+            <h2 id="possession">Possession protection</h2>
+            <p>If you need to recover your property and the paperwork is not in order, the delay costs money. The possession figure adds up three things: the rent you lose while you sort out and re-serve a notice, the court fee wasted if a claim fails on a technicality, and, for a student HMO, the value of the months lost if you miss the Ground 4A window and cannot re-let for the new academic year.</p>
+            <p>For a single let, Ground 4A does not apply, so that part is zero and the calculator does not show it. Everything here uses your real local rent, so the figure reflects your property, not a national average.</p>
+            <p class="method-source"><strong>Sources:</strong> Current court fees for possession claims on GOV.UK, the Ground 4A student possession rules under the Renters' Rights Act, and your local ONS rent.</p>
+
+            <div class="rra-cta-banner">
+                <h3>See your own numbers</h3>
+                <p>Put in your area and property, and the calculator does the rest.</p>
+                <a href="/savings-calculator" class="btn btn-white">Open the calculator</a>
+            </div>
+
+            <div class="rra-disclaimer" id="disclaimer">
+                <h2>A note on what these figures are</h2>
+                <p>These are estimates to help you make a decision. They are not financial advice or legal advice. The probabilities in the model describe how the model works. They are not a promise about your specific property. Direct savings and risk are shown separately and are never added together, and compliance risk uses a realistic expected cost rather than the maximum fine.</p>
+                <p>Before taking any step with legal or financial consequences, check the current position on GOV.UK and take advice from a qualified professional.</p>
+                <p>Last updated: 2 July 2026. Sources: Office for National Statistics, the Association of British Insurers, HMRC, and GOV.UK. Full citations available on request.</p>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-content">
+                    <h3>Ready to get ahead of the Renters&rsquo; Rights Act?</h3>
+                    <p>Join the free pilot and help us build the platform landlords actually need.</p>
+                </div>
+                <a href="/#contact" class="btn btn-white">Join as a Founding Landlord</a>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo" id="footerLogo">
+                        <img src="images/logo-light.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="lazy" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <div class="logo-fallback">
+                            <div class="logo-icon logo-icon-accent">H</div>
+                            <span class="logo-text text-white">HOMEi <span class="logo-accent-light">PM</span></span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-description">
+                        Web-based inspection, maintenance and communication
+                        software for UK landlords and estate agents.
+                    </p>
+                    <div class="footer-email-capture">
+                        <p class="footer-email-label">Have a question? Drop us a line.</p>
+                        <p class="footer-email-value">support@homeistudent.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#inspections">Inspections</a></li>
+                        <li><a href="/savings-calculator">Savings Calculator</a></li>
+                        <li><a href="/how-the-calculator-works">How the Calculator Works</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/#contact">Claim Free Year</a></li>
+                        <li><a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer">HOMEi App</a></li>
+                        <li>support@homeistudent.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p id="copyright"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
