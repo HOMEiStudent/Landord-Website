@@ -269,8 +269,23 @@
         render();
     }
 
+    // Keep the visible text in step with the selected area. If someone types a
+    // search that matches nothing and then clicks or tabs away, put the current
+    // area's name back so the field never disagrees with the figures on screen.
+    function restoreInputToSelected() {
+        for (var i = 0; i < data.areas.length; i++) {
+            if (data.areas[i].code === state.areaCode) { input.value = data.areas[i].area; break; }
+        }
+    }
+
     input.addEventListener('focus', function () {
+        input.select();
         openList(filterAreas(input.value));
+    });
+
+    input.addEventListener('blur', function () {
+        // Delay so a click on an option registers before we tidy the field.
+        setTimeout(restoreInputToSelected, 150);
     });
 
     input.addEventListener('input', function () {
@@ -298,6 +313,7 @@
             }
         } else if (e.key === 'Escape') {
             closeList();
+            restoreInputToSelected();
         }
     });
 
@@ -322,7 +338,7 @@
     });
 
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('.calc-combo')) { closeList(); }
+        if (!e.target.closest('.calc-combo')) { closeList(); restoreInputToSelected(); }
     });
 
     // ----- Init -----
