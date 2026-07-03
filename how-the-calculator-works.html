@@ -298,20 +298,20 @@
 
             <p class="rra-lede">The calculator does not guess. Every figure comes from a fixed model built from tested, cited sources and checked to the penny. This page walks through how each number is reached, in plain language, so you can see the working and judge it for yourself.</p>
 
-            <!-- ================= FLOWCHART FIGURE ================= -->
-            <!--
-                The one-page flowchart is produced separately in HOMEi brand style and
-                exported as an image. Drop the export in here, replacing the placeholder
-                div below with an <img> (keep the <figcaption>):
-
-                <img src="assets/images/calculator/how-it-works-flowchart.png"
-                     alt="Flowchart showing how the calculator turns four inputs into direct savings, expected annual risk, and worst-case exposure"
-                     width="1200" height="700" loading="eager">
-
-                Recommended: 1200px wide PNG or SVG, HOMEi orange brand palette.
+            <!-- ================= FLOWCHART FIGURE =================
+                To add the flowchart: upload the export to
+                assets/images/calculator/how-it-works-flowchart.png
+                (exact lowercase filename). The <img> below picks it up
+                automatically. Until then, the styled placeholder shows
+                instead, so nothing looks broken.
+                Recommended export: 1200px wide PNG or SVG, HOMEi orange brand palette.
             -->
             <figure class="method-figure">
-                <div class="method-figure-placeholder">
+                <img src="assets/images/calculator/how-it-works-flowchart.png"
+                     alt="Flowchart showing how the calculator turns four inputs into direct savings, expected annual risk, and worst-case exposure"
+                     width="1200" height="700" loading="eager"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="method-figure-placeholder" style="display:none;">
                     <span>The one-page flowchart goes here. It shows the four inputs on the left, the rent lookup in the middle, and the three result blocks on the right: direct savings, expected annual risk, and worst-case exposure.</span>
                 </div>
                 <figcaption>At a glance: four inputs feed a rent lookup, which feeds three separate result blocks. Direct savings and risk are never added together.</figcaption>
