@@ -19,7 +19,8 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .privacy-page { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .privacy-page { max-width: 800px; margin: 0 auto; padding: 6rem 1.5rem 4rem; }
+        @media (min-width: 640px) { .privacy-page { padding-top: 7rem; } }
         .privacy-page h1 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--navy-950); }
         .privacy-page .last-updated { color: var(--slate-500); font-size: 0.875rem; margin-bottom: 2rem; }
         .privacy-page h2 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--navy-900); }
@@ -37,6 +38,60 @@
     </style>
 </head>
 <body>
+
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="container navbar-inner">
+            <a href="/" class="logo" id="navLogo">
+                <img src="images/logo.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="eager" fetchpriority="high" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                <div class="logo-fallback">
+                    <div class="logo-icon">H</div>
+                    <span class="logo-text">HOMEi <span class="logo-accent">Property Management</span></span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/#features">Features</a>
+                <a href="/#inspections">Inspections</a>
+                <a href="/#rra">RRA Compliance</a>
+                <a href="/savings-calculator">Calculator</a>
+                <a href="/#why-homei">Why HOMEi</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/blog/">Guides</a>
+                <a href="/#contact">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">HOMEi App</a>
+                <a href="/#contact" class="btn btn-primary">Claim Free Year</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg aria-hidden="true" class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg aria-hidden="true" class="close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-menu hidden" id="mobileMenu">
+            <a href="/#features" class="mobile-link">Features</a>
+            <a href="/#inspections" class="mobile-link">Inspections</a>
+            <a href="/#rra" class="mobile-link">RRA Compliance</a>
+            <a href="/savings-calculator" class="mobile-link">Calculator</a>
+            <a href="/#why-homei" class="mobile-link">Why HOMEi</a>
+            <a href="/#faq" class="mobile-link">FAQ</a>
+            <a href="/blog/" class="mobile-link">Guides</a>
+            <a href="/#contact" class="mobile-link">Contact</a>
+            <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="mobile-link">HOMEi App</a>
+            <a href="/#contact" class="btn btn-primary mobile-cta">Claim Your Free Year of Early Access</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
     <div class="privacy-page">
         <a href="/" class="privacy-back">&larr; Back to HOMEi PM</a>
 
@@ -236,5 +291,65 @@
         Email: <a href="mailto:support@homeistudent.com">support@homeistudent.com</a><br>
         Phone: 07986 220070</p>
     </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo" id="footerLogo">
+                        <img src="images/logo-light.png" alt="HOMEi Property Management" class="logo-img" width="200" height="200" loading="lazy" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <div class="logo-fallback">
+                            <div class="logo-icon logo-icon-accent">H</div>
+                            <span class="logo-text text-white">HOMEi <span class="logo-accent-light">PM</span></span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-description">
+                        Web-based inspection, maintenance and communication
+                        software for UK landlords and estate agents.
+                    </p>
+                    <div class="footer-email-capture">
+                        <p class="footer-email-label">Have a question? Drop us a line.</p>
+                        <p class="footer-email-value">support@homeistudent.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#inspections">Inspections</a></li>
+                        <li><a href="/savings-calculator">Savings Calculator</a></li>
+                        <li><a href="/how-the-calculator-works">How the Calculator Works</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/#contact">Claim Free Year</a></li>
+                        <li><a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer">HOMEi App</a></li>
+                        <li>support@homeistudent.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p id="copyright"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
