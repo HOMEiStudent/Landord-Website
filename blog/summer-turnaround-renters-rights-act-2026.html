@@ -23,7 +23,9 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="/css/styles.css">
 
     <script type="application/ld+json">
@@ -51,9 +53,27 @@
             }
         },
         "datePublished": "2026-06-01",
-        "dateModified": "2026-06-01",
+        "dateModified": "2026-07-03",
         "mainEntityOfPage": "https://homeistudent.uk/blog/summer-turnaround-renters-rights-act-2026",
         "image": "https://homeistudent.uk/assets/images/blog/summer-turnaround/hero.png"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "HOMEi PM guided inspection demo",
+        "description": "A quick look at how the guided inspection process works in HOMEi PM: select the property and room, follow the prompts, photograph as you go, and the system compiles a single timestamped report.",
+        "thumbnailUrl": "https://homeistudent.uk/assets/images/blog/summer-turnaround/video-poster.png",
+        "contentUrl": "https://homeistudent.uk/assets/videos/inspection-demo.mp4",
+        "uploadDate": "2026-06-23",
+        "duration": "PT39S",
+        "publisher": {
+            "@type": "Organization",
+            "name": "HOMEi",
+            "url": "https://homeistudent.uk"
+        }
     }
     </script>
 
@@ -71,7 +91,7 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Resources",
+                "name": "Guides",
                 "item": "https://homeistudent.uk/blog/"
             },
             {
@@ -326,6 +346,28 @@
         .rra-faq .rra-faq-answer p { font-size: 0.9375rem; margin-bottom: 0; }
 
         /* CTA banner */
+        /* Mid-article calculator callout */
+        .rra-calc-callout {
+            background: var(--accent-50);
+            border: 1px solid var(--accent-200);
+            border-left: 4px solid var(--accent-500);
+            border-radius: 0 0.75rem 0.75rem 0;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .rra-calc-callout p {
+            margin-bottom: 0.25rem;
+        }
+
+        .rra-calc-callout strong {
+            color: var(--navy-900);
+        }
+
+        .rra-calc-callout a {
+            font-weight: 600;
+        }
+
         .rra-cta-banner {
             background: #C2410C;
             border-radius: 0.75rem;
@@ -454,7 +496,7 @@
                 <a href="/savings-calculator">Calculator</a>
                 <a href="/#why-homei">Why HOMEi</a>
                 <a href="/#faq">FAQ</a>
-                <a href="/blog/">Resources</a>
+                <a href="/blog/">Guides</a>
                 <a href="/#contact">Contact</a>
             </div>
 
@@ -480,7 +522,7 @@
             <a href="/savings-calculator" class="mobile-link">Calculator</a>
             <a href="/#why-homei" class="mobile-link">Why HOMEi</a>
             <a href="/#faq" class="mobile-link">FAQ</a>
-            <a href="/blog/" class="mobile-link">Resources</a>
+            <a href="/blog/" class="mobile-link">Guides</a>
             <a href="/#contact" class="mobile-link">Contact</a>
             <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="mobile-link">HOMEi App</a>
             <a href="/#contact" class="btn btn-primary mobile-cta">Claim Your Free Year of Early Access</a>
@@ -627,6 +669,10 @@
                 <li>A spare set of keys (you will need them)</li>
                 <li>Replacement bulbs, batteries, and small consumables</li>
             </ul>
+
+            <div class="rra-calc-callout">
+                <p><strong>Wondering what this costs you?</strong> Our free savings calculator uses official rent data for your area to show what early inspections and on-time compliance are worth each year. <a href="/savings-calculator">See your number</a>.</p>
+            </div>
 
             <!-- Section: Document everything -->
             <h2 id="document">Document everything</h2>

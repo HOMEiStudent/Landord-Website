@@ -23,7 +23,9 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="css/styles.css">
 
     <script type="application/ld+json">
@@ -256,7 +258,7 @@
                 <a href="/savings-calculator">Calculator</a>
                 <a href="/#why-homei">Why HOMEi</a>
                 <a href="/#faq">FAQ</a>
-                <a href="/blog/">Resources</a>
+                <a href="/blog/">Guides</a>
                 <a href="/#contact">Contact</a>
             </div>
 
@@ -282,7 +284,7 @@
             <a href="/savings-calculator" class="mobile-link">Calculator</a>
             <a href="/#why-homei" class="mobile-link">Why HOMEi</a>
             <a href="/#faq" class="mobile-link">FAQ</a>
-            <a href="/blog/" class="mobile-link">Resources</a>
+            <a href="/blog/" class="mobile-link">Guides</a>
             <a href="/#contact" class="mobile-link">Contact</a>
             <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="mobile-link">HOMEi App</a>
             <a href="/#contact" class="btn btn-primary mobile-cta">Claim Your Free Year of Early Access</a>
@@ -309,7 +311,7 @@
             <figure class="method-figure">
                 <img src="assets/images/calculator/how-it-works-flowchart.png"
                      alt="Flowchart showing how the calculator turns four inputs into direct savings, expected annual risk, and worst-case exposure"
-                     width="1200" height="700" loading="eager"
+                     width="1200" height="1697" loading="eager" decoding="async"
                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                 <div class="method-figure-placeholder" style="display:none;">
                     <span>The one-page flowchart goes here. It shows the four inputs on the left, the rent lookup in the middle, and the three result blocks on the right: direct savings, expected annual risk, and worst-case exposure.</span>

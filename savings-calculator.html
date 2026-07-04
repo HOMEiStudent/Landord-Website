@@ -23,7 +23,9 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="css/styles.css">
 
     <script type="application/ld+json">
@@ -45,6 +47,47 @@
             "name": "HOMEi",
             "url": "https://homeistudent.uk"
         }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How accurate are the savings figures?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Every figure comes from a fixed model built from cited public sources and checked to the penny. Results are shown as a range (low, base, high) because outcomes vary property to property. They are estimates to support a decision, not a promise or financial advice."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where does the rent data come from?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Monthly rents are official Office for National Statistics medians for your local authority and bedroom count, covering 342 local authorities across England."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are the savings and risk figures added together?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Direct savings are cash you keep each year. The risk figures show what is at stake if something goes wrong. They are kept separate and never combined into one headline number."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the calculator free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. It runs entirely in your browser, needs no sign-up, and stores nothing you enter."
+                }
+            }
+        ]
     }
     </script>
 
@@ -414,6 +457,63 @@
             margin-top: 1rem;
         }
 
+        /* FAQ */
+        .calc-faq {
+            max-width: 760px;
+            margin-top: 3rem;
+        }
+
+        .calc-faq h2 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .calc-faq details {
+            border: 1px solid var(--slate-200);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+
+        .calc-faq summary {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--navy-900);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .calc-faq summary::-webkit-details-marker { display: none; }
+
+        .calc-faq summary::after {
+            content: '+';
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--slate-400);
+            flex-shrink: 0;
+        }
+
+        .calc-faq details[open] summary::after { content: '\2212'; }
+
+        .calc-faq summary:hover { background: var(--slate-50); }
+
+        .calc-faq-answer { padding: 0 1.25rem 1rem; }
+
+        .calc-faq-answer p {
+            font-size: 0.9375rem;
+            color: var(--navy-700);
+            line-height: 1.65;
+            margin: 0;
+        }
+
         /* Graceful empty / error message */
         .calc-message {
             font-size: 0.9375rem;
@@ -488,7 +588,7 @@
                 <a href="/savings-calculator" aria-current="page">Calculator</a>
                 <a href="/#why-homei">Why HOMEi</a>
                 <a href="/#faq">FAQ</a>
-                <a href="/blog/">Resources</a>
+                <a href="/blog/">Guides</a>
                 <a href="/#contact">Contact</a>
             </div>
 
@@ -514,7 +614,7 @@
             <a href="/savings-calculator" class="mobile-link">Calculator</a>
             <a href="/#why-homei" class="mobile-link">Why HOMEi</a>
             <a href="/#faq" class="mobile-link">FAQ</a>
-            <a href="/blog/" class="mobile-link">Resources</a>
+            <a href="/blog/" class="mobile-link">Guides</a>
             <a href="/#contact" class="mobile-link">Contact</a>
             <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" class="mobile-link">HOMEi App</a>
             <a href="/#contact" class="btn btn-primary mobile-cta">Claim Your Free Year of Early Access</a>
@@ -577,6 +677,34 @@
                     <!-- Populated by JS -->
                 </div>
 
+            </div>
+
+            <div class="calc-faq">
+                <h2>Questions about the calculator</h2>
+                <details>
+                    <summary>How accurate are the savings figures?</summary>
+                    <div class="calc-faq-answer">
+                        <p>Every figure comes from a fixed model built from cited public sources and checked to the penny. Results are shown as a range (low, base, high) because outcomes vary property to property. They are estimates to support a decision, not a promise or financial advice.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Where does the rent data come from?</summary>
+                    <div class="calc-faq-answer">
+                        <p>Monthly rents are official Office for National Statistics medians for your local authority and bedroom count, covering 342 local authorities across England.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Are the savings and risk figures added together?</summary>
+                    <div class="calc-faq-answer">
+                        <p>No. Direct savings are cash you keep each year. The risk figures show what is at stake if something goes wrong. They are kept separate and never combined into one headline number.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Is the calculator free to use?</summary>
+                    <div class="calc-faq-answer">
+                        <p>Yes. It runs entirely in your browser, needs no sign-up, and stores nothing you enter.</p>
+                    </div>
+                </details>
             </div>
 
             <div class="calc-foot-cta">
