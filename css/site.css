@@ -118,6 +118,8 @@ h1, h2, h3 { text-wrap: pretty; }
     .hx-hero h1 { font-size: 36px !important; }
     .hx-h2 { font-size: 28px !important; }
     .hx-sticky { position: static !important; }
+    .hx-toc { position: static !important; }
+    .hx-flow { grid-template-columns: 1fr !important; }
 }
 
 /* ===== Cookie consent banner (restyled to the new tokens; same
