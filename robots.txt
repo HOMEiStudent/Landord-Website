@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://homeistudent.uk/sitemap.xml
+Sitemap: https://homei.org.uk/sitemap.xml
