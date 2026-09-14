@@ -19,14 +19,27 @@ touching an existing redesigned page, match it exactly.
 - No em dashes anywhere in site copy. Use commas, colons, or full stops.
 - Never claim more than "just over £500 a year per property" saved.
 - Pricing is £15/month or £150/year (both up to 5 properties; annual shown
-  with a struck-through £180, never a "Save 20%" badge).
-- Pilot wording is exactly "waiting list open now, testing starts August
-  2026" and "first 50 landlords test free for 3 months". No "free year",
-  no "no card required".
+  with a struck-through £180, never a "Save 20%" badge). Tiers above 5
+  properties are not agreed: do not invent them.
+- The product is live. There is no waiting list, no pilot, and no launch
+  countdown. Never use waiting-list, pilot or "coming soon" language.
+- There is no payment page yet, so HOMEi PM is advertised as free to use
+  while in early access, with every feature included. Standard wording is
+  "Free while we are in early access" and "plenty of notice before any
+  charges begin". Never imply a card is taken, a trial is counting down, or
+  a charge is imminent. No "free year", no "no card required", no
+  "free trial".
+- Pricing appears only in the pricing section, labelled "from launch".
+- Primary CTA is "Get started" (nav and general use) or "Sign up now" (hero
+  and conversion moments). A "Sign in" link sits to the left of the nav CTA
+  on every page. Never "Join the waiting list" or "Claim a free year".
+  Secondary CTAs are direct verb phrases, such as "See how much you could
+  save".
 - Direct savings and risk figures are never added together anywhere.
 - The landlord side is a web-based dashboard, never an app; tenants use the
   HOMEi app. Inspections and maintenance tracking are two separate tools.
-- The two guide articles are founder-fact-checked and must stay word-for-word.
+- The three guide articles are founder-fact-checked and must stay
+  word-for-word against their approved designs.
 - The sign-up counter stays hidden until sign-ups exceed 50.
 
 ## Locked systems (do not alter without care)
@@ -36,9 +49,15 @@ touching an existing redesigned page, match it exactly.
   the founders' Excel model to the penny). The savings calculator page and
   the home mini-calculator both bind to this engine. Never edit the formulas,
   coefficients, rent data, or the low/base/high scenario logic.
-- **Waiting-list form**: `js/join-form.js` posts to the existing Web3Forms
+- **Contact form**: `js/join-form.js` posts to the existing Web3Forms
   endpoint with the established access key and field names (name, email,
   role, feedback). Do not change the endpoint, key, or field names.
+- **Platform URL**: the marketing site never handles sign-up. Every
+  "Get started", "Sign up now" and "Sign in" control links out to the
+  platform. `js/config.js` holds that URL in one place and repoints every
+  `a[data-platform-link]` on load; the same URL is written into those href
+  attributes so the links work without JavaScript. Change both together
+  (the command is in the comment at the top of `js/config.js`).
 - **Analytics**: PostHog loads in memory-only mode until consent
   (`scripts/posthog-init.js`, `scripts/cookie-consent.js`). Keep the consent
   gating and the `data-cta-id` attributes that feed conversion tracking.
@@ -47,5 +66,6 @@ touching an existing redesigned page, match it exactly.
 
 `/` `/savings-calculator` `/how-the-calculator-works` `/blog/` (guides index)
 `/renters-rights-act` `/blog/summer-turnaround-renters-rights-act-2026`
-`/join` `/about` `/privacy`. Keep the indexed URLs stable; 301-redirect
-anything that moves.
+`/blog/renters-rights-act-rent-rules` `/join` (get started and contact)
+`/about` `/privacy`. Keep the indexed URLs stable; 301-redirect anything
+that moves.
