@@ -58,9 +58,15 @@ touching an existing redesigned page, match it exactly.
   `a[data-platform-link]` on load; the same URL is written into those href
   attributes so the links work without JavaScript. Change both together
   (the command is in the comment at the top of `js/config.js`).
-- **Analytics**: PostHog loads in memory-only mode until consent
-  (`scripts/posthog-init.js`, `scripts/cookie-consent.js`). Keep the consent
-  gating and the `data-cta-id` attributes that feed conversion tracking.
+- **Analytics**: currently switched off at the founders' request. No
+  analytics, no tracking scripts and no cookies are loaded, so there is no
+  consent banner. `scripts/posthog-init.js`, `scripts/cookie-consent.js`
+  and `scripts/cta-tracking.js` stay on disk but are referenced by no page.
+  The `data-cta-id` attributes stay in the markup so conversion tracking
+  can be switched back on by re-adding those script tags and the banner
+  markup (both are in git history). Note that `privacy.html` still
+  describes PostHog analytics and needs updating before or alongside any
+  restart.
 
 ## Pages and routes
 
