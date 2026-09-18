@@ -1,5 +1,5 @@
 /*
- * Waiting-list form for the Join page.
+ * Contact form for the get started and contact page.
  * Submits to the EXISTING Web3Forms endpoint with the SAME field names the
  * live site already posts (access_key, subject, email, name, role, feedback).
  * The management toggle maps to `role`; the notes textarea to `feedback`.
@@ -52,7 +52,7 @@
     function captureConversion() {
         if (window.posthog) {
             posthog.capture('form_submitted', {
-                form_id: 'join-waiting-list',
+                form_id: 'contact-enquiry',
                 role: management,
                 has_feedback: !!((notesInput.value || '').trim()),
                 page: window.location.pathname
@@ -86,7 +86,7 @@
 
         var fd = new FormData();
         fd.append('access_key', ACCESS_KEY);
-        fd.append('subject', 'New waiting-list sign-up from HOMEi PM website');
+        fd.append('subject', 'New enquiry from the HOMEi PM website');
         fd.append('email', email);
         fd.append('name', name);
         fd.append('role', management);
