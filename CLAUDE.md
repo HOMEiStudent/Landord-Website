@@ -21,8 +21,14 @@ touching an existing redesigned page, match it exactly.
 - Pricing is £15/month or £150/year (both up to 5 properties; annual shown
   with a struck-through £180, never a "Save 20%" badge). Tiers above 5
   properties are not agreed: do not invent them.
-- The product is live. There is no waiting list, no pilot, and no launch
-  countdown. Never use waiting-list, pilot or "coming soon" language.
+- There is no waiting list, no pilot, and no launch countdown. Never use
+  waiting-list, pilot or "coming soon" language.
+- **The site is in a bridge round of testing.** Nothing links out to the
+  platform: every call to action goes to the contact page at `/join`. Do not
+  describe the product as "live", and do not promise self-serve sign-up
+  ("create your account", "set up your properties today"). Say we are making
+  changes and invite people to get in touch. This is temporary, see the
+  Platform URL entry below for how it goes back.
 - There is no payment page yet, so HOMEi PM is advertised as free to use
   while in early access, with every feature included. Standard wording is
   "Free while we are in early access" and "plenty of notice before any
@@ -30,11 +36,13 @@ touching an existing redesigned page, match it exactly.
   a charge is imminent. No "free year", no "no card required", no
   "free trial".
 - Pricing appears only in the pricing section, labelled "from launch".
-- Primary CTA is "Get started" (nav and general use) or "Sign up now" (hero
-  and conversion moments). A "Sign in" link sits to the left of the nav CTA
-  on every page. Never "Join the waiting list" or "Claim a free year".
-  Secondary CTAs are direct verb phrases, such as "See how much you could
-  save".
+- Primary CTA during the bridge round is "Get in touch", pointing at
+  `/join`. A "Sign in" link sits to the left of the nav CTA on every page and
+  currently also goes to `/join`. When the platform links come back the
+  primary CTA returns to "Get started" (nav and general use) or "Sign up now"
+  (hero and conversion moments). Never "Join the waiting list" or "Claim a
+  free year". Secondary CTAs are direct verb phrases, such as "See how much
+  you could save".
 - Direct savings and risk figures are never added together anywhere.
 - The landlord side is a web-based dashboard, never an app; tenants use the
   HOMEi app. Inspections and maintenance tracking are two separate tools.
@@ -52,12 +60,15 @@ touching an existing redesigned page, match it exactly.
 - **Contact form**: `js/join-form.js` posts to the existing Web3Forms
   endpoint with the established access key and field names (name, email,
   role, feedback). Do not change the endpoint, key, or field names.
-- **Platform URL**: the marketing site never handles sign-up. Every
-  "Get started", "Sign up now" and "Sign in" control links out to the
-  platform. `js/config.js` holds that URL in one place and repoints every
-  `a[data-platform-link]` on load; the same URL is written into those href
-  attributes so the links work without JavaScript. Change both together
-  (the command is in the comment at the top of `js/config.js`).
+- **Platform URL**: the marketing site never handles sign-up. `js/config.js`
+  holds the platform URL and a `PLATFORM_LINKS_LIVE` flag that decides whether
+  `a[data-platform-link]` elements point at the platform or at `/join`. The
+  flag is currently `false` for the bridge round of testing, and the hrefs in
+  the HTML say `/join` so the links work without JavaScript.
+  To send people back to the platform, revert the commit titled "Point calls
+  to action at contact for the bridge round of testing": that restores the
+  hrefs, the button labels and the sign-up copy together. Flipping the flag
+  alone only moves the links and leaves the copy wrong.
 - **Analytics**: currently switched off at the founders' request. No
   analytics, no tracking scripts and no cookies are loaded, so there is no
   consent banner. `scripts/posthog-init.js`, `scripts/cookie-consent.js`
