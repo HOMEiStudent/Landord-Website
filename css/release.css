@@ -34,3 +34,20 @@ body{margin:0}html{scroll-behavior:smooth}a{text-decoration:none}.hx-r{position:
 }
 
 .skip-to-content:focus { left: 16px; top: 16px; }
+
+/* ------------------------------------------------------------------
+   Production additions, phone only (640px and under). Nothing here can
+   affect the approved laptop design.
+
+   The mini savings calculator binds to the locked production dataset,
+   whose local authority names are longer than the 24 placeholders in the
+   design file ("Barking and Dagenham" against "Leeds"). A select sizes
+   itself to its widest option, and a grid item defaults to
+   min-width:auto, so at 360px the card forced the page 12px wider than
+   the viewport. These two rules let it shrink instead. Same fix as the
+   pre-release stylesheet carried, and for the same reason.
+   ------------------------------------------------------------------ */
+@media (max-width: 640px) {
+    .hx-grid > * { min-width: 0; }
+    #miniCalcLocation { max-width: 100%; }
+}
