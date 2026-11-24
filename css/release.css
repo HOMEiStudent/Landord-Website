@@ -1,0 +1,108 @@
+/* ============================================================
+   HOMEi PM release stylesheet.
+   Ported verbatim from the approved design
+   HOMEi-PM-release-handover/designs/Release Home.dc.html, which carries
+   the same block as Release Join, About and Guides (those differ only in
+   the body background, which each page sets for itself).
+
+   Two layouts, kept separate:
+     wider than 640px  the approved laptop design, including its own
+                       1000px stacking and "Menu" button
+     640px and under   the phone layout in PHONE_LAYOUT.md, added only
+                       inside max-width:640px blocks
+
+   Do not edit a shared rule to fix a phone problem. Add to the 640px
+   block instead, then re-check 1440px against
+   HOMEi-PM-release-handover/screenshots/.
+   ============================================================ */
+
+body{margin:0}html{scroll-behavior:smooth}a{text-decoration:none}.hx-r{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}.hx-v{display:none}.hx-v1{display:inline}.hx-vb.hx-v1{display:flex}#hxp2:checked~* .hx-v1,#hxp3:checked~* .hx-v1,#hxp4:checked~* .hx-v1,#hxp5:checked~* .hx-v1{display:none !important}.hx-seg label[for=hxp1]{background:#FCEEDE;border-color:#E8730C !important;color:#B95E0A !important}#hxp2:checked~.hx-seg label[for=hxp1],#hxp3:checked~.hx-seg label[for=hxp1],#hxp4:checked~.hx-seg label[for=hxp1],#hxp5:checked~.hx-seg label[for=hxp1]{background:transparent;border-color:rgba(255,255,255,0.25) !important;color:#D7DEE8 !important}#hxp1:checked~* .hx-v1{display:inline}#hxp1:checked~* .hx-vb.hx-v1{display:flex}#hxp2:checked~* .hx-v2{display:inline}#hxp2:checked~* .hx-vb.hx-v2{display:flex}#hxp3:checked~* .hx-v3{display:inline}#hxp3:checked~* .hx-vb.hx-v3{display:flex}#hxp4:checked~* .hx-v4{display:inline}#hxp4:checked~* .hx-vb.hx-v4{display:flex}#hxp5:checked~* .hx-v5{display:inline}#hxp5:checked~* .hx-vb.hx-v5{display:flex}#hxp1:checked~.hx-seg label[for=hxp1]{background:#FCEEDE;border-color:#E8730C !important;color:#B95E0A !important}#hxp1:focus-visible~.hx-seg label[for=hxp1]{outline:2px solid #F5A356;outline-offset:2px}#hxp2:checked~.hx-seg label[for=hxp2]{background:#FCEEDE;border-color:#E8730C !important;color:#B95E0A !important}#hxp2:focus-visible~.hx-seg label[for=hxp2]{outline:2px solid #F5A356;outline-offset:2px}#hxp3:checked~.hx-seg label[for=hxp3]{background:#FCEEDE;border-color:#E8730C !important;color:#B95E0A !important}#hxp3:focus-visible~.hx-seg label[for=hxp3]{outline:2px solid #F5A356;outline-offset:2px}#hxp4:checked~.hx-seg label[for=hxp4]{background:#FCEEDE;border-color:#E8730C !important;color:#B95E0A !important}#hxp4:focus-visible~.hx-seg label[for=hxp4]{outline:2px solid #F5A356;outline-offset:2px}#hxp5:checked~.hx-seg label[for=hxp5]{background:#FCEEDE;border-color:#E8730C !important;color:#B95E0A !important}#hxp5:focus-visible~.hx-seg label[for=hxp5]{outline:2px solid #F5A356;outline-offset:2px}button,input,select,textarea{font-family:'Public Sans',sans-serif;box-sizing:border-box}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid #F5A356;outline-offset:2px}.hx-menu{display:none}.hx-show-m{display:none}.hx-pho{display:none}@media (max-width:1000px){.hx-grid{grid-template-columns:1fr !important}.hx-nav{display:none !important}.hx-menu{display:block}.hx-pad{padding-left:20px !important;padding-right:20px !important}.hx-hide-m{display:none !important}.hx-tabspace{margin-bottom:0 !important}.hx-fan{height:auto !important}.hx-fan .hx-mid{position:static !important;width:62% !important;margin:0 auto}.hx-show-m{display:block}.hx-h1{font-size:36px !important}.hx-h2{font-size:28px !important}.hx-row{padding:20px 0 !important;gap:10px !important}.hx-shot{margin-right:0 !important}}@media (max-width:640px){.hx-grid{grid-template-columns:1fr !important}.hx-nav{display:none !important}.hx-menu{display:block}.hx-pad{padding-left:20px !important;padding-right:20px !important}.hx-npho{display:none !important}.hx-tabspace{margin-bottom:0 !important}.hx-lbase{margin:0 -3% !important}.hx-pad a{white-space:normal !important}.hx-pad a[style*="border-radius"]{text-align:center}.hx-h1 br,.hx-h2 br,p br{display:none}.hx-promo .hx-pad{padding-top:7px !important;padding-bottom:7px !important;font-size:13px !important;gap:6px 10px !important}.hx-promo-link{display:none !important}.hx-v>span{display:block;margin-top:6px}.hx-save{border-left:0 !important;padding:24px 0 0 !important;margin-top:20px;border-top:1px solid rgba(255,255,255,0.12)}.hx-fan{height:auto !important}.hx-fan .hx-mid{position:static !important;width:62% !important;margin:0 auto}.hx-pho{display:block}.hx-h1{font-size:36px !important}.hx-h2{font-size:28px !important}.hx-row{padding:20px 0 !important;gap:10px !important}.hx-shot{margin-right:0 !important}.hx-pho{display:block}.hx-npho{display:none !important}.hx-jrow{grid-template-columns:1fr !important}}@media (max-width:640px){.hx-navbar{padding-top:12px !important;padding-bottom:12px !important;flex-wrap:nowrap !important;gap:10px !important}.hx-navcta{padding:10px 14px !important;font-size:13.5px !important}.hx-navright{gap:8px !important}.hx-burger{width:44px;height:44px;padding:0 !important;display:flex !important;align-items:center;justify-content:center;box-sizing:border-box}.hx-menu summary::-webkit-details-marker{display:none}.hx-menu nav{top:52px !important;right:-4px !important}.hx-ann{font-size:12px !important;padding:7px 16px !important}.hx-h1,.hx-h2{text-align:center;margin-left:auto !important;margin-right:auto !important}.hx-k{text-align:center}.hx-h1~p,.hx-h2~p{text-align:center;margin-left:auto !important;margin-right:auto !important}.hx-cta{justify-content:center}.hx-cta>a{text-align:center}.hx-hero{gap:22px !important}.hx-herotext{display:contents !important}.hx-shot{order:1;margin:4px 0 !important;gap:12px !important}.hx-o2{order:2}.hx-tabspace{padding-left:0 !important}.hx-lbase{display:none !important}.hx-lframe{border-radius:12px !important;padding:6px !important}.hx-lframe>span{display:none}.hx-shot>span{text-align:center;font-size:12.5px !important}.hx-herobtns{flex-direction:column;align-items:stretch !important;gap:10px !important}.hx-herobtns a{text-align:center}.hx-heroul{align-self:center}.hx-guar{align-self:center;text-align:left}.hx-facts{grid-template-columns:repeat(3,minmax(0,1fr)) !important;text-align:center}.hx-facts>div{padding:14px 4px 0 !important}.hx-facts>div>span:first-child{font-size:14px !important}.hx-facts>div>span{font-size:12px !important}.hx-rows{border-bottom:0 !important;gap:14px}.hx-row{background:#fff;border:1px solid #E4E8EE !important;border-radius:12px;padding:0 !important;gap:0 !important;overflow:hidden;box-shadow:0 8px 28px rgba(16,27,45,0.06)}.hx-row>div{padding:14px 18px;border-top:1px solid #F1F3F6}.hx-row>div>.hx-pho{display:block}.hx-row>div:first-child{background:#101B2D;border-top:0}.hx-row>div:first-child>span{color:#fff !important;font-size:17px !important}.hx-row>div:first-child>.hx-pho{color:#F5A356 !important;font-size:11.5px !important}.hx-row>div:nth-child(2)>.hx-pho{color:#B95E0A !important}.hx-row>div:nth-child(3)>.hx-pho{color:#1F8A5B !important}.hx-acc{border-top:1px solid #E4E8EE}.hx-acc:last-child{border-bottom:1px solid #E4E8EE}.hx-acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 0;min-height:44px;box-sizing:border-box}.hx-acc summary::-webkit-details-marker{display:none}.hx-acc summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid #D5DBE4;color:#B95E0A;font-weight:600;font-size:18px;line-height:25px;text-align:center}.hx-acc[open] summary::after{content:"−";background:#FCEEDE;border-color:#E8730C}.hx-acc p{margin:0 0 18px !important}.hx-scroll{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px !important;margin-left:-20px !important;margin-right:-20px !important;padding:2px 20px 10px !important;scrollbar-width:none;-webkit-overflow-scrolling:touch}.hx-scroll::-webkit-scrollbar{display:none}.hx-scroll>*{flex:0 0 76%;scroll-snap-align:center;box-sizing:border-box}.hx-sdark>*{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12) !important;border-radius:12px;padding:18px !important}.hx-swipe{display:block;font-size:12.5px;font-weight:600;color:#8FA0B8;text-align:center;margin-top:-4px}.hx-apptext{display:contents !important}.hx-app{gap:16px !important}.hx-app .hx-fan{order:1}.hx-app .hx-o1{order:1}.hx-app .hx-o2{order:2}.hx-fan{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;height:auto !important;margin:6px -20px 0;padding:6px 20px 14px;scrollbar-width:none}.hx-fan::-webkit-scrollbar{display:none}.hx-fan>div{display:block !important;position:static !important;transform:none !important;flex:0 0 58% !important;width:auto !important;margin:0 !important;scroll-snap-align:center;box-shadow:0 12px 30px rgba(0,0,0,0.35) !important}.hx-fan>.hx-mid{order:-1}.hx-steps{row-gap:0 !important}.hx-steps>li{flex-direction:row !important;align-items:center !important;text-align:left !important;gap:14px !important;padding:12px 0 !important;border-top:1px solid #E4E8EE}.hx-steps>li:last-child{border-bottom:1px solid #E4E8EE}.hx-steps>li>span{width:38px !important;height:38px !important;font-size:17px !important}.hx-letter{font-size:17px !important;gap:14px !important}.hx-founder{gap:8px !important}.hx-founder>div:last-child{margin-top:0 !important;border-top:1px solid #E4E8EE;padding-top:8px}.hx-founder>div:last-child>a{padding-top:12px !important}.hx-h1{font-size:32px !important}.hx-more summary{list-style:none;cursor:pointer;color:#B95E0A;font-family:"Public Sans",sans-serif;font-size:15px;font-weight:600;padding:10px 0;min-height:44px;box-sizing:border-box}.hx-more summary::-webkit-details-marker{display:none}.hx-more[open] summary{display:none}.hx-more p{margin:0 0 14px !important}.hx-plist>li{grid-template-columns:118px 1fr !important;gap:12px !important;padding:16px 0 !important}.hx-plist>li>span{font-size:13px !important}.hx-plist>li>div>span:first-child{font-size:24px !important}.hx-gcard>div{padding:22px !important;gap:12px !important}.hx-gcard>div>span:nth-child(2){font-size:23px !important}.hx-gcard p{font-size:16px !important}.hx-bonus .hx-scroll>*{flex-basis:72%}.hx-jrow{gap:6px !important;padding:18px 0 !important}.hx-pad,.hx-pad *{text-align:center}.hx-left,.hx-left *,.hx-menu nav,.hx-menu nav *{text-align:left !important}.hx-tick,.hx-heroul li,.hx-guar{display:block !important}.hx-tick>span:first-child,.hx-heroul li>span:first-child,.hx-guar>span:first-child{margin-right:8px}.hx-heroul{align-self:stretch}.hx-steps>li{flex-direction:column !important;text-align:center !important;gap:6px !important;padding:14px 0 !important}.hx-plist>li{grid-template-columns:1fr !important;gap:4px !important;justify-items:center}.hx-save{align-items:center}.hx-pad div[style*="flex-direction:column"]{align-items:stretch}.hx-seg>div{width:100%;max-width:none !important}.hx-foot>div{justify-content:center !important}.hx-foot>div>div{align-items:center}.hx-foot>div>div:last-child{justify-content:center;gap:28px 44px !important}.hx-foot div[style*="align-items:center;gap:8px"]{justify-content:center}.hx-bandbtns{flex-direction:column;align-items:stretch !important;width:100%}.hx-pad div[style*="align-items:flex-start"]{align-items:center !important}.hx-pad div[style*="flex-wrap:wrap"]{justify-content:center}.hx-left div{justify-content:flex-start !important;align-items:stretch !important}.hx-fname{justify-content:center}.hx-cost{padding:8px 0 !important;align-items:center}.hx-bhead{justify-content:center !important;flex-direction:column;gap:6px !important}.hx-acc summary{position:relative;justify-content:center !important;padding:16px 40px !important;text-align:center !important}.hx-acc summary::after{position:absolute;right:0;top:50%;margin-top:-14px}.hx-acc p{text-align:center !important}.hx-vb>div{flex-direction:column;gap:6px !important;align-items:stretch !important}.hx-vb>div>*{flex:none !important;width:100% !important}.hx-vb>div>span:first-child{width:auto !important;text-align:center !important}.hx-left>div:first-child,.hx-left>div:first-child *,.hx-left button{text-align:center !important}.hx-ann{display:none !important}.hx-sticky{display:flex !important;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#101B2D;border-top:1px solid rgba(255,255,255,0.12);padding:10px 16px calc(10px + env(safe-area-inset-bottom));gap:12px;align-items:center;justify-content:space-between;box-shadow:0 -8px 24px rgba(0,0,0,0.25)}body{padding-bottom:76px;background:#0B1523 !important}.hx-lframe img{aspect-ratio:1040/778 !important;object-position:top center !important}.hx-mletter p{margin:0 0 14px !important}.hx-foot a{display:block;padding:11px 0;min-height:44px;box-sizing:border-box}.hx-foot div[style*="flex-direction:column"]{gap:0 !important}.hx-dots{display:flex !important;justify-content:center;align-items:center;gap:6px;margin:2px 0 4px}.hx-dots i{display:block;width:6px;height:6px;border-radius:6px;background:rgba(143,160,184,0.5);transition:width .2s,background .2s}.hx-dots i.on{width:18px;background:#E8730C}.hx-rows{flex-direction:row !important;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px !important;padding:2px 20px 10px !important;scrollbar-width:none}.hx-rows::-webkit-scrollbar{display:none}.hx-rows>.hx-row{flex:0 0 84%;scroll-snap-align:center;box-sizing:border-box}.hx-swipe-l{color:#6B7A8F}}@keyframes hx-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}@keyframes hx-grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}.hx-bar{transform-origin:left center}.hx-lift{transition:transform .18s ease,box-shadow .18s ease}.hx-lift:hover{transform:translateY(-3px)}@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){.hx-bar{animation:hx-grow linear both;animation-timeline:view();animation-range:entry 10% entry 70%}}}
+
+/* Added for production, neither affects the design's layout. */
+.hidden { display: none !important; }
+
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 200;
+    background: #E8730C;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skip-to-content:focus { left: 16px; top: 16px; }
+
+/* ------------------------------------------------------------------
+   Production additions, phone only (640px and under). Nothing here can
+   affect the approved laptop design.
+
+   The mini savings calculator binds to the locked production dataset,
+   whose local authority names are longer than the 24 placeholders in the
+   design file ("Barking and Dagenham" against "Leeds"). A select sizes
+   itself to its widest option, and a grid item defaults to
+   min-width:auto, so at 360px the card forced the page 12px wider than
+   the viewport. These two rules let it shrink instead. Same fix as the
+   pre-release stylesheet carried, and for the same reason.
+   ------------------------------------------------------------------ */
+@media (max-width: 640px) {
+    .hx-grid > * { min-width: 0; }
+    #miniCalcLocation { max-width: 100%; }
+}
+
+/* ------------------------------------------------------------------
+   Compatibility for the secondary pages (the three guides, How the
+   Calculator Works, Privacy). Their article bodies are locked copy and
+   still use .hx-section and .hx-toc from the pre-release stylesheet.
+   These two rules keep their responsive behaviour once those pages move
+   to this stylesheet, at the 1000px breakpoint the article designs in
+   designs/site/ use. No Release page uses either class.
+   ------------------------------------------------------------------ */
+@media (max-width: 1000px) {
+    .hx-section { padding-left: 20px !important; padding-right: 20px !important; }
+    .hx-toc { position: static !important; }
+}
+
+/* ------------------------------------------------------------------
+   Phone tap targets, 44px minimum (CLAUDE.md section 7 and the
+   acceptance checklist). The approved phone design produces several
+   controls below that: the nav button at 36px, the property selector
+   and the mini calculator's bedroom buttons at 39px, the About link at
+   29px and the in-article buttons at 43px.
+
+   Scoped to phones, so nothing above 640px moves. Links sitting inside
+   sentences are left alone: WCAG 2.5.8 exempts inline links, and
+   enlarging them would break the body copy of the locked articles.
+   ------------------------------------------------------------------ */
+@media (max-width: 640px) {
+    .hx-navcta,
+    .hx-seg label,
+    #miniCalcBeds button,
+    #calcBeds button,
+    #calcMgmt button,
+    #calcType button,
+    #joinType button,
+    .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    a.hx-k {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ------------------------------------------------------------------
+   Offer switch backstop.
+   Several offer blocks carry an inline display:flex / display:grid,
+   which outranks the user-agent [hidden]{display:none}. Without this
+   they stay visible when js/config.js sets OFFER_ACTIVE to false.
+   ------------------------------------------------------------------ */
+[hidden] { display: none !important; }

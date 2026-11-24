@@ -1,236 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landlord Savings Calculator | See What HOMEi PM Saves You | HOMEi PM</title>
-    <meta name="description" content="Free landlord savings calculator. See the money HOMEi PM puts back in your pocket each year and the compliance and possession risk it mitigates. Built on official ONS rent data.">
+    <meta name="description" content="Free landlord savings calculator. See the money HOMEi PM puts back in your pocket each year and the compliance and possession risk it mitigates. Built on official ONS rent data for England.">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Landlord Savings Calculator | HOMEi PM">
-    <meta property="og:description" content="See what a UK landlord saves each year with HOMEi PM, plus the compliance and possession risk it protects against.">
+    <meta property="og:title" content="Landlord Savings Calculator | See What HOMEi PM Saves You | HOMEi PM">
+    <meta property="og:description" content="Free landlord savings calculator. See the money HOMEi PM puts back in your pocket each year and the compliance and possession risk it mitigates. Built on official ONS rent data for England.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://homei.org.uk/savings-calculator">
     <meta property="og:image" content="https://homei.org.uk/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Landlord Savings Calculator | HOMEi PM">
-    <meta name="twitter:description" content="See what a UK landlord saves each year with HOMEi PM, plus the risk it takes off the table.">
+    <meta name="twitter:title" content="Landlord Savings Calculator | See What HOMEi PM Saves You | HOMEi PM">
+    <meta name="twitter:description" content="Free landlord savings calculator. See the money HOMEi PM puts back in your pocket each year and the compliance and possession risk it mitigates. Built on official ONS rent data for England.">
     <meta name="twitter:image" content="https://homei.org.uk/images/og-image.png">
     <meta name="theme-color" content="#101B2D">
     <link rel="canonical" href="https://homei.org.uk/savings-calculator">
-    <link rel="icon" href="favicon.ico" sizes="48x48">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="css/site.css">
-
+    <link rel="stylesheet" href="/css/release.css">
+    <style>body{background:#F7F8FA}</style>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "HOMEi PM Landlord Savings Calculator",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web browser",
-        "url": "https://homei.org.uk/savings-calculator",
-        "description": "A free calculator that estimates the annual savings and the compliance and possession risk mitigation a UK landlord gets from HOMEi PM.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-        "publisher": { "@type": "Organization", "name": "HOMEi", "url": "https://homei.org.uk" }
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HOMEi",
+    "url": "https://homei.org.uk",
+    "logo": "https://homei.org.uk/images/homei-logo.png",
+    "description": "HOMEi builds property management and shared household technology for the UK rental market.",
+    "email": "contact@homei.uk",
+    "foundingDate": "2023",
+    "founder": [
+        {
+            "@type": "Person",
+            "name": "James"
+        },
+        {
+            "@type": "Person",
+            "name": "Gurprit"
+        }
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sheffield",
+        "addressCountry": "GB"
     }
+}
     </script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            { "@type": "Question", "name": "How accurate are the savings figures?", "acceptedAnswer": { "@type": "Answer", "text": "Every figure comes from a fixed model built from cited public sources and checked to the penny. Results are shown as a range (low, base, high) because outcomes vary property to property. They are estimates to support a decision, not a promise or financial advice." } },
-            { "@type": "Question", "name": "Where does the rent data come from?", "acceptedAnswer": { "@type": "Answer", "text": "Monthly rents are official Office for National Statistics medians for your local authority and bedroom count, covering 342 local authorities across England." } },
-            { "@type": "Question", "name": "Are the savings and risk figures added together?", "acceptedAnswer": { "@type": "Answer", "text": "No. Direct savings are cash you keep each year. The risk figures show what is at stake if something goes wrong. They are kept separate and never combined into one headline number." } }
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How accurate are the savings figures?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every figure comes from a fixed model built from cited public sources and checked to the penny. Results are shown as a range (low, base, high) because outcomes vary by property. They are estimates to support a decision, not a promise or financial advice."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Where does the rent data come from?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Monthly rents are official Office for National Statistics medians for your local authority and bedroom count, covering 342 local authorities across England."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are the savings and risk figures added together?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Direct savings are cash you keep each year. The risk figures show what is at stake if something goes wrong. They are kept separate and never combined into one headline number."
+            }
+        }
+    ]
+}
     </script>
-
 </head>
 <body>
 
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-    <div style="font-family:'Public Sans',sans-serif;min-height:100vh;background:#F7F8FA">
 
-    <div style="background:#101B2D">
-        <header>
-            <nav aria-label="Main navigation" class="hx-section" style="display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid rgba(255,255,255,0.08);max-width:1280px;margin:0 auto;box-sizing:border-box;gap:16px;flex-wrap:wrap">
-                <a href="/" style="display:flex;align-items:center;gap:10px">
-                    <img src="images/homei-logo.png" alt="HOMEi PM logo" style="width:34px;height:34px" width="34" height="34">
-                    <span style="color:#fff;font-weight:700;font-size:17px;letter-spacing:-0.01em">HOMEi <span style="font-weight:400;color:#8FA0B8">PM</span></span>
-                </a>
-                <div class="hx-nav" style="display:flex;gap:26px;font-size:14px;font-weight:500">
-                    <a href="/#platform" style="color:#B9C4D4">Platform</a>
-                    <a href="/savings-calculator" style="color:#fff;font-weight:600">Your Savings</a>
-                    <a href="/#pricing" style="color:#B9C4D4">Pricing</a>
-                    <a href="/blog/" style="color:#B9C4D4">Guides</a>
-                    <a href="/about" style="color:#B9C4D4">About</a>
-                    <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer" style="color:#8FA0B8">HOMEi App ↗</a>
-                </div>
-                <div class="hx-nav-cta" style="display:flex;align-items:center;gap:14px">
-                    <a href="/join" data-platform-link data-cta-id="nav-signin" style="color:#B9C4D4;font-size:14px;font-weight:500">Sign in</a>
-                    <a href="/join" data-platform-link data-cta-id="nav-get-started" style="background:#E8730C;color:#fff;font-size:14px;font-weight:600;padding:10px 18px;border-radius:6px">Get in touch</a>
-                </div>
-                <button class="hx-mobile-btn" id="hxMobileBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="hxMobileMenu">
-                    <svg aria-hidden="true" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
-            </nav>
-            <div class="hx-mobile-menu" id="hxMobileMenu">
-                <a href="/#platform">Platform</a>
-                <a href="/savings-calculator">Your Savings</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/blog/">Guides</a>
-                <a href="/about">About</a>
-                <a href="https://homeistudent.com" target="_blank" rel="noopener noreferrer">HOMEi App ↗</a>
-                <a href="/join" data-platform-link data-cta-id="nav-mobile-signin">Sign in</a><a href="/join" class="hx-mobile-cta" data-platform-link data-cta-id="nav-mobile-get-started">Get in touch</a>
-            </div>
-        </header>
-        <div class="hx-section" style="max-width:1280px;margin:0 auto;padding:56px 48px 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
-            <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#F5A356;text-transform:uppercase">Savings calculator</span>
-            <h1 style="margin:0;font-family:'Source Serif 4',serif;font-size:44px;line-height:1.1;color:#fff;font-weight:600;max-width:26ch">Landlord savings calculator</h1>
-            <p style="margin:0;font-size:17px;line-height:1.6;color:#B9C4D4;max-width:64ch">See the money HOMEi PM puts back in your pocket each year, and the compliance and possession risk it mitigates. Pick your area and property below. The figures update as you go.</p>
+<div style="font-family:'Public Sans',sans-serif;min-height:100vh" data-screen-label="Savings Calculator">
+
+  <div style="background:#101B2D">
+      <div class="hx-promo" data-offer role="region" aria-label="New year offer" style="position:sticky;top:0;z-index:60;background:#B35708;color:#fff">
+    <div class="hx-pad" style="max-width:1440px;margin:0 auto;padding:10px 48px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;font-size:14px;line-height:1.4;text-align:center">
+      <span class="hx-npho"><strong>New year offer:</strong> HOMEi PM is free until 1 February 2027.<span class="hx-hide-m"> No card needed.</span></span><span class="hx-pho"><strong>Free until 1 Feb 2027</strong></span>
+      <span class="hx-cd-wrap" style="display:none;background:rgba(11,21,35,0.25);border-radius:100px;padding:4px 12px;font-weight:600;white-space:nowrap"><span class="hx-npho" style="display:inline">Ends in </span><span class="hx-cd" style="font-variant-numeric:tabular-nums"></span></span>
+      <a class="hx-promo-link" href="https://d1evln8kpnyy80.cloudfront.net" style="color:#fff;font-weight:700;text-decoration:underline;white-space:nowrap" data-platform-link>Get started today →</a>
+    </div>
+  </div>
+  <div class="hx-sticky" role="region" aria-label="Get started" style="display:none"><span data-offer style="display:flex;flex-direction:column;gap:1px;line-height:1.3;text-align:left"><strong style="color:#fff;font-size:14px">Free until 1 Feb 2027</strong><span style="color:#8FA0B8;font-size:12px">No card needed</span></span><a href="https://d1evln8kpnyy80.cloudfront.net" style="background:#B35708;color:#fff;font-size:15px;font-weight:600;padding:12px 20px;border-radius:6px;white-space:nowrap;min-height:44px;box-sizing:border-box;display:flex;align-items:center" data-platform-link>Get started today</a></div>
+  <div style="background:#101B2D">
+  <div class="hx-pad hx-navbar" style="display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid rgba(255,255,255,0.08);max-width:1440px;margin:0 auto;box-sizing:border-box;gap:16px;flex-wrap:wrap">
+    <a href="/" style="display:flex;align-items:center;gap:10px">
+      <img src="/images/homei-logo.png" alt="HOMEi PM logo" width="34" height="34" style="width:34px;height:34px">
+      <span style="color:#fff;font-weight:700;font-size:17px;letter-spacing:-0.01em">HOMEi <span style="font-weight:400;color:#8FA0B8">PM</span></span>
+    </a>
+    <nav class="hx-nav" aria-label="Main" style="display:flex;gap:26px;font-size:14px;font-weight:500;flex-wrap:wrap"><a href="/#how" style="color:#B9C4D4">How it works</a><a href="/savings-calculator" style="color:#fff;font-weight:600">Your Savings</a><a href="/#pricing" style="color:#B9C4D4">Pricing</a><a href="/blog/" style="color:#B9C4D4">Guides</a><a href="/about" style="color:#B9C4D4">About</a><a href="https://homeistudent.com" target="_blank" rel="noopener" style="color:#8FA0B8">HOMEi App ↗</a></nav>
+    <div class="hx-navright" style="display:flex;align-items:center;gap:14px"><a class="hx-hide-m hx-npho" href="https://d1evln8kpnyy80.cloudfront.net" style="color:#B9C4D4;font-size:14px;font-weight:500" data-platform-link>Sign in</a><a class="hx-navcta" href="https://d1evln8kpnyy80.cloudfront.net" style="background:#B35708;color:#fff;font-size:14px;font-weight:600;padding:12px 18px;border-radius:6px;white-space:nowrap" data-platform-link>Get started today</a>
+      <details class="hx-menu" style="position:relative"><summary class="hx-burger" aria-label="Menu" style="list-style:none;cursor:pointer;color:#fff;font-size:14px;font-weight:600;border:1px solid rgba(255,255,255,0.25);border-radius:6px;padding:11px 14px"><span class="hx-npho">Menu</span><svg class="hx-pho" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></summary><nav aria-label="Mobile" style="position:absolute;right:0;top:52px;z-index:20;background:#0B1523;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:6px 20px;min-width:220px;box-shadow:0 24px 60px rgba(0,0,0,0.45)"><a href="/#how" style="color:#B9C4D4;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:15px;display:block">How it works</a><a href="/savings-calculator" style="color:#fff;font-weight:600;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:15px;display:block">Your Savings</a><a href="/#pricing" style="color:#B9C4D4;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:15px;display:block">Pricing</a><a href="/blog/" style="color:#B9C4D4;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:15px;display:block">Guides</a><a href="/about" style="color:#B9C4D4;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:15px;display:block">About</a><a href="https://homeistudent.com" target="_blank" rel="noopener" style="color:#8FA0B8;padding:13px 0;font-size:15px;display:block;border-bottom:1px solid rgba(255,255,255,0.08)">HOMEi App ↗</a><a href="https://d1evln8kpnyy80.cloudfront.net" style="color:#B9C4D4;padding:13px 0;font-size:15px;display:block" data-platform-link>Sign in</a></nav></details>
+    </div>
+  </div>
+  </div>
+<div style="max-width:1280px;margin:0 auto;padding:56px 48px 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#F5A356;text-transform:uppercase">Savings calculator</span>
+      <h1 style="margin:0;font-family:'Source Serif 4',serif;font-size:44px;line-height:1.1;color:#fff;font-weight:600;max-width:26ch;text-wrap:pretty">Landlord savings calculator</h1>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#B9C4D4;max-width:64ch">See the money HOMEi PM puts back in your pocket each year, and the compliance and possession risk it mitigates. Pick your area in England and your property below. The figures update as you go.</p>
+    </div>
+  </div>
+  <main id="main-content">
+
+  <div class="hx-grid" style="max-width:1184px;margin:-24px auto 0;padding:0 48px 56px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:start">
+
+    <!-- inputs -->
+    <div class="hx-sticky" style="background:#fff;border:1px solid #E4E8EE;border-radius:14px;box-shadow:0 8px 28px rgba(16,27,45,0.08);padding:32px;display:flex;flex-direction:column;gap:26px;position:sticky;top:24px">
+      <span style="font-family:'Source Serif 4',serif;font-size:22px;font-weight:600;color:#101B2D">Your property</span>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;font-weight:600;color:#101B2D">Location</span>
+        <select id="calcLocation" aria-label="Local authority" style="border:1.5px solid #D5DBE4;border-radius:8px;padding:12px 14px;font-size:15px;font-weight:600;color:#101B2D;background:#fff"></select>
+        <span style="font-size:12.5px;color:#9AA7B8">ONS median rent for a <span id="calcRentBeds"></span>-bed here: <strong style="color:#4A5A70">£<span id="calcRent"></span>/month</strong></span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;font-weight:600;color:#101B2D">Bedrooms</span>
+        <div id="calcBeds" role="group" aria-label="Bedrooms" style="display:flex;gap:6px"><button type="button" data-value="1" aria-pressed="false" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">1</button><button type="button" data-value="2" aria-pressed="false" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">2</button><button type="button" data-value="3" aria-pressed="false" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">3</button><button type="button" data-value="4" aria-pressed="true" style="flex:1;text-align:center;border:1.5px solid #E8730C;background:#FCEEDE;color:#B95E0A;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">4</button></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;font-weight:600;color:#101B2D">Management</span>
+        <div id="calcMgmt" role="group" aria-label="Management" style="display:flex;gap:6px"><button type="button" data-value="Self-managed" aria-pressed="true" style="flex:1;text-align:center;border:1.5px solid #E8730C;background:#FCEEDE;color:#B95E0A;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">Self-managed</button><button type="button" data-value="Agent-managed" aria-pressed="false" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">Agent-managed</button></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;font-weight:600;color:#101B2D">Property type</span>
+        <div id="calcType" role="group" aria-label="Property type" style="display:flex;gap:6px"><button type="button" data-value="Single let" aria-pressed="false" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">Single let</button><button type="button" data-value="Student HMO" aria-pressed="true" style="flex:1;text-align:center;border:1.5px solid #E8730C;background:#FCEEDE;color:#B95E0A;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px">Student HMO</button></div>
+      </div>
+
+      <span style="font-size:12.5px;color:#9AA7B8;line-height:1.6">All four inputs are fixed choices, so the model always knows exactly which numbers to use. <a href="/how-the-calculator-works" style="color:#B95E0A;text-decoration:underline">See exactly how the figures are worked out</a></span>
+    </div>
+
+    <!-- results -->
+    <div style="display:flex;flex-direction:column;gap:16px">
+
+      <div style="background:#101B2D;border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:16px;box-shadow:0 12px 32px rgba(16,27,45,0.25)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+          <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#F5A356;text-transform:uppercase">Direct savings each year</span>
+          <span style="font-size:12.5px;color:#8FA0B8">cash you keep</span>
         </div>
-    </div>
-
-    <main id="main-content">
-    <div class="hx-grid hx-section" style="max-width:1184px;margin:-24px auto 0;padding:0 48px 56px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:start">
-
-        <div class="hx-sticky" style="background:#fff;border:1px solid #E4E8EE;border-radius:14px;box-shadow:0 8px 28px rgba(16,27,45,0.08);padding:32px;display:flex;flex-direction:column;gap:26px;position:sticky;top:24px">
-            <span style="font-family:'Source Serif 4',serif;font-size:22px;font-weight:600;color:#101B2D">Your property</span>
-
-            <div style="display:flex;flex-direction:column;gap:8px">
-                <label for="calcLocation" style="font-size:14px;font-weight:600;color:#101B2D">Location</label>
-                <select id="calcLocation" style="border:1.5px solid #D5DBE4;border-radius:8px;padding:12px 14px;font-size:15px;font-weight:600;color:#101B2D;background:#fff"></select>
-                <span style="font-size:12.5px;color:#9AA7B8">ONS median rent for a <span id="calcRentBeds">4</span>-bed here: <strong style="color:#4A5A70">£<span id="calcRent">1,327</span>/month</strong></span>
-            </div>
-
-            <div style="display:flex;flex-direction:column;gap:8px">
-                <span id="calcBedsLabel" style="font-size:14px;font-weight:600;color:#101B2D">Bedrooms</span>
-                <div id="calcBeds" role="group" aria-labelledby="calcBedsLabel" style="display:flex;gap:8px">
-                    <button type="button" data-value="1" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">1</button>
-                    <button type="button" data-value="2" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">2</button>
-                    <button type="button" data-value="3" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">3</button>
-                    <button type="button" data-value="4" style="flex:1;text-align:center;border:1.5px solid #E8730C;background:#FCEEDE;color:#B95E0A;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">4</button>
-                </div>
-            </div>
-
-            <div style="display:flex;flex-direction:column;gap:8px">
-                <span id="calcMgmtLabel" style="font-size:14px;font-weight:600;color:#101B2D">Management</span>
-                <div id="calcMgmt" role="group" aria-labelledby="calcMgmtLabel" style="display:flex;gap:8px">
-                    <button type="button" data-value="Self-managed" style="flex:1;text-align:center;border:1.5px solid #E8730C;background:#FCEEDE;color:#B95E0A;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">Self-managed</button>
-                    <button type="button" data-value="Agent-managed" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">Agent-managed</button>
-                </div>
-            </div>
-
-            <div style="display:flex;flex-direction:column;gap:8px">
-                <span id="calcTypeLabel" style="font-size:14px;font-weight:600;color:#101B2D">Property type</span>
-                <div id="calcType" role="group" aria-labelledby="calcTypeLabel" style="display:flex;gap:8px">
-                    <button type="button" data-value="Single let" style="flex:1;text-align:center;border:1.5px solid #D5DBE4;background:#fff;color:#4A5A70;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">Single let</button>
-                    <button type="button" data-value="Student HMO" style="flex:1;text-align:center;border:1.5px solid #E8730C;background:#FCEEDE;color:#B95E0A;border-radius:8px;padding:11px 0;font-size:14.5px;font-weight:600;cursor:pointer">Student HMO</button>
-                </div>
-            </div>
-
-            <span style="font-size:12.5px;color:#9AA7B8;line-height:1.6">All four inputs are fixed choices, so the model always knows exactly which numbers to use. <a href="/how-the-calculator-works" style="color:#B95E0A;text-decoration:underline">See exactly how the figures are worked out</a></span>
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+          <span style="font-family:'Source Serif 4',serif;font-size:52px;font-weight:600;color:#fff;letter-spacing:-0.01em">£<span id="directBase"></span></span>
+          <span style="font-size:15px;color:#8FA0B8">range £<span id="directLow"></span> to £<span id="directHigh"></span></span>
         </div>
-
-        <div style="display:flex;flex-direction:column;gap:16px" aria-live="polite">
-
-            <div style="background:#101B2D;border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:16px;box-shadow:0 12px 32px rgba(16,27,45,0.25)">
-                <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
-                    <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#F5A356;text-transform:uppercase">Direct savings each year</span>
-                    <span style="font-size:12.5px;color:#8FA0B8">cash you keep</span>
-                </div>
-                <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
-                    <span style="font-family:'Source Serif 4',serif;font-size:52px;font-weight:600;color:#fff;letter-spacing:-0.01em">£<span id="directBase">574</span></span>
-                    <span style="font-size:15px;color:#8FA0B8">range £<span id="directLow">338</span> to £<span id="directHigh">1,111</span></span>
-                </div>
-                <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,0.1)">
-                    <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);gap:16px">
-                        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600;color:#fff">Maintenance saved</span><span style="font-size:12.5px;color:#8FA0B8">Early fault reporting avoids escalated repairs, an insurance excess and the premium rise after a claim</span></div>
-                        <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-end"><span style="font-size:15px;font-weight:700;color:#fff;white-space:nowrap">£<span id="maintBase">194</span>/yr</span><span style="font-size:12px;color:#8FA0B8;white-space:nowrap">£<span id="maintLow">52</span> – £<span id="maintHigh">628</span></span></div>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);gap:16px">
-                        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600;color:#fff">Inspection saved</span><span id="inspectionDesc" style="font-size:12.5px;color:#8FA0B8">Digital inspections replace your own visits: time and travel saved</span></div>
-                        <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-end"><span style="font-size:15px;font-weight:700;color:#fff;white-space:nowrap">£<span id="inspectionBase">293</span>/yr</span><span style="font-size:12px;color:#8FA0B8;white-space:nowrap">£<span id="inspectionLow">223</span> – £<span id="inspectionHigh">363</span></span></div>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;padding:12px 0;gap:16px">
-                        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600;color:#fff">Rent uplift captured</span><span style="font-size:12.5px;color:#8FA0B8">A valid, on-time Section 13 review keeps rent in step with the market</span></div>
-                        <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-end"><span style="font-size:15px;font-weight:700;color:#fff;white-space:nowrap">£<span id="upliftBase">88</span>/yr</span><span style="font-size:12px;color:#8FA0B8;white-space:nowrap">£<span id="upliftLow">64</span> – £<span id="upliftHigh">119</span></span></div>
-                    </div>
-                </div>
-                <a href="/join" data-platform-link data-cta-id="calc-direct-get-started" style="background:#E8730C;color:#fff;font-size:15.5px;font-weight:600;padding:14px;border-radius:8px;text-align:center">Get in touch</a>
-            </div>
-
-            <div style="background:#fff;border:1px solid #E4E8EE;border-radius:14px;padding:26px 30px;display:flex;flex-direction:column;gap:12px">
-                <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#B95E0A;text-transform:uppercase">Average annual risk mitigated</span>
-                <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
-                    <span style="font-family:'Source Serif 4',serif;font-size:34px;font-weight:600;color:#101B2D">£<span id="complianceBase">307</span>/yr</span>
-                    <span style="font-size:13.5px;color:#9AA7B8">range £<span id="complianceLow">59</span> to £<span id="complianceHigh">1,183</span></span>
-                </div>
-                <span style="font-size:13.5px;color:#4A5A70;line-height:1.6">The probability-weighted cost of a lapsed gas (CP12), electrical (EICR) or energy (EPC) certificate: how often each lapses, how often that is caught and fined, and the size of the fine, spread across the renewal cycle. Not the maximum fine. <a href="/how-the-calculator-works#compliance" style="color:#B95E0A;text-decoration:underline">How this is worked out</a></span>
-            </div>
-
-            <div style="background:#FCEEDE;border:1px solid #F5D9BB;border-radius:14px;padding:26px 30px;display:flex;flex-direction:column;gap:14px">
-                <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#7A4A0E;text-transform:uppercase">What is at stake if it goes wrong</span>
-                <div style="display:flex;flex-direction:column">
-                    <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #F5D9BB;gap:16px"><span style="font-size:14px;color:#7A4A0E;line-height:1.5">Worst-case exposure if all three certificates lapse and are caught</span><span style="font-size:14px;font-weight:700;color:#7A4A0E;white-space:nowrap">£<span id="worstCase">51,000</span></span></div>
-                    <div id="possessionRow" style="display:flex;justify-content:space-between;padding:11px 0;gap:16px;border-bottom:1px solid #F5D9BB"><span style="font-size:14px;color:#7A4A0E;line-height:1.5">Possession delay from faulty paperwork: rent lost re-serving a notice, plus a wasted court fee</span><span style="font-size:14px;font-weight:700;color:#7A4A0E;white-space:nowrap">£<span id="possessionCost">4,385</span></span></div>
-                    <div id="ground4aRow" style="display:flex;justify-content:space-between;padding:11px 0;gap:16px"><span style="font-size:14px;color:#7A4A0E;line-height:1.5">Missing the Ground 4A student window: months un-let until the next academic year</span><span style="font-size:14px;font-weight:700;color:#7A4A0E;white-space:nowrap">£<span id="ground4aCost">2,654</span></span></div>
-                </div>
-                <span style="font-size:12.5px;color:#9C6A2B;line-height:1.6">These are not costs you expect in a normal year. They are the downside HOMEi PM is there to keep off the table, worked out from your local rent, not a national average.</span>
-            </div>
-
-            <span style="font-size:12.5px;color:#9AA7B8;line-height:1.65">These figures are estimates to help you make a decision, not financial or legal advice. Direct savings and risk are shown separately and are never added together. Every number comes from a fixed, sourced model. <a href="/how-the-calculator-works" style="color:#6B7A8F;text-decoration:underline">See exactly how the figures are worked out</a></span>
+        <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,0.1)">
+          <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);gap:16px">
+            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600;color:#fff">Maintenance saved</span><span style="font-size:12.5px;color:#8FA0B8">Early fault reporting avoids escalated repairs, an insurance excess and the premium rise after a claim</span></div>
+            <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-end"><span style="font-size:15px;font-weight:700;color:#fff;white-space:nowrap">£<span id="maintBase"></span>/yr</span><span style="font-size:12px;color:#8FA0B8;white-space:nowrap">£<span id="maintLow"></span> – £<span id="maintHigh"></span></span></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);gap:16px">
+            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600;color:#fff">Inspection saved<span style="display:inline-block;margin-left:8px;font-size:11.5px;font-weight:600;color:#F5A356;background:rgba(232,115,12,0.15);padding:2px 9px;border-radius:100px;vertical-align:1px">Coming Q1 2027</span></span><span style="font-size:12.5px;color:#8FA0B8"><span id="inspectionDesc"></span></span></div>
+            <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-end"><span style="font-size:15px;font-weight:700;color:#fff;white-space:nowrap">£<span id="inspectionBase"></span>/yr</span><span style="font-size:12px;color:#8FA0B8;white-space:nowrap">£<span id="inspectionLow"></span> – £<span id="inspectionHigh"></span></span></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:12px 0;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600;color:#fff">Rent uplift captured</span><span style="font-size:12.5px;color:#8FA0B8">A valid, on-time Section 13 review keeps rent in step with the market</span></div>
+            <div style="display:flex;flex-direction:column;gap:2px;align-items:flex-end"><span style="font-size:15px;font-weight:700;color:#fff;white-space:nowrap">£<span id="upliftBase"></span>/yr</span><span style="font-size:12px;color:#8FA0B8;white-space:nowrap">£<span id="upliftLow"></span> – £<span id="upliftHigh"></span></span></div>
+          </div>
         </div>
-    </div>
+        <a href="https://d1evln8kpnyy80.cloudfront.net" style="background:#B35708;color:#fff;font-size:15.5px;font-weight:600;padding:14px;border-radius:8px;text-align:center" data-platform-link>Get started today</a>
+      </div>
 
-    <div class="hx-section" style="background:#fff;border-top:1px solid #ECEEF2;padding:56px 48px">
-        <div class="hx-grid" style="max-width:1184px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start">
-            <h2 style="margin:0;font-family:'Source Serif 4',serif;font-size:30px;color:#101B2D;font-weight:600;line-height:1.2">Questions about the calculator</h2>
-            <div style="display:flex;flex-direction:column">
-                <div style="display:flex;flex-direction:column;gap:6px;padding:18px 0;border-bottom:1px solid #F1F3F6">
-                    <span style="font-size:15.5px;font-weight:700;color:#101B2D">How accurate are the savings figures?</span>
-                    <span style="font-size:14.5px;color:#4A5A70;line-height:1.65">Every figure comes from a fixed model built from cited public sources and checked to the penny. Results are shown as a range (low, base, high) because outcomes vary property to property. They are estimates to support a decision, not a promise or financial advice. <a href="/how-the-calculator-works" style="color:#B95E0A;text-decoration:underline">Read the full methodology</a></span>
-                </div>
-                <div style="display:flex;flex-direction:column;gap:6px;padding:18px 0;border-bottom:1px solid #F1F3F6">
-                    <span style="font-size:15.5px;font-weight:700;color:#101B2D">Where does the rent data come from?</span>
-                    <span style="font-size:14.5px;color:#4A5A70;line-height:1.65">Monthly rents are official Office for National Statistics medians for your local authority and bedroom count, covering 342 local authorities across England. <a href="/how-the-calculator-works#rent" style="color:#B95E0A;text-decoration:underline">How the rent lookup works</a></span>
-                </div>
-                <div style="display:flex;flex-direction:column;gap:6px;padding:18px 0">
-                    <span style="font-size:15.5px;font-weight:700;color:#101B2D">Are the savings and risk figures added together?</span>
-                    <span style="font-size:14.5px;color:#4A5A70;line-height:1.65">No. Direct savings are cash you keep each year. The risk figures show what is at stake if something goes wrong. They are kept separate and never combined into one headline number. <a href="/how-the-calculator-works#compliance" style="color:#B95E0A;text-decoration:underline">Why we keep them separate</a></span>
-                </div>
-            </div>
+      <div style="background:#fff;border:1px solid #E4E8EE;border-radius:14px;padding:26px 30px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#B95E0A;text-transform:uppercase">Average annual risk mitigated</span>
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+          <span style="font-family:'Source Serif 4',serif;font-size:34px;font-weight:600;color:#101B2D">£<span id="complianceBase"></span>/yr</span>
+          <span style="font-size:13.5px;color:#9AA7B8">range £<span id="complianceLow"></span> to £<span id="complianceHigh"></span></span>
         </div>
-    </div>
-    </main>
+        <span style="font-size:13.5px;color:#4A5A70;line-height:1.6">The probability-weighted cost of a lapsed gas (CP12), electrical (EICR) or energy (EPC) certificate: how often each lapses, how often that is caught and fined, and the size of the fine, spread across the renewal cycle. Not the maximum fine. <a href="/how-the-calculator-works#compliance" style="color:#B95E0A;text-decoration:underline">How this is worked out</a></span>
+      </div>
 
-    <div class="hx-section" style="background:#0B1523;padding:48px">
-        <div style="max-width:1184px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
-            <div style="display:flex;flex-direction:column;gap:6px">
-                <span style="font-family:'Source Serif 4',serif;font-size:24px;color:#fff;font-weight:600">Start saving today</span>
-                <span style="font-size:14px;color:#8FA0B8">HOMEi PM turns these numbers into reality: it runs your inspections, chases the reminders, and keeps the compliance trail for you. Free while we are in early access.</span>
-            </div>
-            <a href="/join" data-platform-link data-cta-id="calc-cta-get-started" style="background:#E8730C;color:#fff;font-size:16px;font-weight:600;padding:15px 26px;border-radius:6px;white-space:nowrap">Get in touch</a>
+      <div style="background:#FCEEDE;border:1px solid #F5D9BB;border-radius:14px;padding:26px 30px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#7A4A0E;text-transform:uppercase">What is at stake if it goes wrong</span>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #F5D9BB;gap:16px"><span style="font-size:14px;color:#7A4A0E;line-height:1.5">Worst-case exposure if all three certificates lapse and are caught</span><span style="font-size:14px;font-weight:700;color:#7A4A0E;white-space:nowrap">£<span id="worstCase"></span></span></div>
+          <div id="possessionRow" style="display:flex;justify-content:space-between;padding:11px 0;gap:16px"><span style="font-size:14px;color:#7A4A0E;line-height:1.5">Possession delay from faulty paperwork: rent lost re-serving a notice, plus a wasted court fee</span><span style="font-size:14px;font-weight:700;color:#7A4A0E;white-space:nowrap">£<span id="possessionCost"></span></span></div>
+          <div id="ground4aRow" style="display:flex;justify-content:space-between;padding:11px 0;gap:16px"><span style="font-size:14px;color:#7A4A0E;line-height:1.5">Missing the Ground 4A student window: months un-let until the next academic year</span><span style="font-size:14px;font-weight:700;color:#7A4A0E;white-space:nowrap">£<span id="ground4aCost"></span></span></div>
+          
         </div>
-    </div>
+        <span style="font-size:12.5px;color:#9C6A2B;line-height:1.6">These are not costs you expect in a normal year. They are the downside HOMEi PM is there to keep off the table, worked out from your local rent, not a national average.</span>
+      </div>
 
+      <span style="font-size:12.5px;color:#9AA7B8;line-height:1.65">These figures are estimates to help you make a decision, not financial or legal advice. Direct savings and risk are shown separately and are never added together. Every number comes from a fixed, sourced model. <a href="/how-the-calculator-works" style="color:#6B7A8F;text-decoration:underline">See exactly how the figures are worked out</a></span>
     </div>
+  </div>
 
+  <!-- FAQ -->
+  <div style="background:#fff;border-top:1px solid #ECEEF2;padding:56px 48px">
+    <div class="hx-grid" style="max-width:1184px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start">
+      <h2 style="margin:0;font-family:'Source Serif 4',serif;font-size:30px;color:#101B2D;font-weight:600;line-height:1.2">Questions about the calculator</h2>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;flex-direction:column;gap:6px;padding:18px 0;border-bottom:1px solid #F1F3F6">
+          <span style="font-size:15.5px;font-weight:700;color:#101B2D">How accurate are the savings figures?</span>
+          <span style="font-size:14.5px;color:#4A5A70;line-height:1.65">Every figure comes from a fixed model built from cited public sources and checked to the penny. Results are shown as a range (low, base, high) because outcomes vary property to property. They are estimates to support a decision, not a promise or financial advice. <a href="/how-the-calculator-works" style="color:#B95E0A;text-decoration:underline">Read the full methodology</a></span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:18px 0;border-bottom:1px solid #F1F3F6">
+          <span style="font-size:15.5px;font-weight:700;color:#101B2D">Where does the rent data come from?</span>
+          <span style="font-size:14.5px;color:#4A5A70;line-height:1.65">Monthly rents are official Office for National Statistics medians for your local authority and bedroom count, covering 342 local authorities across England. <a href="/how-the-calculator-works#rent" style="color:#B95E0A;text-decoration:underline">How the rent lookup works</a></span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:18px 0">
+          <span style="font-size:15.5px;font-weight:700;color:#101B2D">Are the savings and risk figures added together?</span>
+          <span style="font-size:14.5px;color:#4A5A70;line-height:1.65">No. Direct savings are cash you keep each year. The risk figures show what is at stake if something goes wrong. They are kept separate and never combined into one headline number. <a href="/how-the-calculator-works#compliance" style="color:#B95E0A;text-decoration:underline">Why we keep them separate</a></span>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script src="js/calculator-data.js" defer></script>
-    <script src="js/calc-engine.js" defer></script>
-    <script src="js/calculator-page.js" defer></script>
-    <script src="js/config.js" defer></script>
-    <script src="js/site.js" defer></script>
+  <div style="background:#0B1523;padding:48px">
+    <div style="max-width:1184px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:'Source Serif 4',serif;font-size:24px;color:#fff;font-weight:600">Start saving today</span>
+        <span style="font-size:14px;color:#8FA0B8">HOMEi PM turns these numbers into reality: it chases the reminders and keeps the compliance trail for you. Backed by a six-month money-back guarantee.</span>
+      </div>
+      <a href="https://d1evln8kpnyy80.cloudfront.net" style="background:#B35708;color:#fff;font-size:16px;font-weight:600;padding:15px 26px;border-radius:6px;white-space:nowrap" data-platform-link>Get started today</a>
+    </div>
+  </div>
+  </main>
+<div class="hx-pad hx-foot" style="background:#0B1523;border-top:1px solid rgba(255,255,255,0.07);padding:36px 48px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;align-items:center;gap:8px"><img src="/images/homei-logo.png" alt="HOMEi PM" width="26" height="26" style="width:26px;height:26px"><span style="color:#fff;font-weight:700;font-size:15px">HOMEi PM</span></div>
+        <span style="font-size:12.5px;color:#8FA0B8;max-width:52ch;line-height:1.55">Property management software for independent UK landlords.</span>
+        <span style="font-size:12.5px;color:#8FA0B8;line-height:1.55">Sheffield, United Kingdom</span>
+        <a href="mailto:contact@homei.uk" style="font-size:12.5px;color:#B9C4D4">contact@homei.uk</a>
+      </div>
+      <div style="display:flex;gap:56px;font-size:13px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:10px"><span style="color:#fff;font-weight:600">Product</span><a href="/#how" style="color:#8FA0B8">How it works</a><a href="/savings-calculator" style="color:#8FA0B8">Savings calculator</a><a href="/#pricing" style="color:#8FA0B8">Pricing and guarantee</a><a href="https://d1evln8kpnyy80.cloudfront.net" style="color:#8FA0B8" data-platform-link>Get started today</a></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><span style="color:#fff;font-weight:600">Guides</span><a href="/renters-rights-act" style="color:#8FA0B8">Renters' Rights Act guide</a><a href="/blog/renters-rights-act-rent-rules" style="color:#8FA0B8">Rent rules explained</a><a href="/blog/" style="color:#8FA0B8">All guides</a><a href="/how-the-calculator-works" style="color:#8FA0B8">How the calculator works</a></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><span style="color:#fff;font-weight:600">Company</span><a href="/about" style="color:#8FA0B8">About the founders</a><a href="https://homeistudent.com" target="_blank" rel="noopener" style="color:#8FA0B8">HOMEi app ↗</a><a href="/contact" style="color:#8FA0B8">Contact us</a><a href="/privacy" style="color:#8FA0B8">Privacy policy</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/config.js" defer></script>
+<script src="/js/calculator-data.js" defer></script>
+<script src="/js/calc-engine.js" defer></script>
+<script src="/js/calculator-page.js" defer></script>
+<script src="/js/release.js" defer></script>
 </body>
 </html>
