@@ -3,15 +3,25 @@
  *
  * Two switches live here. Nothing else in the site hard-codes either one.
  *
- * 1. PLATFORM_URL
- *    The marketing site never handles sign-up. Every "Get started today"
- *    and "Sign in" control links out to the platform. Elements carrying
- *    data-platform-link are repointed on load, and the same URL is written
- *    into their href attributes so the links work without JavaScript and
- *    stay crawlable.
+ * 1. PLATFORM_URL and PLATFORM_SIGNUP_URL
+ *    The marketing site never handles sign-up. Controls link out to the
+ *    platform in one of two roles:
  *
- *    When the platform moves to HOMEi.uk, change PLATFORM_URL here and
- *    bring the hrefs along with it:
+ *      data-platform-link    "Sign in", for someone who already has an
+ *                            account. Uses PLATFORM_URL.
+ *      data-platform-signup  "Get started today" and the other sign-up
+ *                            calls to action, for someone creating an
+ *                            account. Uses PLATFORM_SIGNUP_URL.
+ *
+ *    Both are repointed on load, and the URL is written into the href
+ *    attributes so the links work without JavaScript and stay crawlable.
+ *
+ *    PLATFORM_SIGNUP_URL is empty until James supplies the create-account
+ *    route, and while it is empty the sign-up controls fall back to
+ *    PLATFORM_URL, which is how they behaved before the split. Setting it
+ *    sends all 65 of them to the create-account page instead.
+ *
+ *    When a URL changes, set it here and bring the hrefs along with it:
  *
  *      grep -rl 'd1evln8kpnyy80.cloudfront.net' --include=*.html . \
  *        | xargs sed -i 's|https://d1evln8kpnyy80.cloudfront.net|https://homei.uk|g'
@@ -38,6 +48,11 @@
 
     var PLATFORM_URL = 'https://d1evln8kpnyy80.cloudfront.net';
 
+    // The create-account page. Empty means "same as PLATFORM_URL".
+    var PLATFORM_SIGNUP_URL = '';
+
+    var SIGNUP_URL = PLATFORM_SIGNUP_URL || PLATFORM_URL;
+
     // The offer ends at 1 Feb 2027 00:00 UK time. UK is on GMT in February,
     // so UTC and local time agree on that instant.
     var OFFER_ENDS = Date.UTC(2027, 1, 1, 0, 0, 0);
@@ -49,6 +64,7 @@
 
     window.HOMEI_CONFIG = {
         PLATFORM_URL: PLATFORM_URL,
+        PLATFORM_SIGNUP_URL: SIGNUP_URL,
         OFFER_ENDS: OFFER_ENDS,
         OFFER_ACTIVE: OFFER_ACTIVE,
         offerRunning: offerRunning
@@ -58,6 +74,10 @@
         var links = document.querySelectorAll('a[data-platform-link]');
         for (var i = 0; i < links.length; i++) {
             links[i].setAttribute('href', PLATFORM_URL);
+        }
+        var signup = document.querySelectorAll('a[data-platform-signup]');
+        for (var k = 0; k < signup.length; k++) {
+            signup[k].setAttribute('href', SIGNUP_URL);
         }
         if (!offerRunning) {
             var offer = document.querySelectorAll('[data-offer]');
