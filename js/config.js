@@ -21,14 +21,17 @@
  *    Every piece of offer content carries data-offer, so setting
  *    OFFER_ACTIVE to false removes all of it in one change: the promo bar,
  *    the "Free until 1 February 2027" lines, the first pricing row, the
- *    sticky phone bar text and the Contact page price line.
+ *    sticky phone bar text, the Contact page price and plan lines, and the
+ *    four new year bonuses.
  *
  *    It switches itself off after the offer date regardless, so the site
  *    cannot keep advertising a lapsed offer if nobody flips the flag.
  *
- *    Open item 2 is still with James: what copy replaces the offer lines
- *    after 1 February 2027. Until that is answered the elements are simply
- *    hidden, not replaced.
+ *    The offer sits over the base copy rather than replacing it, so taking
+ *    it down reveals the page underneath with nothing missing: one plan at
+ *    £28 a month or £268 a year, and the six-month guarantee. James has
+ *    said a new bonus follows straight after 1 February 2027, which will
+ *    be a separate change.
  */
 (function () {
     'use strict';
