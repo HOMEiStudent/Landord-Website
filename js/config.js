@@ -1,35 +1,72 @@
 /*
  * HOMEi PM site configuration.
  *
- * PLATFORM_URL is the single place the platform address is defined. The
- * marketing site does not handle sign-up: every "Get started", "Sign up now"
- * and "Sign in" control links straight out to the platform.
+ * Two switches live here. Nothing else in the site hard-codes either one.
  *
- * When the platform moves to HOMEi.uk, change PLATFORM_URL here. Every
- * element carrying data-platform-link is repointed on load. The same URL is
- * also written into those href attributes so the links work without
- * JavaScript and are crawlable; keep them in step with:
+ * 1. PLATFORM_URL
+ *    The marketing site never handles sign-up. Every "Get started today"
+ *    and "Sign in" control links out to the platform. Elements carrying
+ *    data-platform-link are repointed on load, and the same URL is written
+ *    into their href attributes so the links work without JavaScript and
+ *    stay crawlable.
  *
- *   grep -rl 'd1evln8kpnyy80.cloudfront.net' --include=*.html . \
- *     | xargs sed -i 's|https://d1evln8kpnyy80.cloudfront.net|https://homei.uk|g'
+ *    When the platform moves to HOMEi.uk, change PLATFORM_URL here and
+ *    bring the hrefs along with it:
+ *
+ *      grep -rl 'd1evln8kpnyy80.cloudfront.net' --include=*.html . \
+ *        | xargs sed -i 's|https://d1evln8kpnyy80.cloudfront.net|https://homei.uk|g'
+ *
+ * 2. OFFER_ACTIVE
+ *    The new year offer: free until 1 February 2027, no card needed.
+ *    Every piece of offer content carries data-offer, so setting
+ *    OFFER_ACTIVE to false removes all of it in one change: the promo bar,
+ *    the "Free until 1 February 2027" lines, the first pricing row, the
+ *    sticky phone bar text and the Contact page price line.
+ *
+ *    It switches itself off after the offer date regardless, so the site
+ *    cannot keep advertising a lapsed offer if nobody flips the flag.
+ *
+ *    Open item 2 is still with James: what copy replaces the offer lines
+ *    after 1 February 2027. Until that is answered the elements are simply
+ *    hidden, not replaced.
  */
 (function () {
     'use strict';
 
     var PLATFORM_URL = 'https://d1evln8kpnyy80.cloudfront.net';
 
-    window.HOMEI_CONFIG = { PLATFORM_URL: PLATFORM_URL };
+    // The offer ends at 1 Feb 2027 00:00 UK time. UK is on GMT in February,
+    // so UTC and local time agree on that instant.
+    var OFFER_ENDS = Date.UTC(2027, 1, 1, 0, 0, 0);
 
-    function applyPlatformLinks() {
+    // Set to false to take the whole offer down before its end date.
+    var OFFER_ACTIVE = true;
+
+    var offerRunning = OFFER_ACTIVE && Date.now() < OFFER_ENDS;
+
+    window.HOMEI_CONFIG = {
+        PLATFORM_URL: PLATFORM_URL,
+        OFFER_ENDS: OFFER_ENDS,
+        OFFER_ACTIVE: OFFER_ACTIVE,
+        offerRunning: offerRunning
+    };
+
+    function apply() {
         var links = document.querySelectorAll('a[data-platform-link]');
         for (var i = 0; i < links.length; i++) {
             links[i].setAttribute('href', PLATFORM_URL);
         }
+        if (!offerRunning) {
+            var offer = document.querySelectorAll('[data-offer]');
+            for (var j = 0; j < offer.length; j++) {
+                offer[j].hidden = true;
+            }
+        }
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', applyPlatformLinks);
+        document.addEventListener('DOMContentLoaded', apply);
     } else {
-        applyPlatformLinks();
+        apply();
     }
 })();
