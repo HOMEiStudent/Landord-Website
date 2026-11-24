@@ -64,3 +64,37 @@ body{margin:0}html{scroll-behavior:smooth}a{text-decoration:none}.hx-r{position:
     .hx-section { padding-left: 20px !important; padding-right: 20px !important; }
     .hx-toc { position: static !important; }
 }
+
+/* ------------------------------------------------------------------
+   Phone tap targets, 44px minimum (CLAUDE.md section 7 and the
+   acceptance checklist). The approved phone design produces several
+   controls below that: the nav button at 36px, the property selector
+   and the mini calculator's bedroom buttons at 39px, the About link at
+   29px and the in-article buttons at 43px.
+
+   Scoped to phones, so nothing above 640px moves. Links sitting inside
+   sentences are left alone: WCAG 2.5.8 exempts inline links, and
+   enlarging them would break the body copy of the locked articles.
+   ------------------------------------------------------------------ */
+@media (max-width: 640px) {
+    .hx-navcta,
+    .hx-seg label,
+    #miniCalcBeds button,
+    #calcBeds button,
+    #calcMgmt button,
+    #calcType button,
+    #joinType button,
+    .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    a.hx-k {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
