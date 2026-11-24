@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - Main
+  # A Pages deploy can fail on a transient artifact or API fault, and the
+  # action itself asks you to re-run it. Without this the only way to retry
+  # is another push to Main, so the deploy can be started by hand instead.
+  workflow_dispatch:
 
 permissions:
   contents: read
