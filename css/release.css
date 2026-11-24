@@ -98,3 +98,11 @@ body{margin:0}html{scroll-behavior:smooth}a{text-decoration:none}.hx-r{position:
         align-items: center;
     }
 }
+
+/* ------------------------------------------------------------------
+   Offer switch backstop.
+   Several offer blocks carry an inline display:flex / display:grid,
+   which outranks the user-agent [hidden]{display:none}. Without this
+   they stay visible when js/config.js sets OFFER_ACTIVE to false.
+   ------------------------------------------------------------------ */
+[hidden] { display: none !important; }

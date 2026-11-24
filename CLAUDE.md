@@ -84,7 +84,7 @@ This file replaces `previous-handoff/CLAUDE_INSTRUCTIONS.md`. Where the two disa
 - **Never use em dashes.** Avoid en dashes in prose too. Use commas, colons or full stops.
 - No emoji. No exclamation marks. No hype words (revolutionary, game-changing, seamless, effortless). No triadic lists as a habit.
 - Every number is sourced (ONS, GOV.UK, NRLA, HSE, ABI). Estimates are labelled as estimates.
-- No testimonials, logos or statistics we cannot evidence. Sign-up counters stay hidden until the real number passes 50.
+- No testimonials, logos or statistics we cannot evidence. The old rule holding sign-up counters back until the number passed 50 is retired (James, November 2026); any figure shown still has to be real and evidenced.
 - Legal and compliance content carries "general information, not legal advice" plus a sources line.
 
 ## 6. Locked assets (never change without asking)
